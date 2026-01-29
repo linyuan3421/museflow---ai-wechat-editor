@@ -154,13 +154,7 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
                   <span className="text-xl">💡</span>
                   <div>
                     <p className="font-bold text-stone-800 mb-1">小贴士</p>
-                    <p className="text-sm text-stone-700 mb-2">
-                      点击右侧预览区的"复制"按钮，可直接粘贴到微信公众号编辑器，格式不乱。
-                    </p>
                     <div className="mt-3 pt-3 border-t border-amber-200">
-                      <p className="text-xs text-stone-500 mb-2">
-                        欢迎关注我们的公众号，获取更多技巧和更新
-                      </p>
                       <div className="flex items-center gap-2">
                         <img 
                           src="/assets/qrcode.jpg" 
@@ -170,9 +164,12 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
                             e.currentTarget.style.display = 'none';
                           }}
                         />
-                        <span className="text-sm text-stone-600">
-                          扫码关注「<a href="https://mp.weixin.qq.com/" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:underline font-medium">浮光掠影</a>」
-                        </span>
+                        <div className="flex flex-col">
+                          <p className="text-xs text-stone-500 mb-2">
+                            扫码关注公众号
+                          </p>
+                          <span className="text-sm text-stone-600 font-medium">反时钟效率笔记</span>
+                        </div>
                       </div>
                     </div>
                   </div>
