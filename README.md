@@ -116,6 +116,6 @@ MIT License.
 ---
 
 <div align="center">
-  <p>Made with ❤️ by <a href="https://github.com/linyuan3421">反时钟效率笔记</a></p>
+  <p>Made with ❤️ by <a href="https://github.com/linyuan3421">Aren</a></p>
   <p>让每一次记录，都如浮光掠影般美好。</p>
 </div>
