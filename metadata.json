@@ -1,0 +1,5 @@
+{
+  "name": "MuseFlow - AI WeChat Editor",
+  "description": "A design-forward, AI-powered Markdown editor for WeChat Official Accounts. Generate themes from images or prompts, and convert raw text to structured Markdown instantly.",
+  "requestFramePermissions": []
+}
