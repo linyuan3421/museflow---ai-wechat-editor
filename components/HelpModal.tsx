@@ -6,12 +6,11 @@ interface HelpModalProps {
 }
 
 const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
-  const [activeTab, setActiveTab] = useState<'intro' | 'guide' | 'faq'>('intro');
+  const [activeTab, setActiveTab] = useState<'intro' | 'guide'>('intro');
 
   const tabs = [
     { id: 'intro' as const, label: '产品介绍', icon: '✨' },
     { id: 'guide' as const, label: '快速开始', icon: '🚀' },
-    { id: 'faq' as const, label: '常见问题', icon: '❓' },
   ];
 
   if (!isOpen) return null;
@@ -113,7 +112,8 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
                   <div className="flex-1">
                     <h4 className="font-bold text-stone-800 mb-1">配置 AI API Key</h4>
                     <p className="text-sm text-stone-600">
-                      点击左侧栏顶部的 <span className="font-mono text-xs bg-stone-100 px-2 py-0.5 rounded">⚙️</span> 设置图标，选择服务提供商并输入 API Key。
+                      点击左侧栏顶部的 <span className="font-mono text-xs bg-stone-100 px-2 py-0.5 rounded">⚙️</span> 设置图标，输入 API Key。<br/>
+                      <span className="text-stone-500 text-xs">支持 OpenAI 兼容接口（如 DeepSeek、通义千问等国内模型）</span>
                     </p>
                   </div>
                 </div>
@@ -154,67 +154,45 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
                   <span className="text-xl">💡</span>
                   <div>
                     <p className="font-bold text-stone-800 mb-1">小贴士</p>
-                    <p className="text-sm text-stone-700">
+                    <p className="text-sm text-stone-700 mb-2">
                       点击右侧预览区的"复制"按钮，可直接粘贴到微信公众号编辑器，格式不乱。
                     </p>
+                    <div className="mt-3 pt-3 border-t border-amber-200">
+                      <p className="text-xs text-stone-500 mb-2">
+                        欢迎关注我们的公众号，获取更多技巧和更新
+                      </p>
+                      <div className="flex items-center gap-2">
+                        <img 
+                          src="/assets/qrcode.jpg" 
+                          alt="公众号二维码" 
+                          className="w-20 h-20 rounded-lg border-2 border-white shadow-sm"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                          }}
+                        />
+                        <span className="text-sm text-stone-600">
+                          扫码关注「<a href="https://mp.weixin.qq.com/" target="_blank" rel="noopener noreferrer" className="text-amber-700 hover:underline font-medium">浮光掠影</a>」
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          )}
-
-          {activeTab === 'faq' && (
-            <div className="p-8 space-y-4">
-              {[
-                {
-                  q: '如何获取 API Key？',
-                  a: (
-                    <>
-                      <p className="mb-2 text-sm text-stone-600">支持以下服务商：</p>
-                      <ul className="space-y-1 text-sm text-stone-600">
-                        <li>• <span className="font-medium">OpenAI</span>：<a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer" className="text-stone-500 hover:underline">platform.openai.com/api-keys</a></li>
-                        <li>• <span className="font-medium">DeepSeek</span>：<a href="https://platform.deepseek.com/api_keys" target="_blank" rel="noopener noreferrer" className="text-stone-500 hover:underline">platform.deepseek.com/api_keys</a></li>
-                        <li>• <span className="font-medium">Moonshot（月之暗面）</span>：<a href="https://platform.moonshot.cn/console/apikeys" target="_blank" rel="noopener noreferrer" className="text-stone-500 hover:underline">platform.moonshot.cn/console/apikeys</a></li>
-                        <li>• <span className="font-medium">通义千问（阿里云）</span>：登录阿里云控制台获取</li>
-                      </ul>
-                    </>
-                  )
-                },
-                {
-                  q: '主题数据存储在哪里？',
-                  a: '所有主题、模版和配置数据都存储在浏览器的 LocalStorage 中，完全本地化，不上传到任何服务器。'
-                },
-                {
-                  q: '如何重置为默认状态？',
-                  a: '清除浏览器 LocalStorage 即可。方法：打开开发者工具 → Application → Local Storage → 右键清除。'
-                },
-                {
-                  q: '小红书卡片如何导出？',
-                  a: '点击预览区右上角的"下载全部"按钮，将所有卡片导出为 PNG 图片，可直接发布到小红书。'
-                },
-                {
-                  q: 'AI 生成的主题不满意怎么办？',
-                  a: '可以直接修改主题卡片中的样式，点击保存后会将自定义主题保存到本地。'
-                },
-                {
-                  q: '支持哪些 Markdown 语法？',
-                  a: '支持标准 Markdown 语法，包括标题（#）、粗体（**）、斜体（*）、列表、引用（>）、代码块（```）、链接、图片等。'
-                }
-              ].map((item, index) => (
-                <div key={index} className="bg-white p-4 rounded-xl border border-[#e5e0d8]">
-                  <h4 className="font-bold text-stone-800 mb-2 text-sm">{item.q}</h4>
-                  <p className="text-sm text-stone-600 leading-relaxed">{item.a}</p>
-                </div>
-              ))}
             </div>
           )}
         </div>
 
         {/* Footer */}
         <div className="px-6 py-4 bg-white border-t border-[#e5e0d8] flex justify-between items-center">
-          <span className="text-xs text-stone-400">
-            MuseFlow · 浮光掠影
-          </span>
+          <a 
+            href="https://github.com/linyuan3421/museflow---ai-wechat-editor"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-stone-400 hover:text-stone-600 transition-colors flex items-center gap-2"
+          >
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12v5.333c0-6.626 5.373-12 12-12h-2.523c-2.272-1.646-4.667-1.646-4.381 0-8.023 3.682-4.667 8.023v-2.523c0-2.272 1.646-4.667 1.646-4.381 0-8.023-3.682-4.667-8.023 2.272-0 4.667 1.646 4.667 4.381 0 8.023 3.682 4.667v2.523c0 2.272-1.646 4.667-1.646 4.381 0 8.023-3.682 4.667 8.023zM12 13.333c-2.917 0-5.638-1.167-7.638-2.853v1.646c1.686 3.099 2.853 6.768 2.853 6.768 2.853 1.686 3.099 2.853 6.768 2.853 6.768 2.853 1.686 3.099 2.853 6.768 2.853zM19.078 8.377c.976 0 1.771-.804 1.771-1.771v-6.389c0-.976-.804-1.771-1.771-1.771h-1.607v6.389c0 .976.804 1.771 1.771 1.771h1.607v-6.389c0-.976.804-1.771 1.771-1.771h-1.607z"/></svg>
+            GitHub
+          </a>
           <button 
             onClick={onClose}
             className="px-6 py-2 rounded-lg text-sm font-medium text-stone-500 hover:text-stone-700 hover:bg-stone-100 transition-colors"
