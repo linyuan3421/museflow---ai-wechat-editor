@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 interface EditorProps {
   value: string;
   onChange: (val: string) => void;
 }
 
-const Editor: React.FC<EditorProps> = ({ value, onChange }) => {
+const Editor = forwardRef<HTMLTextAreaElement, EditorProps>(({ value, onChange }, ref) => {
   return (
     <div className="h-full w-full flex flex-col bg-white border-r border-[#e5e0d8]">
       <div className="px-5 py-4 border-b border-[#e5e0d8] flex justify-between items-center bg-[#fdfbf7]">
@@ -15,6 +15,7 @@ const Editor: React.FC<EditorProps> = ({ value, onChange }) => {
         </span>
       </div>
       <textarea
+        ref={ref}
         className="flex-1 w-full bg-white text-stone-700 p-8 resize-none focus:outline-none font-mono text-sm leading-loose placeholder:text-stone-300"
         value={value}
         onChange={(e) => onChange(e.target.value)}
@@ -23,6 +24,8 @@ const Editor: React.FC<EditorProps> = ({ value, onChange }) => {
       />
     </div>
   );
-};
+});
+
+Editor.displayName = 'Editor';
 
 export default Editor;

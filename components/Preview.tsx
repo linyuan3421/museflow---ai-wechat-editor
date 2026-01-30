@@ -7,9 +7,10 @@ import { ThemeStyles } from '../types';
 interface PreviewProps {
   markdown: string;
   themeStyles: ThemeStyles;
+  scrollRef?: React.RefObject<HTMLDivElement>; // New prop for scroll container ref
 }
 
-const Preview = forwardRef<HTMLDivElement, PreviewProps>(({ markdown, themeStyles }, ref) => {
+const Preview = forwardRef<HTMLDivElement, PreviewProps>(({ markdown, themeStyles, scrollRef }, ref) => {
   
   // Custom renderers to apply the ThemeStyles inline
   const components = {
@@ -76,9 +77,12 @@ const Preview = forwardRef<HTMLDivElement, PreviewProps>(({ markdown, themeStyle
   };
 
   return (
-    <div className="h-full w-full bg-[#f4f5f0] overflow-y-auto flex justify-center p-4 md:p-8">
+    <div
+      ref={scrollRef as React.RefObject<HTMLDivElement>}
+      className="h-full w-full bg-[#f4f5f0] overflow-y-auto flex justify-center p-4 md:p-8"
+    >
       {/* Mobile Phone Simulator Container */}
-      <div 
+      <div
         className="w-[375px] min-h-[667px] bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] relative flex flex-col"
         id="preview-container"
         ref={ref}

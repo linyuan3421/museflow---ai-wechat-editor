@@ -122,6 +122,8 @@ const App: React.FC = () => {
   const [isGeneratingRedNote, setIsGeneratingRedNote] = useState(false);
 
   const previewRef = useRef<HTMLDivElement>(null);
+  const editorRef = useRef<HTMLTextAreaElement>(null); // Ref for Editor textarea
+  const previewScrollRef = useRef<HTMLDivElement>(null); // Ref for Preview scroll container
   const [copyFeedback, setCopyFeedback] = useState(false);
 
   // --- Layout Resizing State ---
@@ -386,8 +388,8 @@ const App: React.FC = () => {
           style={{ width: `${editorPercentage}%` }}
         >
           {syncScrollEnabled ? (
-            <ScrollSyncPane group="markdown-editor">
-              <Editor value={markdown} onChange={setMarkdown} />
+            <ScrollSyncPane group="markdown-editor" attachTo={editorRef}>
+              <Editor ref={editorRef} value={markdown} onChange={setMarkdown} />
             </ScrollSyncPane>
           ) : (
             <Editor value={markdown} onChange={setMarkdown} />
@@ -404,9 +406,10 @@ const App: React.FC = () => {
         <div className="flex-1 h-full overflow-hidden relative">
            <div className="absolute top-0 left-0 w-full h-full z-0">
              {syncScrollEnabled && mode === 'wechat' ? (
-               <ScrollSyncPane group="markdown-editor">
+               <ScrollSyncPane group="markdown-editor" attachTo={previewScrollRef}>
                  <Preview
                    ref={previewRef}
+                   scrollRef={previewScrollRef}
                    markdown={markdown}
                    themeStyles={theme.styles}
                  />
