@@ -20,9 +20,15 @@ const Preview = forwardRef<HTMLDivElement, PreviewProps>(({ markdown, themeStyle
     blockquote: ({ node, ...props }: any) => <blockquote style={themeStyles.blockquote} {...props} />,
     strong: ({ node, ...props }: any) => <strong style={themeStyles.strong} {...props} />,
     li: ({ node, ...props }: any) => <li style={themeStyles.li} {...props} />,
-    ul: ({ node, ...props }: any) => <ul style={{ paddingLeft: '20px', marginBottom: '16px' }} {...props} />,
-    ol: ({ node, ...props }: any) => <ol style={{ paddingLeft: '20px', marginBottom: '16px' }} {...props} />,
+    ul: ({ node, ...props }: any) => <ul style={themeStyles.ul} {...props} />,
+    ol: ({ node, ...props }: any) => <ol style={themeStyles.ol} {...props} />,
     a: ({ node, ...props }: any) => <a style={themeStyles.a} {...props} />,
+    table: ({ node, ...props }: any) => <table style={themeStyles.table} {...props} />,
+    thead: ({ node, ...props }: any) => <thead {...props} />,
+    tbody: ({ node, ...props }: any) => <tbody {...props} />,
+    tr: ({ node, ...props }: any) => <tr style={themeStyles.tr} {...props} />,
+    th: ({ node, ...props }: any) => <th style={themeStyles.th} {...props} />,
+    td: ({ node, ...props }: any) => <td style={themeStyles.td} {...props} />,
     code: ({ node, inline, ...props }: any) => {
       if (inline) {
         return <code style={themeStyles.code} {...props} />;

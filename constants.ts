@@ -172,9 +172,9 @@ print(f"处理了 {len(data)} 条记录")
 
 在 Markdown 中可以使用原生 HTML 标签，实现更复杂的效果：
 
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 10px; color: white; text-align: center;">
-  <h3>✨ 渐变背景卡片</h3>
-  <p>通过 HTML 实现 Markdown 无法直接支持的样式效果</p>
+<div style="background: linear-gradient(135deg, #78716c 0%, #44403c 100%); padding: 24px; border-radius: 16px; color: #fafaf9; text-align: center; font-family: 'Noto Sans SC', sans-serif; box-shadow: 0 4px 20px rgba(68, 64, 60, 0.15);">
+  <h3 style="margin: 0 0 12px 0; font-weight: 600; color: #fff;">✨ 高级效果示例</h3>
+  <p style="margin: 0; font-size: 14px; opacity: 0.95; line-height: 1.6;">通过 HTML 标签实现 Markdown 无法直接支持的复杂样式</p>
 </div>
 
 ---
@@ -199,6 +199,51 @@ const BASE_STYLES = {
   marginBottom: '1.5em',
   wordBreak: 'break-word' as const,
   textAlign: 'justify' as const,
+};
+
+// 基础列表样式
+const BASE_LIST_STYLES = {
+  ul: {
+    paddingInlineStart: '24px',
+    marginBlock: '12px 16px',
+    color: '#44403c',
+  },
+  ol: {
+    paddingInlineStart: '28px',
+    marginBlock: '12px 16px',
+    color: '#44403c',
+  },
+  li: {
+    marginBottom: '8px',
+    lineHeight: '1.8',
+  },
+};
+
+// 基础表格样式
+const BASE_TABLE_STYLES = {
+  table: {
+    width: '100%',
+    borderCollapse: 'collapse',
+    marginBlock: '24px 32px',
+    fontSize: '14px',
+    overflow: 'hidden',
+  },
+  th: {
+    backgroundColor: '#f5f5f4',
+    padding: '12px 16px',
+    fontWeight: '600',
+    color: '#292524',
+    textAlign: 'left',
+    borderBottom: '2px solid #d6d3d1',
+  },
+  td: {
+    padding: '12px 16px',
+    borderBottom: '1px solid #e7e5e4',
+    color: '#44403c',
+  },
+  tr: {
+    transition: 'background-color 0.15s',
+  },
 };
 
 export const DEFAULT_THEMES: AppTheme[] = [
@@ -263,7 +308,22 @@ export const DEFAULT_THEMES: AppTheme[] = [
         backgroundColor: '#fcd34d', // Subtle highlighter
         padding: '0 4px',
       },
-      li: { fontSize: '15px', marginBottom: '8px', lineHeight: '1.7' },
+      ul: { 
+        ...BASE_LIST_STYLES.ul,
+        listStyleType: 'disc',
+      },
+      ol: { 
+        ...BASE_LIST_STYLES.ol,
+        listStyleType: 'decimal',
+      },
+      li: { ...BASE_LIST_STYLES.li, fontSize: '15px', lineHeight: '1.7', color: '#1a1a1a' },
+      table: { ...BASE_TABLE_STYLES.table },
+      th: { ...BASE_TABLE_STYLES.th, backgroundColor: '#1a1a1a', color: '#ffffff' },
+      td: { ...BASE_TABLE_STYLES.td, color: '#1a1a1a' },
+      tr: { 
+        ...BASE_TABLE_STYLES.tr,
+        '&:nth-child(even)': { backgroundColor: '#f9f9f9' },
+      },
       a: { color: '#000', fontWeight: 'bold', textDecoration: 'underline', textDecorationThickness: '2px', textUnderlineOffset: '4px' },
       code: { 
         backgroundColor: '#f4f4f5', 
@@ -346,7 +406,22 @@ export const DEFAULT_THEMES: AppTheme[] = [
         textAlign: 'center'
       },
       strong: { color: '#365314', fontWeight: 'bold' },
-      li: { fontSize: '15px', marginBottom: '8px', lineHeight: '1.7', color: '#4b5563' },
+      ul: { 
+        ...BASE_LIST_STYLES.ul,
+        listStyleType: 'square',
+      },
+      ol: { 
+        ...BASE_LIST_STYLES.ol,
+        listStyleType: 'decimal',
+      },
+      li: { ...BASE_LIST_STYLES.li, fontSize: '15px', lineHeight: '1.7', color: '#2c3e50' },
+      table: { ...BASE_TABLE_STYLES.table },
+      th: { ...BASE_TABLE_STYLES.th, backgroundColor: '#f0fdf4', color: '#365314', borderBottom: '2px solid #84cc16' },
+      td: { ...BASE_TABLE_STYLES.td, color: '#2c3e50' },
+      tr: { 
+        ...BASE_TABLE_STYLES.tr,
+        '&:nth-child(even)': { backgroundColor: '#f7fee7' },
+      },
       a: { color: '#4d7c0f', textDecoration: 'underline', textUnderlineOffset: '4px' },
       code: { backgroundColor: '#f0fdf4', padding: '2px 6px', borderRadius: '4px', fontSize: '13px', color: '#166534' },
       img: { borderRadius: '4px', maxWidth: '100%', height: 'auto', display: 'block', margin: '30px auto', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.05)' },
@@ -408,7 +483,22 @@ export const DEFAULT_THEMES: AppTheme[] = [
         position: 'relative',
       },
       strong: { color: '#0284c7', fontWeight: 'bold' },
-      li: { fontSize: '15px', marginBottom: '8px', lineHeight: '1.7', color: '#475569' },
+      ul: { 
+        ...BASE_LIST_STYLES.ul,
+        listStyleType: 'circle',
+      },
+      ol: { 
+        ...BASE_LIST_STYLES.ol,
+        listStyleType: 'decimal',
+      },
+      li: { ...BASE_LIST_STYLES.li, fontSize: '15px', lineHeight: '1.7', color: '#334155' },
+      table: { ...BASE_TABLE_STYLES.table },
+      th: { ...BASE_TABLE_STYLES.th, backgroundColor: '#e0f2fe', color: '#0369a1', borderBottom: '2px solid #0284c7' },
+      td: { ...BASE_TABLE_STYLES.td, color: '#334155' },
+      tr: { 
+        ...BASE_TABLE_STYLES.tr,
+        '&:nth-child(even)': { backgroundColor: '#f0f9ff' },
+      },
       a: { color: '#0284c7', textDecoration: 'none', borderBottom: '1px solid #0284c7' },
       code: { backgroundColor: '#f1f5f9', padding: '2px 6px', borderRadius: '4px', fontSize: '13px', color: '#0f172a' },
       img: { borderRadius: '16px', maxWidth: '100%', height: 'auto', display: 'block', margin: '24px auto', boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.05)' },
@@ -468,7 +558,22 @@ export const DEFAULT_THEMES: AppTheme[] = [
         borderRadius: '0 8px 8px 0'
       },
       strong: { color: '#881337', fontWeight: '800', background: 'linear-gradient(to top, #fecdd3 50%, transparent 50%)' },
-      li: { fontSize: '16px', marginBottom: '8px', lineHeight: '1.8' },
+      ul: { 
+        ...BASE_LIST_STYLES.ul,
+        listStyleType: 'disc',
+      },
+      ol: { 
+        ...BASE_LIST_STYLES.ol,
+        listStyleType: 'decimal',
+      },
+      li: { ...BASE_LIST_STYLES.li, fontSize: '16px', lineHeight: '1.8', color: '#500724' },
+      table: { ...BASE_TABLE_STYLES.table },
+      th: { ...BASE_TABLE_STYLES.th, backgroundColor: '#ffe4e6', color: '#881337', borderBottom: '2px solid #fb7185' },
+      td: { ...BASE_TABLE_STYLES.td, color: '#500724' },
+      tr: { 
+        ...BASE_TABLE_STYLES.tr,
+        '&:nth-child(even)': { backgroundColor: '#fff1f2' },
+      },
       a: { color: '#be123c', fontWeight: 'bold' },
       code: { backgroundColor: '#ffe4e6', padding: '2px 6px', borderRadius: '4px', fontSize: '14px', color: '#881337' },
       img: { borderRadius: '2px', maxWidth: '100%', height: 'auto', display: 'block', margin: '32px auto', border: '8px solid white', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' },
@@ -521,7 +626,22 @@ export const DEFAULT_THEMES: AppTheme[] = [
         marginBottom: '24px'
       },
       strong: { color: '#000', fontWeight: '600' },
-      li: { fontSize: '15px', marginBottom: '8px', lineHeight: '1.7' },
+      ul: { 
+        ...BASE_LIST_STYLES.ul,
+        listStyleType: 'square',
+      },
+      ol: { 
+        ...BASE_LIST_STYLES.ol,
+        listStyleType: 'lower-alpha',
+      },
+      li: { ...BASE_LIST_STYLES.li, fontSize: '15px', lineHeight: '1.7', color: '#333333' },
+      table: { ...BASE_TABLE_STYLES.table },
+      th: { ...BASE_TABLE_STYLES.th, backgroundColor: '#f5f5f5', color: '#333333', borderBottom: '1px solid #e5e5e5' },
+      td: { ...BASE_TABLE_STYLES.td, color: '#333333', borderBottom: '1px solid #fafafa' },
+      tr: { 
+        ...BASE_TABLE_STYLES.tr,
+        '&:nth-child(even)': { backgroundColor: '#fafafa' },
+      },
       a: { color: '#525252', textDecoration: 'underline' },
       code: { backgroundColor: '#f5f5f5', padding: '2px 4px', borderRadius: '2px', fontSize: '13px', color: '#171717' },
       img: { borderRadius: '0', maxWidth: '100%', height: 'auto', display: 'block', margin: '20px auto', filter: 'grayscale(20%)' },
@@ -575,7 +695,22 @@ export const DEFAULT_THEMES: AppTheme[] = [
         marginBottom: '24px',
       },
       strong: { color: '#451a03', fontWeight: 'bold' },
-      li: { fontSize: '16px', marginBottom: '8px', lineHeight: '1.7' },
+      ul: { 
+        ...BASE_LIST_STYLES.ul,
+        listStyleType: 'disc',
+      },
+      ol: { 
+        ...BASE_LIST_STYLES.ol,
+        listStyleType: 'decimal',
+      },
+      li: { ...BASE_LIST_STYLES.li, fontSize: '16px', lineHeight: '1.7', color: '#433422' },
+      table: { ...BASE_TABLE_STYLES.table },
+      th: { ...BASE_TABLE_STYLES.th, backgroundColor: '#fef3c7', color: '#78350f', borderBottom: '2px solid #fcd34d' },
+      td: { ...BASE_TABLE_STYLES.td, color: '#433422', borderBottom: '1px solid #fde68a' },
+      tr: { 
+        ...BASE_TABLE_STYLES.tr,
+        '&:nth-child(even)': { backgroundColor: '#fefce8' },
+      },
       a: { color: '#b45309', textDecoration: 'underline', textUnderlineOffset: '2px' },
       code: { backgroundColor: '#fef3c7', padding: '2px 4px', borderRadius: '4px', fontSize: '14px', color: '#9a3412' },
       img: { borderRadius: '8px', maxWidth: '100%', height: 'auto', display: 'block', margin: '20px auto', border: '4px solid #fff', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' },

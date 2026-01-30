@@ -10,6 +10,12 @@ export interface ThemeStyles {
   blockquote: CSSProperties;
   strong: CSSProperties;
   li: CSSProperties;
+  ul: CSSProperties;
+  ol: CSSProperties;
+  table: CSSProperties;
+  th: CSSProperties;
+  td: CSSProperties;
+  tr: CSSProperties;
   a: CSSProperties;
   code: CSSProperties;
   pre?: CSSProperties; // Added to support code block styling
