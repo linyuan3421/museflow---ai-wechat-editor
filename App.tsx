@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
+import { ScrollSync, ScrollSyncPane } from 'react-scroll-sync';
 import Editor from './components/Editor';
 import Preview from './components/Preview';
 import RedNotePreview from './components/RedNotePreview';
@@ -57,6 +58,17 @@ const App: React.FC = () => {
   const [isHelpOpen, setIsHelpOpen] = useState(false);
   const [isHistoryOpen, setIsHistoryOpen] = useState(false);
 
+  // Load sync scroll preference from local storage
+  const [syncScrollEnabled, setSyncScrollEnabled] = useState<boolean>(() => {
+    try {
+      const saved = localStorage.getItem('museflow_sync_scroll');
+      return saved !== null ? JSON.parse(saved) : true; // Default: enabled
+    } catch (e) {
+      console.error("Failed to load sync scroll preference", e);
+      return true;
+    }
+  });
+
   // Save to local storage whenever they change
   useEffect(() => {
     localStorage.setItem('museflow_saved_themes', JSON.stringify(savedThemes));
@@ -69,6 +81,10 @@ const App: React.FC = () => {
   useEffect(() => {
     localStorage.setItem('museflow_ai_config', JSON.stringify(aiConfig));
   }, [aiConfig]);
+
+  useEffect(() => {
+    localStorage.setItem('museflow_sync_scroll', JSON.stringify(syncScrollEnabled));
+  }, [syncScrollEnabled]);
 
   // --- HISTORY AUTO-SAVE ---
   useEffect(() => {
@@ -292,7 +308,8 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="flex h-screen w-screen overflow-hidden bg-[#f4f5f0] text-stone-700 font-sans">
+    <ScrollSync enabled={syncScrollEnabled} proportional={true} vertical={true}>
+      <div className="flex h-screen w-screen overflow-hidden bg-[#f4f5f0] text-stone-700 font-sans">
       
       {/* Settings Modal */}
       <SettingsModal 
@@ -361,11 +378,17 @@ const App: React.FC = () => {
       <main ref={rightPanelRef} className="flex-1 flex flex-row relative h-full overflow-hidden">
         
         {/* Editor Area */}
-        <div 
+        <div
           className="h-full overflow-hidden"
           style={{ width: `${editorPercentage}%` }}
         >
-          <Editor value={markdown} onChange={setMarkdown} />
+          {syncScrollEnabled ? (
+            <ScrollSyncPane group="markdown-editor">
+              <Editor value={markdown} onChange={setMarkdown} />
+            </ScrollSyncPane>
+          ) : (
+            <Editor value={markdown} onChange={setMarkdown} />
+          )}
         </div>
 
         {/* DRAG HANDLE 2: Editor <-> Preview */}
@@ -377,14 +400,22 @@ const App: React.FC = () => {
         {/* Preview Area */}
         <div className="flex-1 h-full overflow-hidden relative">
            <div className="absolute top-0 left-0 w-full h-full z-0">
-             {mode === 'wechat' ? (
-               <Preview 
+             {syncScrollEnabled && mode === 'wechat' ? (
+               <ScrollSyncPane group="markdown-editor">
+                 <Preview
+                   ref={previewRef}
+                   markdown={markdown}
+                   themeStyles={theme.styles}
+                 />
+               </ScrollSyncPane>
+             ) : mode === 'wechat' ? (
+               <Preview
                  ref={previewRef}
                  markdown={markdown}
                  themeStyles={theme.styles}
                />
              ) : (
-               <RedNotePreview 
+               <RedNotePreview
                  data={redNoteData}
                  onUpdateSlide={handleSlideUpdate}
                  themeStyles={theme.styles}
@@ -402,9 +433,10 @@ const App: React.FC = () => {
                已复制到剪贴板
              </div>
            )}
-        </div>
-      </main>
-    </div>
+         </div>
+       </main>
+     </div>
+    </ScrollSync>
   );
 };
 
