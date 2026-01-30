@@ -95,6 +95,15 @@ interface ThemeStyles {
   img: CSSProperties;
   hr: CSSProperties;
 }
+
+## IMPORTANT: Width Constraints
+
+### CRITICAL - Preview Area Width
+- CRITICAL: The preview area MUST be fixed at 375px width (same as mobile screen simulation)
+- CRITICAL: DO NOT use width: 100% or any percentage-based width
+- CRITICAL: Ensure all theme styles have a maxWidth: '375px' constraint
+- CRITICAL: This is non-negotiable - all AI-generated themes MUST enforce this
+
 Return ONLY valid JSON. No markdown fencing.
 `;
 
