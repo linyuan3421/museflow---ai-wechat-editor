@@ -88,7 +88,13 @@ interface ThemeStyles {
   p: CSSProperties;
   blockquote: CSSProperties;
   strong: CSSProperties;
-  li: CSSProperties;
+  ul: CSSProperties; // Unordered list container
+  ol: CSSProperties; // Ordered list container
+  li: CSSProperties; // List item
+  table: CSSProperties; // Table container
+  th: CSSProperties; // Table header cell
+  td: CSSProperties; // Table data cell
+  tr: CSSProperties; // Table row
   a: CSSProperties;
   code: CSSProperties;
   pre?: CSSProperties; // Code block container style
@@ -96,12 +102,55 @@ interface ThemeStyles {
   hr: CSSProperties;
 }
 
+## IMPORTANT: List Styling (WeChat Official Account Style)
+
+### CRITICAL - Unordered Lists (ul)
+- CRITICAL: MUST include listStyleType property ('disc', 'circle', or 'square')
+- RECOMMENDED: Use 'disc' for standard bullet points
+- REQUIRED: Set paddingInlineStart to '24px' or '28px' for proper indentation
+- REQUIRED: Set marginBlock to '12px 16px' for spacing
+
+### CRITICAL - Ordered Lists (ol)
+- CRITICAL: MUST include listStyleType property ('decimal', 'decimal-leading-zero', etc.)
+- RECOMMENDED: Use 'decimal' for standard numbered lists
+- REQUIRED: Set paddingInlineStart to '28px' or '32px' for proper indentation
+- REQUIRED: Set marginBlock to '12px 16px' for spacing
+
+### CRITICAL - List Items (li)
+- REQUIRED: Set marginBottom to '8px' for spacing between items
+- REQUIRED: Set lineHeight to '1.7' or '1.8' for readability
+
+## IMPORTANT: Table Styling (WeChat Official Account Style)
+
+### CRITICAL - Table Container (table)
+- CRITICAL: MUST set width to '100%'
+- CRITICAL: MUST set borderCollapse to 'collapse'
+- REQUIRED: Set marginBlock to '24px 32px' for spacing
+- REQUIRED: Set fontSize to '14px' or '15px'
+- REQUIRED: Set overflow to 'hidden' to prevent overflow
+
+### CRITICAL - Table Headers (th)
+- CRITICAL: MUST include backgroundColor (light gray or theme color)
+- CRITICAL: MUST include borderBottom (2px solid border)
+- REQUIRED: Set padding to '12px 16px'
+- REQUIRED: Set fontWeight to '600'
+- REQUIRED: Set textAlign to 'left'
+
+### CRITICAL - Table Data Cells (td)
+- CRITICAL: MUST include borderBottom (1px solid border)
+- REQUIRED: Set padding to '12px 16px'
+- REQUIRED: Set color to dark gray for readability
+
+### CRITICAL - Table Rows (tr)
+- OPTIONAL: Add nth-child(even) backgroundColor for zebra striping
+- OPTIONAL: Add transition for hover effects
+
 ## IMPORTANT: Width Constraints
 
 ### CRITICAL - Preview Area Width
 - CRITICAL: The preview area MUST be fixed at 375px width (same as mobile screen simulation)
-- CRITICAL: DO NOT use width: 100% or any percentage-based width
-- CRITICAL: Ensure all theme styles have a maxWidth: '375px' constraint
+- CRITICAL: DO NOT use width: 100% or any percentage-based width for container
+- CRITICAL: Ensure all theme styles have maxWidth: '375px' constraint
 - CRITICAL: This is non-negotiable - all AI-generated themes MUST enforce this
 
 Return ONLY valid JSON. No markdown fencing.
