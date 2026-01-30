@@ -29,24 +29,28 @@ interface ToolsPanelProps {
   onOpenSettings: () => void;
   onOpenHelp: () => void;
   onOpenHistory: () => void;
+
+  // Sync scroll props
+  syncScrollEnabled: boolean;
+  onSyncScrollToggle: () => void;
 }
 
-const ToolsPanel: React.FC<ToolsPanelProps> = ({ 
-  currentTheme, 
+const ToolsPanel: React.FC<ToolsPanelProps> = ({
+  currentTheme,
   mode,
   onModeChange,
   onThemeSelect,
   onTemplateSelect,
   currentTemplateId,
-  
+
   savedThemes,
   onSaveTheme,
   onDeleteTheme,
-  
+
   savedTemplates,
   onAddCustomTemplate,
   onDeleteTemplate,
-  
+
   onMarkdownUpdate,
   onRedNoteGenerate,
   isGeneratingRedNote,
@@ -55,7 +59,10 @@ const ToolsPanel: React.FC<ToolsPanelProps> = ({
   aiConfig,
   onOpenSettings,
   onOpenHelp,
-  onOpenHistory
+  onOpenHistory,
+
+  syncScrollEnabled,
+  onSyncScrollToggle
 }) => {
   const [activeTab, setActiveTab] = useState<'themes' | 'ai'>('themes');
   
@@ -212,6 +219,15 @@ const ToolsPanel: React.FC<ToolsPanelProps> = ({
             </h1>
 
             <div className="flex gap-1">
+              {/* Sync Scroll Toggle Button */}
+              <button
+                onClick={onSyncScrollToggle}
+                className={`p-2 rounded-full transition-colors ${syncScrollEnabled ? 'bg-[#d6d3d1] text-[#44403c]' : 'hover:bg-stone-200 text-stone-400 hover:text-stone-600'}`}
+                title={syncScrollEnabled ? "同步滚动已启用" : "同步滚动已禁用"}
+              >
+                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
+              </button>
+
               {/* History Button */}
               <button
                 onClick={onOpenHistory}

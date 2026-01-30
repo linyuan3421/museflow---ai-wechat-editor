@@ -341,7 +341,7 @@ const App: React.FC = () => {
         className="shrink-0 z-20 shadow-[4px_0_24px_rgba(0,0,0,0.02)] h-full overflow-hidden"
         style={{ width: sidebarWidth }}
       >
-        <ToolsPanel 
+        <ToolsPanel
           currentTheme={theme}
           onThemeSelect={setTheme}
           onMarkdownUpdate={(md) => setMarkdown(md)}
@@ -352,7 +352,7 @@ const App: React.FC = () => {
           isGeneratingRedNote={isGeneratingRedNote}
           currentTemplateId={currentTemplateId}
           onTemplateSelect={setCurrentTemplateId}
-          
+
           savedThemes={savedThemes}
           onSaveTheme={handleSaveTheme}
           onDeleteTheme={handleDeleteTheme}
@@ -361,10 +361,13 @@ const App: React.FC = () => {
            onAddCustomTemplate={handleAddCustomTemplate}
            onDeleteTemplate={handleDeleteTemplate}
 
-            aiConfig={aiConfig}
-            onOpenSettings={() => setIsSettingsOpen(true)}
-            onOpenHelp={() => setIsHelpOpen(true)}
-            onOpenHistory={handleOpenHistory}
+             aiConfig={aiConfig}
+             onOpenSettings={() => setIsSettingsOpen(true)}
+             onOpenHelp={() => setIsHelpOpen(true)}
+             onOpenHistory={handleOpenHistory}
+
+             syncScrollEnabled={syncScrollEnabled}
+             onSyncScrollToggle={() => setSyncScrollEnabled(!syncScrollEnabled)}
           />
       </aside>
 
