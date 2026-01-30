@@ -10,24 +10,25 @@ interface ToolsPanelProps {
   onThemeSelect: (theme: AppTheme) => void;
   onTemplateSelect: (templateId: string) => void;
   currentTemplateId: string;
-  
+
   savedThemes: AppTheme[];
   onSaveTheme: (theme: AppTheme) => void;
   onDeleteTheme: (id: string, e: React.MouseEvent) => void;
-  
+
   savedTemplates: CardTemplate[];
   onAddCustomTemplate: (template: CardTemplate) => void;
   onDeleteTemplate: (id: string, e: React.MouseEvent) => void;
-  
+
   onMarkdownUpdate: (md: string) => void;
   onRedNoteGenerate: () => void;
   isGeneratingRedNote: boolean;
   onCopyHtml: () => void;
-  
+
   // New props for config
   aiConfig: AIConfig;
   onOpenSettings: () => void;
   onOpenHelp: () => void;
+  onOpenHistory: () => void;
 }
 
 const ToolsPanel: React.FC<ToolsPanelProps> = ({ 
@@ -50,10 +51,11 @@ const ToolsPanel: React.FC<ToolsPanelProps> = ({
   onRedNoteGenerate,
   isGeneratingRedNote,
   onCopyHtml,
-  
+
   aiConfig,
   onOpenSettings,
-  onOpenHelp
+  onOpenHelp,
+  onOpenHistory
 }) => {
   const [activeTab, setActiveTab] = useState<'themes' | 'ai'>('themes');
   
@@ -208,15 +210,26 @@ const ToolsPanel: React.FC<ToolsPanelProps> = ({
             <span className="bg-[#44403c] text-[#fcfaf7] w-7 h-7 rounded-lg flex items-center justify-center text-xs shadow-sm">光</span>
             浮光 · 掠影
             </h1>
-            
-            {/* Settings Button */}
-            <button 
-              onClick={onOpenSettings}
-              className="p-2 rounded-full hover:bg-stone-200 text-stone-400 hover:text-stone-600 transition-colors"
-              title="设置 API Key"
-            >
-               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-            </button>
+
+            <div className="flex gap-1">
+              {/* History Button */}
+              <button
+                onClick={onOpenHistory}
+                className="p-2 rounded-full hover:bg-stone-200 text-stone-400 hover:text-stone-600 transition-colors"
+                title="本地历史记录"
+              >
+                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              </button>
+
+              {/* Settings Button */}
+              <button
+                onClick={onOpenSettings}
+                className="p-2 rounded-full hover:bg-stone-200 text-stone-400 hover:text-stone-600 transition-colors"
+                title="设置 API Key"
+              >
+                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+              </button>
+            </div>
         </div>
         
         {/* Mode Toggle */}

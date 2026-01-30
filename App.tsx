@@ -5,9 +5,11 @@ import RedNotePreview from './components/RedNotePreview';
 import ToolsPanel from './components/ToolsPanel';
 import SettingsModal from './components/SettingsModal';
 import HelpModal from './components/HelpModal';
+import HistoryModal from './components/HistoryModal';
 import { INITIAL_MARKDOWN, DEFAULT_THEMES, CARD_TEMPLATES } from './constants';
 import { AppTheme, EditorMode, RedNoteData, CardTemplate, SlideContent, AIConfig } from './types';
 import * as AIService from './services/aiService';
+import { initHistoryDB, saveToHistory, AUTO_SAVE_INTERVAL } from './utils/historyUtils';
 
 const App: React.FC = () => {
   const [markdown, setMarkdown] = useState<string>(INITIAL_MARKDOWN);
@@ -53,6 +55,7 @@ const App: React.FC = () => {
 
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isHelpOpen, setIsHelpOpen] = useState(false);
+  const [isHistoryOpen, setIsHistoryOpen] = useState(false);
 
   // Save to local storage whenever they change
   useEffect(() => {
@@ -66,6 +69,33 @@ const App: React.FC = () => {
   useEffect(() => {
     localStorage.setItem('museflow_ai_config', JSON.stringify(aiConfig));
   }, [aiConfig]);
+
+  // --- HISTORY AUTO-SAVE ---
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+
+    // Initialize IndexedDB and setup auto-save
+    const initAutoSave = async () => {
+      try {
+        await initHistoryDB();
+
+        // Periodic auto-save (every 30 seconds)
+        timer = setInterval(() => {
+          saveToHistory(markdown, false);
+        }, AUTO_SAVE_INTERVAL);
+      } catch (error) {
+        console.error('[App] Failed to initialize history:', error);
+      }
+    };
+
+    initAutoSave();
+
+    return () => {
+      if (timer) {
+        clearInterval(timer);
+      }
+    };
+  }, [markdown]);
 
 
   const [theme, setTheme] = useState<AppTheme>(DEFAULT_THEMES[0]);
@@ -249,6 +279,18 @@ const App: React.FC = () => {
     }
   };
 
+  // --- HISTORY HANDLERS ---
+
+  const handleOpenHistory = () => {
+    setIsHistoryOpen(true);
+  };
+
+  const handleRestoreFromHistory = (content: string) => {
+    setMarkdown(content);
+    // Save the restored content as a new version
+    saveToHistory(content, false);
+  };
+
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-[#f4f5f0] text-stone-700 font-sans">
       
@@ -264,9 +306,17 @@ const App: React.FC = () => {
       />
 
       {/* Help Modal */}
-      <HelpModal 
+      <HelpModal
         isOpen={isHelpOpen}
         onClose={() => setIsHelpOpen(false)}
+      />
+
+      {/* History Modal */}
+      <HistoryModal
+        isOpen={isHistoryOpen}
+        onClose={() => setIsHistoryOpen(false)}
+        currentContent={markdown}
+        onRestore={handleRestoreFromHistory}
       />
 
       {/* 1. Left Sidebar: Tools & Themes */}
@@ -290,14 +340,15 @@ const App: React.FC = () => {
           onSaveTheme={handleSaveTheme}
           onDeleteTheme={handleDeleteTheme}
 
-          savedTemplates={savedTemplates}
-          onAddCustomTemplate={handleAddCustomTemplate}
-          onDeleteTemplate={handleDeleteTemplate}
+           savedTemplates={savedTemplates}
+           onAddCustomTemplate={handleAddCustomTemplate}
+           onDeleteTemplate={handleDeleteTemplate}
 
-           aiConfig={aiConfig}
-           onOpenSettings={() => setIsSettingsOpen(true)}
-           onOpenHelp={() => setIsHelpOpen(true)}
-         />
+            aiConfig={aiConfig}
+            onOpenSettings={() => setIsSettingsOpen(true)}
+            onOpenHelp={() => setIsHelpOpen(true)}
+            onOpenHistory={handleOpenHistory}
+          />
       </aside>
 
       {/* DRAG HANDLE 1: Sidebar <-> Right Panel */}
