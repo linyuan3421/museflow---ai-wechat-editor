@@ -70,14 +70,21 @@ export async function initKnowledgeDB(): Promise<void> {
 
     // 索引所有知识条目
     for (const entry of KNOWLEDGE_BASE) {
-      await insert(db, {
-        id: entry.id,
-        type: entry.type,
-        keywords: entry.keywords.join(' '), // 用空格连接关键词
-        name: entry.name,
-        description: entry.description,
-        data: entry.data // data 字段会完整存储并返回
-      });
+      try {
+        await insert(db, {
+          id: entry.id,
+          type: entry.type,
+          keywords: entry.keywords.join(' '), // 用空格连接关键词
+          name: entry.name,
+          description: entry.description,
+          data: entry.data // data 字段会完整存储并返回
+        });
+      } catch (insertError: any) {
+        // 忽略已存在的文档错误（并发初始化保护）
+        if (!insertError.message?.includes('already exists')) {
+          throw insertError;
+        }
+      }
     }
 
     // 在所有插入成功后再赋值到全局存储
