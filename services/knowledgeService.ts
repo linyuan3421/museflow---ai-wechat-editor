@@ -121,7 +121,7 @@ export async function retrieveKnowledge(
       term: query,
       limit: topK,
       properties: ['keywords', 'name', 'description'],
-      threshold: 0.1 // 相似度阈值，过滤低相关结果
+      threshold: 0.05 // 降低阈值以提高召回率（原 0.1 → 0.05）
     });
 
     // 转换为统一格式

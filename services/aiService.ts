@@ -1,18 +1,30 @@
 import { ThemeStyles, RedNoteData, RedNoteStyleConfig, AIConfig } from "../types";
 import { enhancePromptWithKnowledge } from "./knowledgeService";
 
-// Helper: Parse JSON safely
+// Helper: Parse JSON safely and fix invalid React CSS properties
 const parseJSON = <T>(text: string | undefined): T => {
   if (!text) return {} as T;
+
+  const cleanAndParse = (jsonStr: string): T => {
+    // 移除无效的 React CSS 属性
+    const cleaned = jsonStr
+      .replace(/"nth-child\([^"]*":\s*\{[^}]*\},?\s*/g, '') // 移除所有 nth-child 伪类
+      .replace(/"tr":\s*\{[^}]*\}/g, '"tr": {}') // 简化 tr 为空对象
+      .replace(/,\s*}/g, '}') // 移除尾随逗号
+      .replace(/,\s*,/g, ','); // 移除双逗号
+
+    return JSON.parse(cleaned) as T;
+  };
+
   try {
     // 1. Try direct parse
-    return JSON.parse(text) as T;
+    return cleanAndParse(text);
   } catch (e) {
     // 2. Try extracting JSON from markdown code blocks if present
     const jsonMatch = text.match(/```json\s*([\s\S]*?)\s*```/) || text.match(/```\s*([\s\S]*?)\s*```/);
     if (jsonMatch) {
       try {
-        return JSON.parse(jsonMatch[1]) as T;
+        return cleanAndParse(jsonMatch[1]);
       } catch (e2) {
         console.error("Failed to parse extracted JSON:", text);
       }
