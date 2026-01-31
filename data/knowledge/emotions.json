@@ -652,5 +652,110 @@
         "borders": "Minimal"
       }
     }
+  },
+  {
+    "id": "emotion-golden-hour",
+    "type": "emotion",
+    "keywords": [
+      "golden hour",
+      "日落",
+      "黄金时刻",
+      "sunset",
+      "warm",
+      "温暖",
+      "orange",
+      "橙色",
+      "glow",
+      "光辉"
+    ],
+    "name": "Golden Hour 日落金山",
+    "description": "日落时分的金色光辉与温暖氛围",
+    "data": {
+      "colors": {
+        "approach": "Warm oranges (#FF8C42), golden yellows (#F4D35E), soft pinks"
+      },
+      "typography": {
+        "h1": "Warm color + medium weight (500-600)",
+        "fonts": "Friendly serif or rounded sans-serif"
+      },
+      "decorations": {
+        "background": "Gradient from golden to soft pink",
+        "borders": "Warm-toned, 2px"
+      },
+      "spacing": {
+        "lineHeight": "1.75-1.85 (comfortable, warm)"
+      }
+    }
+  },
+  {
+    "id": "emotion-deep-ocean",
+    "type": "emotion",
+    "keywords": [
+      "deep ocean",
+      "深海",
+      "ocean",
+      "海洋",
+      "mysterious",
+      "神秘",
+      "blue",
+      "蓝色",
+      "depth",
+      "深邃"
+    ],
+    "name": "Deep Ocean 深海神秘",
+    "description": "深海般的神秘与深邃",
+    "data": {
+      "colors": {
+        "approach": "Deep blues (#1E4D8C), navy (#0A2342), aqua accents"
+      },
+      "typography": {
+        "h1": "Light weights (300-400) + wide spacing (0.12em)",
+        "fonts": "Light, elegant serif or thin sans-serif"
+      },
+      "decorations": {
+        "background": "Dark blue gradient (subtle)",
+        "borders": "Minimal (1px, low contrast)",
+        "shadows": "Soft shadows creating depth"
+      },
+      "spacing": {
+        "lineHeight": "1.9-2.0 (airy, mysterious)"
+      }
+    }
+  },
+  {
+    "id": "emotion-morning-fog",
+    "type": "emotion",
+    "keywords": [
+      "morning fog",
+      "晨雾",
+      "fog",
+      "雾",
+      "misty",
+      "朦胧",
+      "soft",
+      "柔和",
+      "quiet",
+      "宁静"
+    ],
+    "name": "Morning Fog 晨雾",
+    "description": "清晨雾霭的朦胧与宁静",
+    "data": {
+      "colors": {
+        "approach": "Soft grays (#B8B8B8), pale blues (#D4E5F7), white"
+      },
+      "typography": {
+        "h1": "Light weights (300) + very wide spacing (0.15em)",
+        "fonts": "Thin, light serif or sans-serif"
+      },
+      "decorations": {
+        "background": "Very light gray or white with subtle gradient",
+        "borders": "Very subtle (1px, transparent or light gray)",
+        "shadows": "Minimal or soft diffuse"
+      },
+      "spacing": {
+        "lineHeight": "2.0+ (very airy, ethereal)",
+        "margins": "2.5em+ (maximum breathing room)"
+      }
+    }
   }
 ]

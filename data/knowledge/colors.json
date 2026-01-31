@@ -2230,5 +2230,195 @@
       "englishName": "Light Bamboo",
       "culturalOrigin": "日本传统色"
     }
+  },
+  {
+    "id": "color-wong-kar-wai",
+    "type": "color_palette",
+    "keywords": [
+      "wong kar-wai",
+      "王家卫",
+      "霓虹",
+      "neon",
+      "香港",
+      "hong kong",
+      "复古",
+      "vintage",
+      "暧昧",
+      "romantic",
+      "夜色",
+      "night",
+      "green",
+      "red",
+      "绿",
+      "红"
+    ],
+    "name": "Wong Kar-wai 王家卫风格",
+    "description": "王家卫电影的霓虹绿与红色调，香港夜色的暧昧与浪漫",
+    "data": {
+      "colors": {
+        "neonGreen": "#39FF14",
+        "deepRed": "#8B0000",
+        "nightBlue": "#0A0A23",
+        "warmYellow": "#FFD700"
+      },
+      "background": "#0A0A23",
+      "designApproach": [
+        "High contrast neon accents",
+        "Moody, romantic atmosphere",
+        "Green and red lighting effects"
+      ],
+      "cssCode": ".wkw-text { color: #39FF14; text-shadow: 0 0 10px rgba(57, 255, 20, 0.5); }"
+    }
+  },
+  {
+    "id": "color-studio-ghibli",
+    "type": "color_palette",
+    "keywords": [
+      "studio ghibli",
+      "吉卜力",
+      "宫崎骏",
+      "hayao miyazaki",
+      "天空蓝",
+      "sky blue",
+      "饱满绿",
+      "vibrant green",
+      "云朵白",
+      "cloud white",
+      "自然",
+      "nature",
+      "治愈",
+      "healing",
+      "动画",
+      "anime"
+    ],
+    "name": "Studio Ghibli 吉卜力风格",
+    "description": "吉卜力工作室动画的天空蓝、饱满绿与云朵白，自然治愈的色彩",
+    "data": {
+      "colors": {
+        "skyBlue": "#87CEEB",
+        "vibrantGreen": "#32CD32",
+        "cloudWhite": "#F5F5F5",
+        "earthBrown": "#8B4513"
+      },
+      "background": "#F5F5F5",
+      "designApproach": [
+        "Soft, natural colors",
+        "Healing, peaceful atmosphere",
+        "Hand-drawn aesthetic"
+      ],
+      "cssCode": ".ghibli-gradient { background: linear-gradient(180deg, #87CEEB 0%, #F5F5F5 100%); }"
+    }
+  },
+  {
+    "id": "color-blade-runner-noir",
+    "type": "color_palette",
+    "keywords": [
+      "blade runner",
+      "银翼杀手",
+      "noir",
+      "黑色电影",
+      "雨夜",
+      "rainy night",
+      "深蓝",
+      "dark blue",
+      "橙色灯光",
+      "orange light",
+      "赛博朋克",
+      "cyberpunk",
+      "反乌托邦",
+      "dystopian"
+    ],
+    "name": "Blade Runner Noir 银翼杀手黑色",
+    "description": "银翼杀手雨夜的深蓝与橙色灯光，反乌托邦的黑色电影美学",
+    "data": {
+      "colors": {
+        "darkBlue": "#0A1628",
+        "rainGray": "#2C3E50",
+        "orangeLight": "#FF6B35",
+        "neonBlue": "#00BFFF"
+      },
+      "background": "#0A1628",
+      "designApproach": [
+        "Dark, rainy atmosphere",
+        "Orange lighting contrasts",
+        "Noir cinematic mood"
+      ],
+      "cssCode": ".bladerunner-rain { background: linear-gradient(180deg, #0A1628 0%, #2C3E50 100%); }"
+    }
+  },
+  {
+    "id": "color-monet-waterlilies",
+    "type": "color_palette",
+    "keywords": [
+      "monet",
+      "莫奈",
+      "water lilies",
+      "睡莲",
+      "印象派",
+      "impressionism",
+      "蓝紫绿",
+      "blue purple green",
+      "柔和",
+      "soft",
+      "油画",
+      "oil painting",
+      "光",
+      "light",
+      "色彩"
+    ],
+    "name": "Monet Water Lilies 莫奈睡莲",
+    "description": "莫奈印象派睡莲的蓝紫绿色调，捕捉光与色彩的柔美",
+    "data": {
+      "colors": {
+        "softBlue": "#9DC3E6",
+        "lavenderPurple": "#B19CD9",
+        "softGreen": "#77DD77",
+        "waterPink": "#F49AC2"
+      },
+      "background": "#F5F5F5",
+      "designApproach": [
+        "Impressionist color palette",
+        "Soft, blended colors",
+        "Light and shadow effects"
+      ],
+      "cssCode": ".monet-blend { background: linear-gradient(135deg, #9DC3E6 0%, #B19CD9 50%, #77DD77 100%); }"
+    }
+  },
+  {
+    "id": "color-ukiyoe",
+    "type": "color_palette",
+    "keywords": [
+      "ukiyoe",
+      "浮世绘",
+      "japanese",
+      "日本",
+      "普鲁士蓝",
+      "prussian blue",
+      "米色",
+      "beige",
+      "传统",
+      "traditional",
+      "木版画",
+      "woodblock print",
+      "江户",
+      "edo"
+    ],
+    "name": "Ukiyo-e 浮世绘",
+    "description": "日本浮世绘的普鲁士蓝与米色纸张，传统木版画的色彩美学",
+    "data": {
+      "colors": {
+        "prussianBlue": "#003153",
+        "ricePaperBeige": "#F5F5DC",
+        "vermilionRed": "#E34234",
+        "sumiBlack": "#1A1A1A"
+      },
+      "background": "#F5F5DC",
+      "designApproach": [
+        "Traditional woodblock print colors",
+        "High contrast outlines",
+        "Historical Japanese aesthetic"
+      ],
+      "cssCode": ".ukiyoe-outline { border: 3px solid #1A1A1A; }"
+    }
   }
 ]
