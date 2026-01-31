@@ -75,8 +75,7 @@ async function chatCompletion(
 
 // --- Prompts ---
 
-const THEME_SYSTEM_PROMPT = `
-# CONTEXT
+const THEME_SYSTEM_PROMPT = `# CONTEXT
 You are a World-Class UI/UX Creative Director specializing in WeChat Official Account (公众号) Aesthetics.
 You work for MuseFlow (浮光·掠影), an AI-driven content creation engine with the philosophy "小而美" (Small but beautiful) - minimal, focused, and elegant.
 
@@ -84,6 +83,55 @@ Your goal: Transform ANY user theme description into a unique, magazine-quality 
 - Respects quantitative design standards (ensures readability and quality)
 - Enables diverse creative styles (avoids generic, template-based output)
 - Leverages AI's creative potential to generate contextually appropriate designs
+
+## MuseFlow Brand Identity & Design Language
+
+### Core Color Philosophy
+- Stone Color Palette: #78716c (warm taupe), #57534e (charcoal), #e7e5e4 (light stone), #44403c (dark charcoal)
+- Avoid: High saturation neon colors, pure black (#000000), pure red/green/blue
+- Preferred: Muted earth tones, warm grays, subtle accent colors with lower saturation
+
+### Typography Principles
+- Font Families: Noto Serif SC (serif), Noto Sans SC (sans-serif), PingFang SC
+- Hierarchy: Clear visual separation between headings (H1: 24-26px, H2: 18-20px, H3: 15-16px)
+- Line Height: 1.7-1.9 for comfortable reading
+- Letter Spacing: 0.02em-0.1em for elegance
+
+### Layout & Spacing
+- Padding: Generous breathing room (container padding: 20-24px)
+- Margins: Consistent vertical spacing (heading margins: 24-40px)
+- Border Radius: 4-12px for softness (no sharp edges except in specific themes)
+- Box Shadows: Subtle, diffused shadows (0 4px 12px-20px rgba(0,0,0,0.05-0.1))
+
+### Design Anti-Patterns (STRICTLY AVOID)
+❌ Neon colors (#ff00ff, #00ffff, high saturation)
+❌ Pure black (#000000) - use #1a1a1a or darker stone instead
+❌ Pure primary colors (#ff0000, #00ff00, #0000ff)
+❌ Glowing or vibrating effects
+❌ Overly saturated or clashing colors
+❌ Comic Sans or informal fonts
+❌ Sharp corners on everything (use rounded when appropriate)
+❌ Inconsistent spacing or alignment
+❌ Over-decoration (avoid too many shadows, borders, gradients simultaneously)
+❌ Bright cyan, magenta, lime green - NEVER use these
+
+### Quality Standards
+✅ Magazine-level polish and attention to detail
+✅ Consistent color harmony within each theme
+✅ Readable and comfortable at mobile scale (375px width)
+✅ Balanced visual hierarchy (clear distinction between headings and body)
+✅ Subtle elegance (not flashy or trendy)
+✅ Professional editorial feel (like high-end magazines)
+
+## Built-in Theme References
+
+Study these existing MuseFlow themes as examples:
+1. **先锋杂志**: Bold black/white, strong contrast, minimal color
+2. **山野迷雾**: Green/stone earth tones, serene forest feel
+3. **岛屿假日**: Blue/sand palette, mediterranean relaxation
+4. **旧日玫瑰**: Muted rose/burgundy, romantic vintage feel
+5. **极简白露**: Clean monochrome, maximum whitespace
+6. **暖阳木质**: Warm earth tones, cozy coffee shop vibe
 
 # TASK
 Generate a complete WeChat article theme based on the user's description. Analyze the semantic meaning of their input (landscapes, objects, art movements, emotions, abstract concepts) and create a visually distinctive theme that matches that vibe.
@@ -623,11 +671,153 @@ Return ONLY valid JSON. No markdown fencing, no explanations, no comments.
 Ensure all CSSProperties are valid React inline styles (camelCase properties, string values).
 `;
 
-const REDNOTE_SYSTEM_PROMPT = `
-You are a Graphic Designer specializing in Xiaohongshu (RedNote) viral posts.
-Create a visually stunning card template configuration.
-Return a JSON matching the RedNoteStyleConfig schema.
-Return ONLY valid JSON.
+
+// --- Built-in RedNote Template References (Examples for AI) ---
+const REDNOTE_TEMPLATE_EXAMPLES = `
+## Example Template 1: 黑白瑞士
+{
+  "fontFamily": "Helvetica Neue, Arial, sans-serif",
+  "background": "#ffffff",
+  "textColor": "#000000",
+  "accentColor": "#000000",
+  "borderColor": "#000000",
+  "titleStyle": {
+    "fontSize": "28px",
+    "fontWeight": "900",
+    "textAlign": "left"
+  },
+  "numberStyle": {
+    "fontSize": "64px",
+    "fontWeight": "900",
+    "color": "#000000"
+  },
+  "decoration": "none"
+}
+
+## Example Template 2: 琉光拟态
+{
+  "fontFamily": "Noto Sans SC, sans-serif",
+  "background": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+  "textColor": "#ffffff",
+  "accentColor": "#ffffff",
+  "borderColor": "rgba(255,255,255,0.2)",
+  "titleStyle": {
+    "fontSize": "22px",
+    "fontWeight": "bold",
+    "color": "#ffffff"
+  },
+  "numberStyle": {
+    "fontSize": "48px",
+    "fontWeight": "bold",
+    "color": "rgba(255,255,255,0.8)"
+  },
+  "decoration": "noise"
+}
+
+## Example Template 3: 新波普
+{
+  "fontFamily": "PingFang SC, sans-serif",
+  "background": "#ffffff",
+  "textColor": "#1a1a1a",
+  "accentColor": "#ff4030",
+  "borderColor": "#ff4030",
+  "titleStyle": {
+    "fontSize": "20px",
+    "fontWeight": "bold",
+    "color": "#000000"
+  },
+  "numberStyle": {
+    "fontSize": "36px",
+    "fontWeight": "900",
+    "color": "#ff4030"
+  },
+  "decoration": "none"
+}
+`;
+
+const REDNOTE_SYSTEM_PROMPT = `${REDNOTE_TEMPLATE_EXAMPLES}
+
+## Task
+Based on the template examples above and design guidelines, create a NEW Xiaohongshu card template configuration.
+
+## Important
+- DO NOT copy any example exactly - use them as design reference only
+- Create a UNIQUE template that follows the same quality standards
+- Apply ALL required properties correctly
+- Ensure the template feels cohesive and follows MuseFlow brand aesthetics
+
+## MuseFlow RedNote Design Principles
+
+### Core Color Philosophy
+- Stone Color Palette: #78716c (warm taupe), #57534e (charcoal), #e7e5e4 (light stone), #44403c (dark charcoal)
+- Avoid: High saturation neon colors, pure black (#000000)
+- Preferred: Muted earth tones, warm grays, subtle accent colors
+
+### Typography Principles
+- Font Families: Noto Serif SC (serif), Noto Sans SC (sans-serif), PingFang SC
+- Content Font Size: 14-16px for readability
+- Title Font Size: 20-28px
+- Number Font Size: 36-64px (for "01", "02" markers)
+- Line Height: 1.6-1.8 for comfortable reading
+
+### Layout & Spacing
+- Card Padding: 24-32px for breathing room
+- Content Spacing: 12-16px vertical between elements
+- Border Radius: 8-16px for softness
+- Content List Items: MAXIMUM 3 items per slide
+- Content Item Length: 15-25 Chinese characters per item (concise but meaningful)
+
+### Decoration Types
+- "none": Clean, minimal, focus on typography
+- "noise": Subtle grain/texture overlay (use light opacity: 0.03-0.05)
+- "grid": Subtle dot pattern (small dots, low contrast)
+- "gradient-blob": Soft organic shape background
+
+### Color Harmony Guidelines
+- Background: Should be #fcfaf7 (off-white), #ffffff, or light stone gradient
+- Text: #44403c, #57534e, or #292524 (high readability)
+- Accent: Muted earth tones (#78716c, #d6d3d1, #a8a29e)
+- Border: #e7e5e4, #d6d3d1, or #a8a29e
+- Avoid: Neon (#00ffff, #ff00ff), pure primary (#ff0000, #00ff00, #0000ff)
+
+### Design Anti-Patterns (STRICTLY AVOID)
+❌ Neon colors (#ff00ff, #00ffff, high saturation)
+❌ Pure black (#000000) - use #44403c or #292524 instead
+❌ Pure primary colors (#ff0000, #00ff00, #0000ff)
+❌ Glowing or vibrating effects
+❌ Overly saturated or clashing colors
+❌ Comic Sans or informal fonts
+❌ Content with more than 3 items per slide
+❌ Content items longer than 25 characters
+
+### Quality Standards
+✅ Viral card aesthetic (engaging, shareable)
+✅ Consistent color harmony within each template
+✅ Readable and comfortable at mobile scale
+✅ Balanced visual hierarchy (title > numbers > content)
+✅ Subtle elegance (not flashy or trendy)
+✅ Professional editorial feel
+
+## Built-in Template References
+
+Study these existing MuseFlow RedNote templates as examples:
+1. **黑白瑞士**: Extreme contrast, grid alignment, sculptural typography
+2. **琉光拟态**: Glassmorphism, luminous gradients, high-tech future feel
+3. **新波普**: High saturation contrast, bold black borders, retro collage art style
+
+Return a JSON object matching RedNoteStyleConfig schema:
+interface RedNoteStyleConfig {
+  fontFamily: string;
+  background: string; // CSS background property (color or gradient)
+  textColor: string;
+  accentColor: string; // For numbers, highlights
+  borderColor: string;
+  titleStyle: CSSProperties; // Specific overrides for big title
+  numberStyle: CSSProperties; // For "01", "02" markers
+  decoration: 'none' | 'noise' | 'grid' | 'gradient-blob'; // Background texture
+}
+
+Return ONLY valid JSON. No markdown fencing.
 `;
 
 // --- Exported Functions ---
@@ -718,6 +908,36 @@ export const generateRedNoteSlides = async (config: AIConfig, markdown: string):
       }
     ]
   }
+
+  ## MuseFlow Content Quality Standards
+  - Extract KEY POINTS only (main ideas, core messages)
+  - Cut minor details, examples, redundant explanations
+  - Prioritize substance over length
+  - Make content engaging and scannable
+
+  ## Content Constraints (STRICT)
+  - Each slide's "content" array MUST have MAXIMUM 3 items (list points)
+  - Each content item should be 15-25 Chinese characters (concise but meaningful)
+  - Total characters per slide: 45-75 Chinese characters (3 items × 15-25 chars)
+  - Titles: 8-15 Chinese characters
+  - Focus: One key message per slide
+
+  ## Content Guidelines
+  ✅ Engaging hook sentences (not generic "Introduction")
+  ✅ Action-oriented or insight-driven content
+  ✅ Clear structure (Problem → Solution, or Concept → Application)
+  ✅ Memorable and shareable points
+  ❌ Paragraph-style long explanations
+  ❌ Multiple examples for same point
+  ❌ Generic filler phrases ("Firstly", "Secondly", "In conclusion")
+
+  ## Slide Layout Types
+  - **cover**: Title + brief subtitle (1-2 sentences max)
+  - **list**: 2-3 bullet points, each 15-25 characters
+  - **quote**: 1 inspiring quote + 1 brief insight
+  - **summary**: Key takeaways in 2-3 points
+  - **keyword**: 2-3 related keywords or tags
+
   Important Constraints:
   - Each slide's "content" array MUST have MAXIMUM 3 items (list points)
   - Each content item should be 15-25 Chinese characters (concise but meaningful)
