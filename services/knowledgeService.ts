@@ -98,6 +98,63 @@ export async function initKnowledgeDB(): Promise<void> {
 }
 
 /**
+ * 查询扩展：丰富用户查询词，提升检索召回率
+ *
+ * @param query 用户原始查询
+ * @returns 扩展后的查询字符串
+ */
+function expandQuery(query: string): string {
+  const expansions: string[] = [query];
+
+  // 1. 颜色相关扩展
+  const colorExpansions: Record<string, string[]> = {
+    '日照金山': ['golden hour', 'alpine glow', 'sunrise', '日出', '朝霞', 'sunset', 'dawn'],
+    '日出': ['sunrise', 'dawn', 'morning', '清晨', '朝霞', 'golden hour'],
+    '日落': ['sunset', 'dusk', 'evening', '黄昏', '晚霞', 'golden hour'],
+    '莫兰迪': ['morandi', 'muted', '低饱和', 'gray', '高级灰', 'oil painting'],
+    '赛博朋克': ['cyberpunk', 'neon', 'futuristic', 'tech', '霓虹', '科幻'],
+    '森林': ['forest', 'green', 'nature', 'woods', '自然', '绿'],
+    '雪山': ['snow mountain', 'alpine', '雪景', 'winter'],
+    '咖啡': ['coffee', 'cafe', 'brown', 'warm', ' warmth'],
+    '海洋': ['ocean', 'sea', 'blue', 'marine', 'marine'],
+    '复古': ['vintage', 'retro', 'nostalgic', 'classic', '经典'],
+    '极简': ['minimal', 'minimalism', 'simple', 'clean', '简约'],
+  };
+
+  // 2. 检查是否包含扩展词
+  for (const [key, synonyms] of Object.entries(colorExpansions)) {
+    if (query.includes(key)) {
+      expansions.push(...synonyms);
+      console.log(`[Query Expansion] "${key}" → 扩展: ${synonyms.join(', ')}`);
+    }
+  }
+
+  // 3. 通用中英互译扩展
+  const commonTranslations: Record<string, string> = {
+    '温暖': 'warm',
+    '冷': 'cold',
+    '明亮': 'bright',
+    '暗': 'dark',
+    '柔和': 'soft',
+    '强烈': 'bold',
+    '优雅': 'elegant',
+    '现代': 'modern',
+  };
+
+  for (const [cn, en] of Object.entries(commonTranslations)) {
+    if (query.includes(cn)) {
+      expansions.push(en);
+    }
+  }
+
+  // 4. 去重并返回扩展查询（用空格连接）
+  const expandedQuery = [...new Set(expansions)].join(' ');
+  console.log(`[Query Expansion] "${query}" → "${expandedQuery}"`);
+
+  return expandedQuery;
+}
+
+/**
  * 语义检索：根据用户查询返回相关知识
  *
  * @param query 用户的查询文本（如"莫兰迪色系的咖啡馆"）
@@ -116,9 +173,12 @@ export async function retrieveKnowledge(
   }
 
   try {
+    // 查询扩展：丰富搜索词
+    const expandedQuery = expandQuery(query);
+
     // 使用 Orama 进行语义搜索
     const searchResults = await search(store.db, {
-      term: query,
+      term: expandedQuery,
       limit: topK,
       properties: ['keywords', 'name', 'description'],
       threshold: 0.05 // 降低阈值以提高召回率（原 0.1 → 0.05）
