@@ -181,7 +181,7 @@ export function formatSaveTime(date: Date): string {
  * 实际项目中可以使用 diff-match-patch 等库
  */
 export function generateDiffHtml(
-  oldContent: string,
+  _oldContent: string,
   newContent: string
 ): string {
   // 简单实现：直接显示新内容

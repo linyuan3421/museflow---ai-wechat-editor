@@ -88,7 +88,7 @@ const App: React.FC = () => {
 
   // --- HISTORY AUTO-SAVE ---
   useEffect(() => {
-    let timer: NodeJS.Timeout;
+    let timer: ReturnType<typeof setInterval>;
 
     // Initialize IndexedDB and setup auto-save
     const initAutoSave = async () => {

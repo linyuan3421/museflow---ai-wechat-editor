@@ -223,7 +223,7 @@ const BASE_LIST_STYLES = {
 const BASE_TABLE_STYLES = {
   table: {
     width: '100%',
-    borderCollapse: 'collapse',
+    borderCollapse: 'collapse' as const,
     marginBlock: '24px 32px',
     fontSize: '14px',
     overflow: 'hidden',
@@ -233,7 +233,7 @@ const BASE_TABLE_STYLES = {
     padding: '12px 16px',
     fontWeight: '600',
     color: '#292524',
-    textAlign: 'left',
+    textAlign: 'left' as const,
     borderBottom: '2px solid #d6d3d1',
   },
   td: {
@@ -320,10 +320,7 @@ export const DEFAULT_THEMES: AppTheme[] = [
       table: { ...BASE_TABLE_STYLES.table },
       th: { ...BASE_TABLE_STYLES.th, backgroundColor: '#1a1a1a', color: '#ffffff' },
       td: { ...BASE_TABLE_STYLES.td, color: '#1a1a1a' },
-      tr: { 
-        ...BASE_TABLE_STYLES.tr,
-        '&:nth-child(even)': { backgroundColor: '#f9f9f9' },
-      },
+      tr: BASE_TABLE_STYLES.tr,
       a: { color: '#000', fontWeight: 'bold', textDecoration: 'underline', textDecorationThickness: '2px', textUnderlineOffset: '4px' },
       code: { 
         backgroundColor: '#f4f4f5', 
@@ -418,10 +415,7 @@ export const DEFAULT_THEMES: AppTheme[] = [
       table: { ...BASE_TABLE_STYLES.table },
       th: { ...BASE_TABLE_STYLES.th, backgroundColor: '#f0fdf4', color: '#365314', borderBottom: '2px solid #84cc16' },
       td: { ...BASE_TABLE_STYLES.td, color: '#2c3e50' },
-      tr: { 
-        ...BASE_TABLE_STYLES.tr,
-        '&:nth-child(even)': { backgroundColor: '#f7fee7' },
-      },
+      tr: BASE_TABLE_STYLES.tr,
       a: { color: '#4d7c0f', textDecoration: 'underline', textUnderlineOffset: '4px' },
       code: { backgroundColor: '#f0fdf4', padding: '2px 6px', borderRadius: '4px', fontSize: '13px', color: '#166534' },
       img: { borderRadius: '4px', maxWidth: '100%', height: 'auto', display: 'block', margin: '30px auto', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.05)' },
@@ -495,10 +489,7 @@ export const DEFAULT_THEMES: AppTheme[] = [
       table: { ...BASE_TABLE_STYLES.table },
       th: { ...BASE_TABLE_STYLES.th, backgroundColor: '#e0f2fe', color: '#0369a1', borderBottom: '2px solid #0284c7' },
       td: { ...BASE_TABLE_STYLES.td, color: '#334155' },
-      tr: { 
-        ...BASE_TABLE_STYLES.tr,
-        '&:nth-child(even)': { backgroundColor: '#f0f9ff' },
-      },
+      tr: BASE_TABLE_STYLES.tr,
       a: { color: '#0284c7', textDecoration: 'none', borderBottom: '1px solid #0284c7' },
       code: { backgroundColor: '#f1f5f9', padding: '2px 6px', borderRadius: '4px', fontSize: '13px', color: '#0f172a' },
       img: { borderRadius: '16px', maxWidth: '100%', height: 'auto', display: 'block', margin: '24px auto', boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.05)' },
@@ -570,10 +561,7 @@ export const DEFAULT_THEMES: AppTheme[] = [
       table: { ...BASE_TABLE_STYLES.table },
       th: { ...BASE_TABLE_STYLES.th, backgroundColor: '#ffe4e6', color: '#881337', borderBottom: '2px solid #fb7185' },
       td: { ...BASE_TABLE_STYLES.td, color: '#500724' },
-      tr: { 
-        ...BASE_TABLE_STYLES.tr,
-        '&:nth-child(even)': { backgroundColor: '#fff1f2' },
-      },
+      tr: BASE_TABLE_STYLES.tr,
       a: { color: '#be123c', fontWeight: 'bold' },
       code: { backgroundColor: '#ffe4e6', padding: '2px 6px', borderRadius: '4px', fontSize: '14px', color: '#881337' },
       img: { borderRadius: '2px', maxWidth: '100%', height: 'auto', display: 'block', margin: '32px auto', border: '8px solid white', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' },
@@ -638,10 +626,7 @@ export const DEFAULT_THEMES: AppTheme[] = [
       table: { ...BASE_TABLE_STYLES.table },
       th: { ...BASE_TABLE_STYLES.th, backgroundColor: '#f5f5f5', color: '#333333', borderBottom: '1px solid #e5e5e5' },
       td: { ...BASE_TABLE_STYLES.td, color: '#333333', borderBottom: '1px solid #fafafa' },
-      tr: { 
-        ...BASE_TABLE_STYLES.tr,
-        '&:nth-child(even)': { backgroundColor: '#fafafa' },
-      },
+      tr: BASE_TABLE_STYLES.tr,
       a: { color: '#525252', textDecoration: 'underline' },
       code: { backgroundColor: '#f5f5f5', padding: '2px 4px', borderRadius: '2px', fontSize: '13px', color: '#171717' },
       img: { borderRadius: '0', maxWidth: '100%', height: 'auto', display: 'block', margin: '20px auto', filter: 'grayscale(20%)' },
@@ -707,10 +692,7 @@ export const DEFAULT_THEMES: AppTheme[] = [
       table: { ...BASE_TABLE_STYLES.table },
       th: { ...BASE_TABLE_STYLES.th, backgroundColor: '#fef3c7', color: '#78350f', borderBottom: '2px solid #fcd34d' },
       td: { ...BASE_TABLE_STYLES.td, color: '#433422', borderBottom: '1px solid #fde68a' },
-      tr: { 
-        ...BASE_TABLE_STYLES.tr,
-        '&:nth-child(even)': { backgroundColor: '#fefce8' },
-      },
+      tr: BASE_TABLE_STYLES.tr,
       a: { color: '#b45309', textDecoration: 'underline', textUnderlineOffset: '2px' },
       code: { backgroundColor: '#fef3c7', padding: '2px 4px', borderRadius: '4px', fontSize: '14px', color: '#9a3412' },
       img: { borderRadius: '8px', maxWidth: '100%', height: 'auto', display: 'block', margin: '20px auto', border: '4px solid #fff', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' },

@@ -57,8 +57,13 @@ const HistoryModal: React.FC<HistoryModalProps> = ({
     }
   };
 
-  const handleDelete = async (e: React.MouseEvent, id: number) => {
+  const handleDelete = async (e: React.MouseEvent, id: number | undefined) => {
     e.stopPropagation();
+
+    if (id === undefined) {
+      console.error('[HistoryModal] Cannot delete version without id');
+      return;
+    }
 
     if (!confirm('确定要删除这个版本吗？')) {
       return;

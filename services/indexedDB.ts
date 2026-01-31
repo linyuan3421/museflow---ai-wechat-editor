@@ -27,9 +27,11 @@ export class IndexedDB {
     this.storeOptions = options.storeOptions || { keyPath: 'id', autoIncrement: true };
 
     if (options.storeInit) {
-      this.initStore = options.storeInit;
+      this.storeInitCallback = options.storeInit;
     }
   }
+
+  private storeInitCallback?: (objectStore: IDBObjectStore) => void;
 
   async init(): Promise<IDBDatabase> {
     const indexedDB = window.indexedDB || (window as any).mozIndexedDB || (window as any).webkitIndexedDB;
@@ -75,6 +77,11 @@ export class IndexedDB {
       }
 
       console.log(`[IndexedDB] 创建对象存储: ${name}`);
+
+      // 调用用户提供的初始化回调
+      if (this.storeInitCallback) {
+        this.storeInitCallback(objectStore);
+      }
     }
   }
 
