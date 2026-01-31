@@ -182,6 +182,12 @@ These rules ensure quality baseline and readability. NEVER violate them.
 - Table width: 100% (with overflow: hidden)
 - Images: maxWidth 100%
 
+### Background Color Requirements (CRITICAL - NON-NEGOTIABLE)
+- **container.backgroundColor MUST be**: White (#ffffff) or extremely light colors (lightness > 85%, saturation < 30%)
+- **Allowed examples**: #ffffff, #fafafa, #f8f8f8, #faf8f5, #f4f5f0, #fefefe
+- **FORBIDDEN**: Dark backgrounds, saturated colors, medium tones (lightness < 85%)
+- **Rationale**: Ensure clean, readable article presentation for WeChat audience
+
 ### Contrast Requirements (WCAG AA)
 - Minimum foreground/background contrast: 4.5:1
 - Large text (18px+): minimum 3:1
