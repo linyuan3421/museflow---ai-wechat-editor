@@ -15,15 +15,21 @@ export class IndexedDB {
   private dbName: string;
   private storeName: string;
   private storeOptions: IDBObjectStoreParameters;
+  private storeInitCallback?: (objectStore: IDBObjectStore) => void;
 
   constructor(options: {
     name: string;
     storeName: string;
     storeOptions?: IDBObjectStoreParameters;
+    storeInit?: (objectStore: IDBObjectStore) => void;
   }) {
     this.dbName = options.name;
     this.storeName = options.storeName;
     this.storeOptions = options.storeOptions || { keyPath: 'id', autoIncrement: true };
+
+    if (options.storeInit) {
+      this.storeInitCallback = options.storeInit;
+    }
   }
 
   async init(): Promise<IDBDatabase> {
@@ -70,6 +76,11 @@ export class IndexedDB {
       }
 
       console.log(`[IndexedDB] 创建对象存储: ${name}`);
+
+      // 调用用户提供的初始化回调
+      if (this.storeInitCallback) {
+        this.storeInitCallback(objectStore);
+      }
     }
   }
 

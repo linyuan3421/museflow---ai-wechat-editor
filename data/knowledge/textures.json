@@ -1,0 +1,503 @@
+[
+  {
+    "id": "texture-oil-painting",
+    "type": "texture",
+    "keywords": [
+      "油画",
+      "oil painting",
+      "笔触",
+      "canvas",
+      "纹理",
+      "艺术",
+      "artistic",
+      "layered",
+      "画布",
+      "颜料",
+      "texture"
+    ],
+    "name": "油画质感",
+    "description": "模拟油画画布的纹理和笔触效果",
+    "data": {
+      "background": {
+        "canvasTexture": "radial-gradient(circle at 20% 30%, rgba(0,0,0,0.02) 1px, transparent 1px)",
+        "backgroundSize": "4px 4px"
+      },
+      "typography": {
+        "h1": "textShadow: 1px 1px 0px rgba(0,0,0,0.1) (depth effect)",
+        "fonts": "Georgia, Noto Serif SC (serif with personality)"
+      },
+      "borders": {
+        "technique": "Slightly uneven (use different widths top/bottom)",
+        "examples": "borderTop: 2px solid; borderBottom: 1px solid"
+      },
+      "colors": {
+        "approach": "Rich, layered (use slight variations)"
+      }
+    }
+  },
+  {
+    "id": "texture-watercolor",
+    "type": "texture",
+    "keywords": [
+      "水彩",
+      "watercolor",
+      "wash",
+      "柔和",
+      "透明",
+      "translucent",
+      "艺术",
+      "水彩画",
+      "晕染",
+      "清淡"
+    ],
+    "name": "水彩质感",
+    "description": "模拟水彩画的透明感和柔和边缘",
+    "data": {
+      "background": {
+        "washEffect": "linear-gradient(135deg, rgba(255,182,193,0.1) 0%, transparent 50%)"
+      },
+      "borders": {
+        "style": "Soft, uneven",
+        "examples": "border: 1px solid rgba(0,0,0,0.1)",
+        "borderRadius": "8px (soft corners)"
+      },
+      "h1": {
+        "watercolorBleed": "textShadow: 0 0 20px rgba(255,105,180,0.3) (glow effect)"
+      },
+      "colors": {
+        "approach": "Pastel, washed-out"
+      },
+      "spacing": {
+        "lineHeight": "1.9-2.0 (very generous, wash effect)"
+      }
+    }
+  },
+  {
+    "id": "texture-concrete",
+    "type": "texture",
+    "keywords": [
+      "水泥",
+      "concrete",
+      "混凝土",
+      "粗糙",
+      "raw",
+      "工业",
+      "industrial",
+      "原始",
+      "粗犷",
+      "urban"
+    ],
+    "name": "水泥质感",
+    "description": "原始、未加饰的水泥混凝土质感",
+    "data": {
+      "background": {
+        "color": "#F5F3EF",
+        "noise": "Subtle grain texture (optional)"
+      },
+      "borders": {
+        "style": "Raw, thick (3-4px solid)",
+        "examples": "border: 3px solid #333"
+      },
+      "shapes": {
+        "borderRadius": "0px"
+      },
+      "colors": {
+        "palette": "Grays (#333-#999)"
+      },
+      "typography": {
+        "fontWeights": "Bold, industrial (700-800)"
+      }
+    }
+  },
+  {
+    "id": "texture-metallic",
+    "type": "texture",
+    "keywords": [
+      "金属",
+      "metallic",
+      "金色",
+      "gold",
+      "silver",
+      "shimmer",
+      "sheen",
+      "premium",
+      "光泽",
+      "反射"
+    ],
+    "name": "金属质感",
+    "description": "模拟金属的光泽和反射效果",
+    "data": {
+      "background": {
+        "sheen": "linear-gradient(135deg, #F7E7CE 0%, #FFEFDB 100%)"
+      },
+      "borders": {
+        "metallicSheen": "border: 1px solid #D4AF37",
+        "shadow": "boxShadow: 0 2px 4px rgba(212,175,55,0.2)"
+      },
+      "h1": {
+        "goldGradientText": "background: linear-gradient(to right, #D4AF37, #FFD700)",
+        "textClip": "-webkit-background-clip: text, -webkit-text-fill-color: transparent"
+      },
+      "colors": {
+        "palette": "Gold, silver, bronze tones"
+      }
+    }
+  },
+  {
+    "id": "texture-paper",
+    "type": "texture",
+    "keywords": [
+      "纸张",
+      "paper",
+      "印刷",
+      "print",
+      "温暖",
+      "warm",
+      "vintage",
+      "纸质",
+      "印刷品",
+      "复古纸"
+    ],
+    "name": "纸张印刷质感",
+    "description": "模拟印刷纸张的温暖纹理",
+    "data": {
+      "background": {
+        "color": "#FAF9F6",
+        "texture": "radial-gradient(#E8E6E1 1px, transparent 1px)",
+        "backgroundSize": "20px 20px"
+      },
+      "typography": {
+        "fonts": "Georgia, Times, serif"
+      },
+      "colors": {
+        "text": "Warm black (#2C2C2C)"
+      },
+      "borders": {
+        "style": "1px, sharp"
+      }
+    }
+  },
+  {
+    "id": "texture-silk",
+    "type": "texture",
+    "keywords": [
+      "丝绸",
+      "silk",
+      "光泽",
+      "smooth",
+      "elegant",
+      "luxury",
+      "柔软",
+      "光滑",
+      "优雅"
+    ],
+    "name": "丝绸质感",
+    "description": "光滑、柔软的丝绸质感",
+    "data": {
+      "background": {
+        "sheen": "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 50%)",
+        "smooth": "无纹理，纯渐变"
+      },
+      "typography": {
+        "fonts": "Elegant serif (Georgia, Noto Serif SC)"
+      },
+      "borders": {
+        "style": "Thin, elegant (1px solid)",
+        "radius": "4px (slight softness)"
+      },
+      "colors": {
+        "approach": "Rich, saturated colors with shimmer"
+      }
+    }
+  },
+  {
+    "id": "texture-velvet",
+    "type": "texture",
+    "keywords": [
+      "天鹅绒",
+      "velvet",
+      "柔软",
+      "plush",
+      "luxury",
+      "depth",
+      "丰富",
+      "质感",
+      "高级"
+    ],
+    "name": "天鹅绒质感",
+    "description": "柔软、深邃的天鹅绒质感",
+    "data": {
+      "background": {
+        "depth": "radial-gradient(circle at 30% 30%, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.2) 100%)",
+        "rich": "Deep colors with subtle gradients"
+      },
+      "typography": {
+        "h1": "textShadow: 0 2px 4px rgba(0,0,0,0.2) (depth)"
+      },
+      "colors": {
+        "palette": "Deep jewel tones (emerald, ruby, sapphire)"
+      },
+      "borders": {
+        "style": "2px solid, rounded (8px)"
+      }
+    }
+  },
+  {
+    "id": "texture-linen",
+    "type": "texture",
+    "keywords": [
+      "亚麻",
+      "linen",
+      "编织",
+      "woven",
+      "natural",
+      "textured",
+      "自然",
+      "粗糙",
+      "有机"
+    ],
+    "name": "亚麻质感",
+    "description": "自然编织的亚麻质感",
+    "data": {
+      "background": {
+        "weave": "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.02) 2px, rgba(0,0,0,0.02) 4px)",
+        "natural": "Warm off-white (#FAF8F5)"
+      },
+      "typography": {
+        "fonts": "Serif or rounded sans-serif"
+      },
+      "colors": {
+        "palette": "Natural tones (beige, tan, sage)"
+      },
+      "borders": {
+        "style": "1-2px solid, slightly textured"
+      }
+    }
+  },
+  {
+    "id": "texture-leather",
+    "type": "texture",
+    "keywords": [
+      "皮革",
+      "leather",
+      "质感",
+      "grain",
+      "vintage",
+      "premium",
+      "温暖",
+      "纹理",
+      "高级"
+    ],
+    "name": "皮革质感",
+    "description": "温暖、有纹理的皮革质感",
+    "data": {
+      "background": {
+        "grain": "radial-gradient(circle at 50% 50%, rgba(0,0,0,0.02) 1px, transparent 2px)",
+        "backgroundSize": "3px 3px",
+        "warm": "Warm brown tones (#D4A373, #A98467)"
+      },
+      "typography": {
+        "fonts": "Serif (Georgia, Noto Serif SC)"
+      },
+      "colors": {
+        "palette": "Browns, tans, cognac"
+      },
+      "borders": {
+        "style": "2px solid, rounded (6px)"
+      }
+    }
+  },
+  {
+    "id": "texture-wood",
+    "type": "texture",
+    "keywords": [
+      "木纹",
+      "wood",
+      "grain",
+      "自然",
+      "warm",
+      "organic",
+      "温暖",
+      "纹理",
+      "木质感"
+    ],
+    "name": "木纹质感",
+    "description": "自然温暖的木纹质感",
+    "data": {
+      "background": {
+        "grain": "repeating-linear-gradient(90deg, rgba(0,0,0,0.02) 0px, rgba(0,0,0,0.02) 1px, transparent 1px, transparent 3px)",
+        "warm": "Warm wood tones (#D4A373, #C19A6B)"
+      },
+      "typography": {
+        "fonts": "Serif or slab-serif"
+      },
+      "colors": {
+        "palette": "Wood tones (oak, walnut, mahogany)"
+      },
+      "borders": {
+        "style": "2px solid, sharp or slightly rounded (4px)"
+      }
+    }
+  },
+  {
+    "id": "texture-marble",
+    "type": "texture",
+    "keywords": [
+      "大理石",
+      "marble",
+      "veined",
+      "luxury",
+      "elegant",
+      "classic",
+      "奢华",
+      "纹理",
+      "优雅"
+    ],
+    "name": "大理石质感",
+    "description": "经典优雅的大理石质感",
+    "data": {
+      "background": {
+        "veining": "Subtle linear gradients creating vein patterns",
+        "base": "White or light gray with subtle veins"
+      },
+      "typography": {
+        "fonts": "Elegant serif (Bodoni, Didot)"
+      },
+      "colors": {
+        "palette": "White, gray, subtle gold/silver veins"
+      },
+      "borders": {
+        "style": "Thin, elegant (1px solid)"
+      }
+    }
+  },
+  {
+    "id": "texture-glass",
+    "type": "texture",
+    "keywords": [
+      "玻璃",
+      "glass",
+      "transparent",
+      "frosted",
+      "modern",
+      "clean",
+      "透明",
+      "磨砂",
+      "现代"
+    ],
+    "name": "玻璃质感",
+    "description": "现代透明的玻璃质感",
+    "data": {
+      "background": {
+        "glass": "rgba(255,255,255,0.1) with backdrop-filter: blur(10px)",
+        "frosted": "Semi-transparent white with blur"
+      },
+      "typography": {
+        "fonts": "Sans-serif, light weights (300-400)"
+      },
+      "borders": {
+        "style": "1px solid rgba(255,255,255,0.2)",
+        "shadow": "boxShadow: 0 4px 6px rgba(0,0,0,0.1)"
+      },
+      "colors": {
+        "approach": "Light, airy, transparent"
+      }
+    }
+  },
+  {
+    "id": "texture-neon-glow",
+    "type": "texture",
+    "keywords": [
+      "霓虹",
+      "neon",
+      "发光",
+      "glow",
+      "cyberpunk",
+      "futuristic",
+      "光效",
+      "未来",
+      "科技"
+    ],
+    "name": "霓虹发光质感",
+    "description": "强烈的霓虹发光效果",
+    "data": {
+      "background": {
+        "dark": "#0A0A0A or dark navy"
+      },
+      "typography": {
+        "h1": "textShadow: 0 0 10px currentColor, 0 0 20px currentColor (double glow)",
+        "fonts": "Bold, display fonts"
+      },
+      "colors": {
+        "palette": "Neon colors (cyan #00FFFF, magenta #FF00FF, yellow #FFFF00)"
+      },
+      "borders": {
+        "style": "Glowing borders with box-shadow"
+      }
+    }
+  },
+  {
+    "id": "texture-grain",
+    "type": "texture",
+    "keywords": [
+      "颗粒",
+      "grain",
+      "noise",
+      "film",
+      "texture",
+      "vintage",
+      "复古",
+      "纹理",
+      "胶片"
+    ],
+    "name": "颗粒纹理质感",
+    "description": "胶片颗粒的纹理质感",
+    "data": {
+      "background": {
+        "noise": "SVG filter or base64 noise image",
+        "subtle": "Low opacity (0.03-0.05)"
+      },
+      "typography": {
+        "fonts": "Any, texture is background-independent"
+      },
+      "colors": {
+        "approach": "Works with any color scheme"
+      },
+      "borders": {
+        "style": "1px solid, sharp"
+      }
+    }
+  },
+  {
+    "id": "texture-gradient-aura",
+    "type": "texture",
+    "keywords": [
+      "渐变",
+      "gradient",
+      "光晕",
+      "aura",
+      "soft",
+      "ethereal",
+      "柔和",
+      "空灵",
+      "梦幻"
+    ],
+    "name": "渐变光晕质感",
+    "description": "柔和的渐变光晕效果",
+    "data": {
+      "background": {
+        "aura": "radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, transparent 70%)",
+        "layered": "Multiple radial gradients overlapping"
+      },
+      "typography": {
+        "fonts": "Light, elegant (300-400 weight)"
+      },
+      "colors": {
+        "approach": "Soft, pastel, ethereal"
+      },
+      "borders": {
+        "style": "None or very subtle (1px transparent)"
+      }
+    }
+  }
+]

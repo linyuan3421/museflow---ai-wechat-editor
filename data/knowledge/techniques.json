@@ -1,0 +1,437 @@
+[
+  {
+    "id": "technique-h1-decoration",
+    "type": "technique",
+    "keywords": [
+      "H1装饰",
+      "h1 decoration",
+      "title",
+      "heading",
+      "主标题",
+      "标题设计",
+      "heading style"
+    ],
+    "name": "H1 装饰技法库",
+    "description": "多种 H1 装饰方法的具体 CSS 实现",
+    "data": {
+      "borderBased": [
+        "borderBottom: 2-4px solid (classic underline)",
+        "borderLeft: 4-8px solid (modern accent)",
+        "borderTop: 2px solid + paddingBottom: 16px (inverted underline)",
+        "border: 2px solid + padding: 8px 16px (framed)"
+      ],
+      "backgroundBased": [
+        "backgroundColor + padding (inline capsule)",
+        "backgroundColor + display inline-block (highlight style)",
+        "linearGradient background (color shift)"
+      ],
+      "shadowBased": [
+        "textShadow: 1px 1px 0px (retro/offset)",
+        "textShadow: 0 0 10px (glow/neon)",
+        "textShadow: 2px 2px 4px rgba(0,0,0,0.1) (elegant depth)"
+      ],
+      "typographyBased": [
+        "letterSpacing: 0.15-0.2em + textTransform uppercase (elegant caps)",
+        "fontWeight: 900 + letterSpacing: -0.02em (ultra bold condensed)",
+        "textTransform: uppercase (minimalist statement)"
+      ]
+    }
+  },
+  {
+    "id": "technique-h2-decoration",
+    "type": "technique",
+    "keywords": [
+      "H2装饰",
+      "h2 decoration",
+      "subtitle",
+      "二级标题",
+      "小标题",
+      "副标题"
+    ],
+    "name": "H2 装饰技法库",
+    "description": "多种 H2 装饰方法的具体 CSS 实现",
+    "data": {
+      "modernHierarchy": [
+        "borderLeft: 3-4px solid + paddingLeft: 8-12px (clean)",
+        "backgroundColor: light tint + padding: 4-12px (badge style)",
+        "borderBottom: 1-2px solid (subtle separation)",
+        "display: inline-block + backgroundColor (floating label)"
+      ],
+      "personality": [
+        "borderRadius: 4px + backgroundColor (soft modern)",
+        "borderRadius: 999px + backgroundColor (pill/organic)",
+        "boxShadow: 0 2px 4px rgba(0,0,0,0.05) (elevation)"
+      ],
+      "combinations": [
+        "borderLeft + backgroundColor (accent highlight)",
+        "borderBottom + display flex (centered underline)"
+      ]
+    }
+  },
+  {
+    "id": "technique-blockquote-decoration",
+    "type": "technique",
+    "keywords": [
+      "引用装饰",
+      "blockquote decoration",
+      "引用块",
+      "quote",
+      "引用",
+      "名言",
+      "blockquote style"
+    ],
+    "name": "引用块装饰技法库",
+    "description": "多种 blockquote 装饰方法的具体 CSS 实现",
+    "data": {
+      "classic": [
+        "borderLeft: 3-4px solid + paddingLeft (minimal)",
+        "borderLeft + borderRight: symmetrical (literary)"
+      ],
+      "creative": [
+        "::before content: '\"' (large opening quote mark)",
+        "::after content: '\"' (closing quote mark, float: right)",
+        "backgroundColor: light tint + borderRadius (card style)"
+      ],
+      "typography": [
+        "fontStyle: italic (traditional)",
+        "fontWeight: 500 (assertive quote)",
+        "textTransform: uppercase (statement quote)"
+      ]
+    }
+  },
+  {
+    "id": "technique-strong-decoration",
+    "type": "technique",
+    "keywords": [
+      "强调装饰",
+      "strong decoration",
+      "bold",
+      "highlight",
+      "marker",
+      "强调",
+      "突出",
+      "标记"
+    ],
+    "name": "强调文本装饰技法库",
+    "description": "多种 strong/bold 文本装饰方法",
+    "data": {
+      "highlighter": [
+        "backgroundColor: yellow/rgba(255,255,0,0.3) + padding: 2px 4px (marker style)",
+        "background: linear-gradient(to top, color 50%, transparent 50%) (highlight)"
+      ],
+      "colorBased": [
+        "color: accent color only (simple emphasis)",
+        "color + fontWeight: 600 (moderate emphasis)",
+        "color + italic (gentle emphasis)"
+      ],
+      "decorative": [
+        "borderBottom: 2px solid (underline emphasis)",
+        "textShadow: 1px 1px 0px (offset emphasis)",
+        "letterSpacing: 0.05em + fontWeight: 700 (spacious emphasis)"
+      ]
+    }
+  },
+  {
+    "id": "technique-link-decoration",
+    "type": "technique",
+    "keywords": [
+      "链接装饰",
+      "link decoration",
+      "anchor",
+      "hyperlink",
+      "链接样式",
+      "anchor style",
+      "url"
+    ],
+    "name": "链接装饰技法库",
+    "description": "多种链接装饰方法",
+    "data": {
+      "classic": [
+        "color: accent color + textDecoration: underline (standard)",
+        "color: accent color + borderBottom: 1px solid (custom underline)"
+      ],
+      "modern": [
+        "color: accent color only (clean, no underline)",
+        "color: accent color + transition: color 0.2s (interactive)"
+      ],
+      "hover": [
+        ":hover { textDecoration: underline } (reveal on hover)",
+        ":hover { color: darken(accent, 10%) } (color shift)",
+        ":hover { letterSpacing: 0.05em } (subtle movement)"
+      ],
+      "external": [
+        "::after { content: '↗' } (external link indicator)",
+        "target: _blank styling (differentiate external)"
+      ]
+    }
+  },
+  {
+    "id": "technique-list-decoration",
+    "type": "technique",
+    "keywords": [
+      "列表装饰",
+      "list decoration",
+      "ul",
+      "ol",
+      "bullet",
+      "number",
+      "列表样式",
+      "bullet point"
+    ],
+    "name": "列表装饰技法库",
+    "description": "多种列表装饰方法",
+    "data": {
+      "customBullets": [
+        "listStyleType: disc/circle/square (classic)",
+        "::marker { color: accent color } (colored bullets)",
+        "listStyleImage: custom icon (custom bullets)"
+      ],
+      "spacing": [
+        "lineHeight: 1.6-1.8 (comfortable reading)",
+        "li { marginBottom: 0.5em } (item separation)",
+        "paddingLeft: 1.5-2em (indentation)"
+      ],
+      "numbered": [
+        "listStyleType: decimal/upper-roman/lower-alpha (variants)",
+        "listStylePosition: inside (numbers in flow)",
+        "custom counters with ::before (styled numbering)"
+      ]
+    }
+  },
+  {
+    "id": "technique-code-decoration",
+    "type": "technique",
+    "keywords": [
+      "代码装饰",
+      "code decoration",
+      "inline code",
+      "code block",
+      "monospace",
+      "代码样式",
+      "programming"
+    ],
+    "name": "代码装饰技法库",
+    "description": "多种代码块和行内代码装饰方法",
+    "data": {
+      "inlineCode": [
+        "backgroundColor: #F5F3EF + padding: 2px 6px + borderRadius: 4px (subtle capsule)",
+        "fontFamily: monospace + color: accent color (simple)",
+        "borderBottom: 1px dotted (minimal)"
+      ],
+      "codeBlock": [
+        "backgroundColor: #1A1A1A + color: #FFFFFF (dark theme)",
+        "backgroundColor: #F5F3EF + border: 1px solid #E5E5E5 (light theme)",
+        "fontFamily: 'Fira Code', 'Monaco', monospace + fontSize: 0.9em"
+      ],
+      "syntax": [
+        "Syntax highlighting (prism.js, highlight.js)",
+        "Line numbers (padding-left with ::before)",
+        "Copy button (position absolute top-right)"
+      ]
+    }
+  },
+  {
+    "id": "technique-shadow-effects",
+    "type": "technique",
+    "keywords": [
+      "阴影",
+      "shadow",
+      "depth",
+      "elevation",
+      "阴影效果",
+      "深度",
+      "立体"
+    ],
+    "name": "阴影效果技法库",
+    "description": "多种阴影效果实现方法",
+    "data": {
+      "boxShadow": [
+        "0 2px 4px rgba(0,0,0,0.1) (subtle elevation)",
+        "0 4px 8px rgba(0,0,0,0.15) (medium elevation)",
+        "0 8px 16px rgba(0,0,0,0.2) (high elevation)",
+        "0 0 10px currentColor (glow effect)"
+      ],
+      "textShadow": [
+        "1px 1px 0px rgba(0,0,0,0.1) (subtle depth)",
+        "2px 2px 4px rgba(0,0,0,0.2) (strong depth)",
+        "0 0 10px accent color (neon glow)"
+      ],
+      "innerShadow": [
+        "inset 0 2px 4px rgba(0,0,0,0.1) (inset depth)",
+        "inset 0 0 10px rgba(0,0,0,0.05) (soft inset glow)"
+      ]
+    }
+  },
+  {
+    "id": "technique-gradient-effects",
+    "type": "technique",
+    "keywords": [
+      "渐变",
+      "gradient",
+      "linear",
+      "radial",
+      "渐变效果",
+      "色彩过渡",
+      "gradient"
+    ],
+    "name": "渐变效果技法库",
+    "description": "多种渐变效果实现方法",
+    "data": {
+      "linear": [
+        "linear-gradient(to right, color1, color2) (horizontal)",
+        "linear-gradient(to bottom, color1, color2) (vertical)",
+        "linear-gradient(135deg, color1, color2) (diagonal)",
+        "linear-gradient(90deg, color1 0%, color2 50%, color1 100%) (midpoint shift)"
+      ],
+      "radial": [
+        "radial-gradient(circle, color1, color2) (center circular)",
+        "radial-gradient(circle at 30% 30%, color1, color2) (offset center)",
+        "radial-gradient(ellipse, color1, color2) (elliptical)"
+      ],
+      "text": [
+        "background-clip: text + -webkit-text-fill-color: transparent (gradient text)",
+        "background: linear-gradient(...) + color: transparent (text reveal)"
+      ],
+      "conic": [
+        "conic-gradient(from 0deg, color1, color2, color1) (conical gradient)"
+      ]
+    }
+  },
+  {
+    "id": "technique-spacing-techniques",
+    "type": "technique",
+    "keywords": [
+      "间距",
+      "spacing",
+      "whitespace",
+      "breathing",
+      "留白",
+      "间距技法",
+      "排版间距"
+    ],
+    "name": "间距排版技法库",
+    "description": "多种间距和留白处理方法",
+    "data": {
+      "lineHeight": [
+        "1.5-1.6 (compact, dense)",
+        "1.7-1.8 (comfortable, balanced)",
+        "1.9-2.0 (generous, airy)",
+        "2.0+ (maximum breathing room)"
+      ],
+      "margins": [
+        "0.5-1em (tight)",
+        "1.2-1.5em (standard)",
+        "1.8-2em (generous)",
+        "2.5em+ (maximum isolation)"
+      ],
+      "letterSpacing": [
+        "-0.02em to 0 (tight, condensed)",
+        "0.05em (slightly expanded)",
+        "0.1-0.15em (elegant spacing)",
+        "0.2em+ (very spacious)"
+      ],
+      "paragraphSpacing": [
+        "marginBottom: 1em (standard)",
+        "marginBottom: 1.5-2em (generous separation)",
+        "textIndent: 2em (first line indent)"
+      ]
+    }
+  },
+  {
+    "id": "technique-border-radius-styles",
+    "type": "technique",
+    "keywords": [
+      "圆角",
+      "border radius",
+      "rounded",
+      "soft",
+      "sharp",
+      "圆角样式",
+      "rounded corners"
+    ],
+    "name": "圆角样式技法库",
+    "description": "多种圆角处理方法",
+    "data": {
+      "sharp": [
+        "borderRadius: 0px (completely sharp, brutalist)",
+        "borderRadius: 1-2px (minimal softness)"
+      ],
+      "soft": [
+        "borderRadius: 4-6px (slight softness)",
+        "borderRadius: 8px (standard softness)",
+        "borderRadius: 12px (friendly, approachable)"
+      ],
+      "organic": [
+        "borderRadius: 16px (very soft, friendly)",
+        "borderRadius: 20-24px (pill-like, organic)",
+        "borderRadius: 999px (completely rounded, pill)"
+      ],
+      "asymmetric": [
+        "borderRadius: 8px 0 8px 0 (asymmetric)",
+        "borderRadius: 50% 0 50% 0 (leaf shape)"
+      ]
+    }
+  },
+  {
+    "id": "technique-animation-effects",
+    "type": "technique",
+    "keywords": [
+      "动画",
+      "animation",
+      "transition",
+      "hover",
+      "动画效果",
+      "交互",
+      "motion"
+    ],
+    "name": "动画效果技法库",
+    "description": "多种微动画和过渡效果",
+    "data": {
+      "transitions": [
+        "transition: all 0.2s ease (standard smooth)",
+        "transition: color 0.3s ease-in-out (color shift)",
+        "transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) (spring)"
+      ],
+      "hover": [
+        ":hover { transform: translateY(-2px) } (lift)",
+        ":hover { transform: scale(1.05) } (grow)",
+        ":hover { filter: brightness(1.1) } (brighten)"
+      ],
+      "fade": [
+        "@keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }",
+        "@keyframes slideUp { from { transform: translateY(20px); opacity: 0 } }"
+      ]
+    }
+  },
+  {
+    "id": "technique-background-patterns",
+    "type": "technique",
+    "keywords": [
+      "背景图案",
+      "background pattern",
+      "texture",
+      "repeat",
+      "背景纹理",
+      "图案",
+      "background"
+    ],
+    "name": "背景图案技法库",
+    "description": "多种背景图案实现方法",
+    "data": {
+      "dots": [
+        "radial-gradient(circle, #ccc 1px, transparent 1px) + backgroundSize: 20px 20px (dot grid)",
+        "radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px) (subtle dots)"
+      ],
+      "lines": [
+        "repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(0,0,0,0.1) 19px, rgba(0,0,0,0.1) 20px) (ruled paper)",
+        "linear-gradient(45deg, transparent 48%, rgba(0,0,0,0.05) 48%, rgba(0,0,0,0.05) 52%, transparent 52%) (diagonal stripes)"
+      ],
+      "grid": [
+        "linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px) + linear-gradient(to bottom, ...) (grid pattern)"
+      ],
+      "geometric": [
+        "conic-gradient(from 45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee) (checkered)"
+      ]
+    }
+  }
+]
