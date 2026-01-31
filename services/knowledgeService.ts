@@ -35,7 +35,9 @@ let isInitialized = false;
  * 初始化知识库数据库
  */
 export async function initKnowledgeDB(): Promise<void> {
-  if (isInitialized) {
+  // 双重检查：使用 knowledgeDB 实例而不是标志位
+  // 避免在 React Strict Mode 下的重复初始化
+  if (knowledgeDB !== null) {
     return;
   }
 
@@ -46,7 +48,7 @@ export async function initKnowledgeDB(): Promise<void> {
 
     // 创建 Orama 数据库
     // 注意：data 字段不加入 schema（不会索引但仍然存储和返回）
-    knowledgeDB = await create({
+    const db = await create({
       schema: {
         id: 'string',
         type: 'string',
@@ -59,7 +61,7 @@ export async function initKnowledgeDB(): Promise<void> {
 
     // 索引所有知识条目
     for (const entry of KNOWLEDGE_BASE) {
-      await insert(knowledgeDB, {
+      await insert(db, {
         id: entry.id,
         type: entry.type,
         keywords: entry.keywords.join(' '), // 用空格连接关键词
@@ -69,6 +71,8 @@ export async function initKnowledgeDB(): Promise<void> {
       });
     }
 
+    // 在所有插入成功后再赋值，避免部分初始化
+    knowledgeDB = db;
     isInitialized = true;
     console.log(`[KnowledgeService] 成功初始化知识库，已索引 ${KNOWLEDGE_BASE.length} 条知识`);
   } catch (error: unknown) {
