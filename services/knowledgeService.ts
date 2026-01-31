@@ -203,15 +203,17 @@ export async function retrieveKnowledge(
       threshold: 0.05
     });
 
-    // 转换为统一格式
-    const results: RetrievalResult[] = searchResults.hits.map((hit: any) => ({
-      id: hit.id,
-      type: hit.result.type,
-      name: hit.result.name,
-      description: hit.result.description,
-      data: hit.result.data,
-      score: hit.score
-    }));
+    // 转换为统一格式（过滤掉 result 为 undefined 的项）
+    const results: RetrievalResult[] = searchResults.hits
+      .filter((hit: any) => hit && hit.result)  // 过滤无效结果
+      .map((hit: any) => ({
+        id: hit.id,
+        type: hit.result.type,
+        name: hit.result.name,
+        description: hit.result.description,
+        data: hit.result.data,
+        score: hit.score
+      }));
 
     console.log(`[KnowledgeService] 检索 "${expandedQuery}" 找到 ${results.length} 条相关知识`);
     console.log(`[KnowledgeService] 检索结果:`, results.map(r => ({
