@@ -114,23 +114,24 @@ async function rewriteQueryWithLLM(query: string, config?: any): Promise<string>
   try {
     const systemPrompt = `你是一个搜索引擎查询优化专家。你的任务是将用户的简短查询扩展为更丰富的搜索关键词。
 
-规则：
-1. 分析用户的查询意图（场景、情绪、颜色、风格等）
-2. 生成 5-10 个相关的中英文关键词
-3. 包括同义词、相关概念、英文翻译
-4. 关键词用空格分隔，不要其他标点
+**重要规则**：
+1. 只生成 5-8 个最相关的关键词（不要太多）
+2. 只输出关键词，用空格分隔，不要其他任何文字
+3. 不要输出"英文翻译"、"关键词"、"扩展"等标注
+4. 不要使用管道符或其他标点符号
+5. 包括同义词和相关概念的中英文
 
-示例：
-输入: "日照金山"
-输出: 日照金山 golden hour alpine glow 日出 日落 日出金山 雪山 日照
+**示例**：
+输入: 日照金山
+输出: 日照金山 golden hour 日出 日落 雪山 alpine glow
 
-输入: "莫兰迪"
-输出: 莫兰迪 morandi 灰粉 低饱和 muted 高级灰 oil painting
+输入: 莫兰迪
+输出: 莫兰迪 morandi 灰粉 低饱和 muted 高级灰
 
-输入: "温暖的森林咖啡馆"
-输出: 森林 咖啡馆 温暖 warm forest green nature cafe brown
+输入: 森林咖啡馆
+输出: 森林 forest 绿色 nature cafe coffee 咖啡馆
 
-现在，请优化以下查询：`;
+现在，请优化以下查询（只输出关键词）：`;
 
     const response = await fetch(`${config.baseUrl.replace(/\/+$/, '')}/chat/completions`, {
       method: 'POST',
@@ -156,10 +157,15 @@ async function rewriteQueryWithLLM(query: string, config?: any): Promise<string>
     const data = await response.json();
     const rewrittenQuery = data.choices?.[0]?.message?.content?.trim() || query;
 
-    // 清理 AI 返回的内容（移除多余字符）
+    // 清理 AI 返回的内容（移除多余字符和标注）
     const cleanedQuery = rewrittenQuery
-      .replace(/[，、。；：]/g, ' ')  // 中文标点替换为空格
+      .replace(/[，、。；：|\\\-]/g, ' ')  // 标点和管道符替换为空格
+      .replace(/英文翻译|翻译|keywords|关键词|扩展|输出|输入/gi, '')  // 移除标注
       .replace(/\s+/g, ' ')  // 多个空格压缩为一个
+      .split(' ')  // 分割成数组
+      .filter(word => word.length > 0)  // 移除空词
+      .slice(0, 15)  // 限制最多15个关键词
+      .join(' ')
       .trim();
 
     console.log(`[LLM Query Rewrite] "${query}" → "${cleanedQuery}"`);
