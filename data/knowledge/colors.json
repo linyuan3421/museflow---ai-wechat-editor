@@ -2420,5 +2420,385 @@
       ],
       "cssCode": ".ukiyoe-outline { border: 3px solid #1A1A1A; }"
     }
+  },
+  {
+    "id": "color-japan-ai-iro",
+    "type": "color_palette",
+    "keywords": [
+      "藍色",
+      "ai-iro",
+      "indigo",
+      "indigo dye",
+      "japanese",
+      "traditional",
+      "蓝",
+      "indigo"
+    ],
+    "name": "日本传统色 - 藍色",
+    "description": "日本传统色「藍色」，蓝草染制的深蓝",
+    "data": {
+      "colors": [
+        "#165E7E"
+      ],
+      "englishName": "Indigo",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japan-ame-iro",
+    "type": "color_palette",
+    "keywords": [
+      "飴色",
+      "ame-iro",
+      "candy",
+      "brown",
+      "amber",
+      "japanese",
+      "traditional",
+      "糖色",
+      "brown"
+    ],
+    "name": "日本传统色 - 飴色",
+    "description": "日本传统色「飴色」，糖饴的褐色",
+    "data": {
+      "colors": [
+        "#D48245"
+      ],
+      "englishName": "Candy",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japan-kiiro",
+    "type": "color_palette",
+    "keywords": [
+      "黄色",
+      "kiiro",
+      "yellow",
+      "japanese",
+      "traditional",
+      "黄",
+      "yellow"
+    ],
+    "name": "日本传统色 - 黄色",
+    "description": "日本传统色「黄色」，明亮的黄色",
+    "data": {
+      "colors": [
+        "#FFD700"
+      ],
+      "englishName": "Yellow",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japan-midori",
+    "type": "color_palette",
+    "keywords": [
+      "緑",
+      "midori",
+      "green",
+      "japanese",
+      "traditional",
+      "绿",
+      "green"
+    ],
+    "name": "日本传统色 - 緑",
+    "description": "日本传统色「緑」，清新的绿色",
+    "data": {
+      "colors": [
+        "#3A7D44"
+      ],
+      "englishName": "Green",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japan-akane",
+    "type": "color_palette",
+    "keywords": [
+      "茜",
+      "akane",
+      "madder red",
+      "red",
+      "japanese",
+      "traditional",
+      "茜红",
+      "red"
+    ],
+    "name": "日本传统色 - 茜",
+    "description": "日本传统色「茜」，茜草染制的红色",
+    "data": {
+      "colors": [
+        "#BC4D4D"
+      ],
+      "englishName": "Madder Red",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-china-vermilion",
+    "type": "color_palette",
+    "keywords": [
+      "朱红",
+      "vermilion",
+      "china red",
+      "chinese",
+      "traditional",
+      "中国红",
+      "red"
+    ],
+    "name": "中国传统色 - 朱红",
+    "description": "中国传统色「朱红」，吉祥喜庆的红色",
+    "data": {
+      "colors": [
+        "#E34234"
+      ],
+      "englishName": "Chinese Vermilion",
+      "culturalOrigin": "中国传统色"
+    }
+  },
+  {
+    "id": "color-china-ochre",
+    "type": "color_palette",
+    "keywords": [
+      "赭石",
+      "ochre",
+      "chinese",
+      "traditional",
+      "earth",
+      "brown",
+      "土红",
+      "brown"
+    ],
+    "name": "中国传统色 - 赭石",
+    "description": "中国传统色「赭石」，大地的土红色",
+    "data": {
+      "colors": [
+        "#CC7722"
+      ],
+      "englishName": "Ochre",
+      "culturalOrigin": "中国传统色"
+    }
+  },
+  {
+    "id": "color-china-cyan",
+    "type": "color_palette",
+    "keywords": [
+      "青花蓝",
+      "cyan",
+      "blue",
+      "chinese",
+      "traditional",
+      "porcelain",
+      "青",
+      "blue"
+    ],
+    "name": "中国传统色 - 青花蓝",
+    "description": "中国传统色「青花蓝」，青花瓷的蓝色",
+    "data": {
+      "colors": [
+        "#1E90FF"
+      ],
+      "englishName": "Cyan Blue",
+      "culturalOrigin": "中国传统色"
+    }
+  },
+  {
+    "id": "color-china-purple",
+    "type": "color_palette",
+    "keywords": [
+      "富贵紫",
+      "purple",
+      "noble",
+      "chinese",
+      "traditional",
+      "紫",
+      "purple"
+    ],
+    "name": "中国传统色 - 富贵紫",
+    "description": "中国传统色「富贵紫」，高贵的紫色",
+    "data": {
+      "colors": [
+        "#800080"
+      ],
+      "englishName": "Noble Purple",
+      "culturalOrigin": "中国传统色"
+    }
+  },
+  {
+    "id": "color-china-ink-black",
+    "type": "color_palette",
+    "keywords": [
+      "水墨黑",
+      "ink black",
+      "chinese",
+      "traditional",
+      "墨色",
+      "black"
+    ],
+    "name": "中国传统色 - 水墨黑",
+    "description": "中国传统色「水墨黑」，水墨画的黑色",
+    "data": {
+      "colors": [
+        "#1A1A1A"
+      ],
+      "englishName": "Ink Black",
+      "culturalOrigin": "中国传统色"
+    }
+  },
+  {
+    "id": "color-song-ru-ware",
+    "type": "color_palette",
+    "keywords": [
+      "汝窑",
+      "ru ware",
+      "song dynasty",
+      "chinese",
+      "minimal",
+      "天青",
+      "sky blue"
+    ],
+    "name": "宋代极简 - 汝窑天青",
+    "description": "宋代汝窑的天青色，极致素雅",
+    "data": {
+      "colors": {
+        "ruSkyBlue": "#7CC2C0",
+        "elegantWhite": "#F5F3EF",
+        "subtleGray": "#D9D9D6"
+      },
+      "designApproach": [
+        "Minimal",
+        "Elegant",
+        "Generous whitespace"
+      ],
+      "typography": {
+        "fonts": "Songti (宋体)"
+      }
+    }
+  },
+  {
+    "id": "color-apple-tech",
+    "type": "color_palette",
+    "keywords": [
+      "apple",
+      "tech",
+      "minimal",
+      "clean",
+      "modern",
+      "professional",
+      "科技",
+      "简约"
+    ],
+    "name": "Industry - Apple Tech Launch",
+    "description": "Apple产品发布会的极简科技美学",
+    "data": {
+      "colors": {
+        "background": "#FFFFFF",
+        "text": "#1D1D1F",
+        "accentBlue": "#0071E3",
+        "subtleGray": "#F5F5F7"
+      },
+      "designApproach": [
+        "Minimal",
+        "Clean",
+        "High contrast"
+      ],
+      "typography": {
+        "fonts": "SF Pro, system-ui"
+      }
+    }
+  },
+  {
+    "id": "color-chanel-luxury",
+    "type": "color_palette",
+    "keywords": [
+      "chanel",
+      "luxury",
+      "elegant",
+      "black",
+      "white",
+      "premium",
+      "奢侈",
+      "优雅"
+    ],
+    "name": "Industry - Chanel Luxury",
+    "description": "Chanel品牌的黑白奢华美学",
+    "data": {
+      "colors": {
+        "black": "#000000",
+        "white": "#FFFFFF",
+        "goldAccent": "#D4AF37"
+      },
+      "designApproach": [
+        "Minimal luxury",
+        "Black & white",
+        "Gold accents"
+      ],
+      "typography": {
+        "fonts": "Serif, elegant"
+      }
+    }
+  },
+  {
+    "id": "color-financial-times",
+    "type": "color_palette",
+    "keywords": [
+      "financial times",
+      "ft",
+      "professional",
+      "salmon",
+      "newspaper",
+      "财经",
+      "专业"
+    ],
+    "name": "Industry - Financial Times",
+    "description": "金融时报的专业财经配色",
+    "data": {
+      "colors": {
+        "salmonPink": "#FFF2E6",
+        "darkBlue": "#163E6A",
+        "black": "#121212",
+        "white": "#FFFFFF"
+      },
+      "designApproach": [
+        "Professional",
+        "Trustworthy",
+        "News"
+      ],
+      "typography": {
+        "fonts": "Serif, classic"
+      }
+    }
+  },
+  {
+    "id": "color-eco-friendly",
+    "type": "color_palette",
+    "keywords": [
+      "eco",
+      "green",
+      "sustainable",
+      "nature",
+      "organic",
+      "环保",
+      "绿色"
+    ],
+    "name": "Industry - Eco Friendly",
+    "description": "环保品牌的自然绿色美学",
+    "data": {
+      "colors": {
+        "forestGreen": "#228B22",
+        "leafGreen": "#32CD32",
+        "earthBrown": "#8B4513",
+        "skyBlue": "#87CEEB"
+      },
+      "designApproach": [
+        "Natural",
+        "Organic",
+        "Sustainable"
+      ],
+      "typography": {
+        "fonts": "Rounded sans-serif"
+      }
+    }
   }
 ]
