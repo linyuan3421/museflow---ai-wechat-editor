@@ -837,7 +837,8 @@ Return ONLY valid JSON. No markdown fencing.
 
 export const generateThemeFromPrompt = async (config: AIConfig, prompt: string): Promise<ThemeStyles> => {
   // Enhance system prompt with relevant knowledge from RAG
-  const enhancedSystemPrompt = await enhancePromptWithKnowledge(THEME_SYSTEM_PROMPT, prompt);
+  // 注意：传递 config 以支持 LLM 查询重写
+  const enhancedSystemPrompt = await enhancePromptWithKnowledge(THEME_SYSTEM_PROMPT, prompt, config);
 
   return await chatCompletion(
     config,

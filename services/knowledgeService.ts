@@ -98,60 +98,77 @@ export async function initKnowledgeDB(): Promise<void> {
 }
 
 /**
- * 查询扩展：丰富用户查询词，提升检索召回率
+ * 使用 LLM 智能重写查询
  *
  * @param query 用户原始查询
- * @returns 扩展后的查询字符串
+ * @param config AI 配置（用于调用 LLM）
+ * @returns AI 扩展后的查询字符串
  */
-function expandQuery(query: string): string {
-  const expansions: string[] = [query];
-
-  // 1. 颜色相关扩展
-  const colorExpansions: Record<string, string[]> = {
-    '日照金山': ['golden hour', 'alpine glow', 'sunrise', '日出', '朝霞', 'sunset', 'dawn'],
-    '日出': ['sunrise', 'dawn', 'morning', '清晨', '朝霞', 'golden hour'],
-    '日落': ['sunset', 'dusk', 'evening', '黄昏', '晚霞', 'golden hour'],
-    '莫兰迪': ['morandi', 'muted', '低饱和', 'gray', '高级灰', 'oil painting'],
-    '赛博朋克': ['cyberpunk', 'neon', 'futuristic', 'tech', '霓虹', '科幻'],
-    '森林': ['forest', 'green', 'nature', 'woods', '自然', '绿'],
-    '雪山': ['snow mountain', 'alpine', '雪景', 'winter'],
-    '咖啡': ['coffee', 'cafe', 'brown', 'warm', ' warmth'],
-    '海洋': ['ocean', 'sea', 'blue', 'marine', 'marine'],
-    '复古': ['vintage', 'retro', 'nostalgic', 'classic', '经典'],
-    '极简': ['minimal', 'minimalism', 'simple', 'clean', '简约'],
-  };
-
-  // 2. 检查是否包含扩展词
-  for (const [key, synonyms] of Object.entries(colorExpansions)) {
-    if (query.includes(key)) {
-      expansions.push(...synonyms);
-      console.log(`[Query Expansion] "${key}" → 扩展: ${synonyms.join(', ')}`);
-    }
+async function rewriteQueryWithLLM(query: string, config?: any): Promise<string> {
+  // 如果没有提供 AI 配置，返回原查询（降级方案）
+  if (!config || !config.apiKey) {
+    console.log('[Query Rewrite] 未提供 AI 配置，使用原查询');
+    return query;
   }
 
-  // 3. 通用中英互译扩展
-  const commonTranslations: Record<string, string> = {
-    '温暖': 'warm',
-    '冷': 'cold',
-    '明亮': 'bright',
-    '暗': 'dark',
-    '柔和': 'soft',
-    '强烈': 'bold',
-    '优雅': 'elegant',
-    '现代': 'modern',
-  };
+  try {
+    const systemPrompt = `你是一个搜索引擎查询优化专家。你的任务是将用户的简短查询扩展为更丰富的搜索关键词。
 
-  for (const [cn, en] of Object.entries(commonTranslations)) {
-    if (query.includes(cn)) {
-      expansions.push(en);
+规则：
+1. 分析用户的查询意图（场景、情绪、颜色、风格等）
+2. 生成 5-10 个相关的中英文关键词
+3. 包括同义词、相关概念、英文翻译
+4. 关键词用空格分隔，不要其他标点
+
+示例：
+输入: "日照金山"
+输出: 日照金山 golden hour alpine glow 日出 日落 日出金山 雪山 日照
+
+输入: "莫兰迪"
+输出: 莫兰迪 morandi 灰粉 低饱和 muted 高级灰 oil painting
+
+输入: "温暖的森林咖啡馆"
+输出: 森林 咖啡馆 温暖 warm forest green nature cafe brown
+
+现在，请优化以下查询：`;
+
+    const response = await fetch(`${config.baseUrl.replace(/\/+$/, '')}/chat/completions`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${config.apiKey}`,
+      },
+      body: JSON.stringify({
+        model: config.modelName,
+        messages: [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: query }
+        ],
+        temperature: 0.3,
+        max_tokens: 100,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`LLM API Error: ${response.status}`);
     }
+
+    const data = await response.json();
+    const rewrittenQuery = data.choices?.[0]?.message?.content?.trim() || query;
+
+    // 清理 AI 返回的内容（移除多余字符）
+    const cleanedQuery = rewrittenQuery
+      .replace(/[，、。；：]/g, ' ')  // 中文标点替换为空格
+      .replace(/\s+/g, ' ')  // 多个空格压缩为一个
+      .trim();
+
+    console.log(`[LLM Query Rewrite] "${query}" → "${cleanedQuery}"`);
+    return cleanedQuery;
+
+  } catch (error) {
+    console.warn('[Query Rewrite] LLM 重写失败，使用原查询:', error);
+    return query;
   }
-
-  // 4. 去重并返回扩展查询（用空格连接）
-  const expandedQuery = [...new Set(expansions)].join(' ');
-  console.log(`[Query Expansion] "${query}" → "${expandedQuery}"`);
-
-  return expandedQuery;
 }
 
 /**
@@ -159,11 +176,13 @@ function expandQuery(query: string): string {
  *
  * @param query 用户的查询文本（如"莫兰迪色系的咖啡馆"）
  * @param topK 返回前 K 个最相关的结果
+ * @param config AI 配置（可选，用于 LLM 查询重写）
  * @returns 检索结果列表
  */
 export async function retrieveKnowledge(
   query: string,
-  topK: number = 5
+  topK: number = 5,
+  config?: any
 ): Promise<RetrievalResult[]> {
   const store = getDBStore();
 
@@ -173,15 +192,15 @@ export async function retrieveKnowledge(
   }
 
   try {
-    // 查询扩展：丰富搜索词
-    const expandedQuery = expandQuery(query);
+    // LLM 智能查询重写（如果提供 AI 配置）
+    const expandedQuery = await rewriteQueryWithLLM(query, config);
 
-    // 使用 Orama 进行语义搜索
+    // 使用 Orama 进行全文搜索
     const searchResults = await search(store.db, {
       term: expandedQuery,
       limit: topK,
       properties: ['keywords', 'name', 'description'],
-      threshold: 0.05 // 降低阈值以提高召回率（原 0.1 → 0.05）
+      threshold: 0.05
     });
 
     // 转换为统一格式
@@ -194,7 +213,7 @@ export async function retrieveKnowledge(
       score: hit.score
     }));
 
-    console.log(`[KnowledgeService] 检索 "${query}" 找到 ${results.length} 条相关知识`);
+    console.log(`[KnowledgeService] 检索 "${expandedQuery}" 找到 ${results.length} 条相关知识`);
     console.log(`[KnowledgeService] 检索结果:`, results.map(r => ({
       id: r.id,
       name: r.name,
@@ -254,10 +273,11 @@ ${JSON.stringify(result.data, null, 2)}
  */
 export async function enhancePromptWithKnowledge(
   baseSystemPrompt: string,
-  userQuery: string
+  userQuery: string,
+  config?: any
 ): Promise<string> {
-  // 1. 检索相关知识
-  const knowledge = await retrieveKnowledge(userQuery, 3);
+  // 1. 检索相关知识（传递 config 支持 LLM 重写）
+  const knowledge = await retrieveKnowledge(userQuery, 3, config);
 
   // 2. 如果没有相关知识，返回原提示词
   if (knowledge.length === 0) {
