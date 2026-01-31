@@ -244,8 +244,14 @@ export async function retrieveKnowledge(
       results.forEach((result, index) => {
         console.log(`${index + 1}. ${result.name} (${result.type}) - 相似度: ${result.score.toFixed(3)}`);
         console.log(`   描述: ${result.description}`);
-        console.log(`   数据:`, result.data);
+        console.log(`   完整数据:`, result.data);  // 显示完整对象
       });
+      console.groupEnd();
+
+      // 新增：显示格式化后的知识上下文（注入到 AI 提示词的内容）
+      const knowledgeContext = formatKnowledgeContext(results);
+      console.group(`[RAG 提示词注入] "${query}"`);
+      console.log(knowledgeContext);
       console.groupEnd();
     }
 
@@ -310,8 +316,16 @@ export async function enhancePromptWithKnowledge(
     相似度: k.score.toFixed(3)
   })));
 
-  // 3. 格式化知识上下文
+  // 新增：显示最终注入到系统提示词的知识上下文
   const knowledgeContext = formatKnowledgeContext(knowledge);
+  console.group(`[RAG 最终注入内容] "${userQuery}"`);
+  console.log('以下内容将被注入到 AI 系统提示词中：');
+  console.log(knowledgeContext);
+  console.log('--- 注入结束 ---');
+  console.groupEnd();
+
+  // 3. 格式化知识上下文（复用上面的变量）
+  // knowledgeContext 已经在上面定义了
 
   // 4. 组合成增强提示词
   const enhancedPrompt = `${baseSystemPrompt}
