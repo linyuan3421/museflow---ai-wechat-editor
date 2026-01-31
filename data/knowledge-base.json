@@ -1,0 +1,788 @@
+[
+  {
+    "id": "color-morandi",
+    "type": "color_palette",
+    "keywords": ["莫兰迪", "morandi", "灰粉", "灰绿", "高级灰", "低饱和", "muted", "oil painting", "油画"],
+    "name": "莫兰迪色系",
+    "description": "Giorgio Morandi 画作的 muted color system，所有颜色都有灰色底色",
+    "data": {
+      "colors": {
+        "mutedPink": "#BFA89A",
+        "sageGreen": "#9C8B7A",
+        "dustyBlue": "#8B9DAF",
+        "warmGray": "#A8A69D",
+        "earth": "#B8A99A",
+        "accent": "#D4C4B0"
+      },
+      "background": "#FAF9F6",
+      "designApproach": [
+        "All colors have gray undertones",
+        "Use 2-3 colors from palette",
+        "Low contrast between elements (gentle transitions)",
+        "Background: #FAF9F6 or #F5F3EF (warm white)"
+      ],
+      "typography": {
+        "fonts": "Georgia, Noto Serif SC (serif with artistic personality)",
+        "lineHeight": "1.85-1.95 (generous, breathing)"
+      },
+      "decorations": {
+        "borders": "Subtle, 1-2px, rounded corners (8px)",
+        "strong": "No background, just color or italic"
+      }
+    }
+  },
+  {
+    "id": "color-klein-blue",
+    "type": "color_palette",
+    "keywords": ["克莱因蓝", "klein blue", "国际克莱因蓝", "#002FA7", "monochrome", "single color"],
+    "name": "克莱因蓝",
+    "description": "International Klein Blue (IKB) by Yves Klein, 单色系设计，极简而强烈",
+    "data": {
+      "colors": {
+        "primary": "#002FA7",
+        "black": "#1A1A1A",
+        "white": "#FFFFFF"
+      },
+      "background": "#FFFFFF",
+      "designApproach": [
+        "Monochrome design (only Klein Blue + black + white)",
+        "Use Klein Blue for all accents (H1, H2, strong, links)",
+        "High contrast (Klein Blue vs white)",
+        "Minimal decorations (let the color speak)"
+      ],
+      "typography": {
+        "fonts": "Helvetica, Arial, sans-serif (clean, modern)",
+        "fontWeights": "700-900 for H1 (bold statement)"
+      },
+      "decorations": {
+        "h1": "Klein Blue + 700 weight + letter-spacing 0.1em",
+        "h2": "borderBottom 2px solid #002FA7",
+        "blockquote": "borderLeft 3px solid #002FA7",
+        "strong": "Klein Blue, no background"
+      }
+    }
+  },
+  {
+    "id": "color-dopamine",
+    "type": "color_palette",
+    "keywords": ["多巴胺", "dopamine", "高饱和", "bright", "colorful", "五颜六色", "playful"],
+    "name": "多巴胺配色",
+    "description": "高饱和度的糖果色系，充满活力和快乐",
+    "data": {
+      "colors": {
+        "hotPink": "#FF6B9D",
+        "brightYellow": "#FFD93D",
+        "cyan": "#6BCF77",
+        "orange": "#FF8C42",
+        "purple": "#A78BFA",
+        "limeGreen": "#CBF3F0"
+      },
+      "background": "#FFFFFF",
+      "designApproach": [
+        "Use 3-4 colors freely (mix and match)",
+        "High saturation (80-100%)",
+        "Playful decorations (rounded corners 12-16px)",
+        "Bold font weights (600-700)"
+      ],
+      "typography": {
+        "fonts": "system-ui, -apple-system, sans-serif",
+        "letterSpacing": "0.05em (slightly expanded)"
+      },
+      "decorations": {
+        "borderRadius": "12-16px (friendly)",
+        "h1": "96D or higher weight",
+        "strong": "backgroundColor + padding (marker style)"
+      }
+    }
+  },
+  {
+    "id": "color-tiffany-blue",
+    "type": "color_palette",
+    "keywords": ["蒂芙尼蓝", "tiffany blue", "优雅", "feminine", "#0ABAB5"],
+    "name": "蒂芙尼蓝",
+    "description": "优雅的蓝绿色系，经典而精致",
+    "data": {
+      "colors": {
+        "primary": "#0ABAB5",
+        "black": "#1A1A1A",
+        "white": "#FFFFFF",
+        "softGray": "#F0F0F0"
+      },
+      "background": "#FFFFFF",
+      "designApproach": [
+        "Feminine, elegant",
+        "Use Tiffany Blue for H1, H2 borders, links",
+        "Black text on white background",
+        "Rounded corners (8px)",
+        "Medium font weights (500-600)"
+      ],
+      "typography": {
+        "fonts": "system-ui, sans-serif"
+      },
+      "decorations": {
+        "h2": "borderLeft 3px solid #0ABAB5",
+        "blockquote": "borderLeft 3px solid #0ABAB5 + padding 16px",
+        "strong": "color #0ABAB5, fontWeight 600"
+      }
+    }
+  },
+  {
+    "id": "color-avocado-green",
+    "type": "color_palette",
+    "keywords": ["牛油果绿", "avocado", "organic", "自然", "green", "earthy"],
+    "name": "牛油果绿",
+    "description": "温暖的有机绿色系，自然舒适",
+    "data": {
+      "colors": {
+        "primary": "#84A98C",
+        "darkGreen": "#5F8D78",
+        "cream": "#F5F3EF",
+        "brown": "#B8A99A"
+      },
+      "background": "#F5F3EF",
+      "designApproach": [
+        "Organic, natural feel",
+        "Use green tones as primary",
+        "Cream background (warm white)",
+        "Rounded corners (8-12px)",
+        "Serif or rounded sans-serif fonts"
+      ],
+      "typography": {
+        "fonts": "Noto Serif SC, Georgia (serif) or rounded sans-serif",
+        "lineHeight": "1.75-1.85 (comfortable)"
+      },
+      "decorations": {
+        "h1": "color #5F8D78 + textAlign center",
+        "h2": "borderLeft 4px solid #84A98C + backgroundColor #F5F3EF",
+        "blockquote": "borderTop 2px solid #84A98C + borderBottom 2px"
+      }
+    }
+  },
+  {
+    "id": "color-whiskey-amber",
+    "type": "color_palette",
+    "keywords": ["威士忌", "whiskey", "琥珀色", "amber", "温暖", "复古", "vintage", "cozy"],
+    "name": "威士忌琥珀色",
+    "description": "温暖的琥珀色和棕色系，如午后的咖啡馆",
+    "data": {
+      "colors": {
+        "amber": "#D4A373",
+        "darkBrown": "#A98467",
+        "warmCream": "#FAEDCD",
+        "charcoal": "#3D405B"
+      },
+      "background": "#FAEDCD",
+      "designApproach": [
+        "Warm, cozy, sophisticated",
+        "Use amber/brown tones",
+        "Cream background",
+        "Serif fonts (elegant, vintage)",
+        "Medium spacing (1.7-1.8)"
+      ],
+      "typography": {
+        "fonts": "Georgia, Noto Serif SC, serif"
+      },
+      "decorations": {
+        "h1": "color #3D405B + fontWeight bold + textAlign center",
+        "h2": "borderBottom 2px solid #D4A373",
+        "blockquote": "borderLeft 3px solid #D4A373 + backgroundColor #FAEDCD",
+        "strong": "background: linear-gradient(to top, #D4A373 50%, transparent 50%)"
+      }
+    }
+  },
+  {
+    "id": "color-black-gold",
+    "type": "color_palette",
+    "keywords": ["黑金", "black gold", "奢华", "luxury", "premium", "高贵"],
+    "name": "黑金奢华",
+    "description": "经典的黑色与金色搭配，奢华而高贵",
+    "data": {
+      "colors": {
+        "black": "#1A1A1A",
+        "gold": "#D4AF37",
+        "champagne": "#F7E7CE",
+        "white": "#FFFFFF"
+      },
+      "background": "#FFFFFF",
+      "designApproach": [
+        "Premium, luxurious",
+        "Black background with gold accents OR Gold background with black text (inverted)",
+        "Serif fonts + wide letter-spacing (0.15em)",
+        "Minimal borders (1px, let contrast speak)"
+      ],
+      "typography": {
+        "fonts": "Georgia, Noto Serif SC, serif",
+        "letterSpacing": "0.15em (elegant spacing)"
+      },
+      "decorations": {
+        "h1": "gold color + serif font + letter-spacing 0.15em",
+        "h2": "backgroundColor black + gold text (inverted luxury) OR borderBottom 2px solid gold",
+        "blockquote": "borderLeft 4px solid #D4AF37 + padding 20px (elegant)",
+        "strong": "gold + italic or fontWeight bold"
+      }
+    }
+  },
+  {
+    "id": "texture-oil-painting",
+    "type": "texture",
+    "keywords": ["油画", "oil painting", "笔触", "canvas", "纹理", "艺术", "artistic", "layered"],
+    "name": "油画质感",
+    "description": "模拟油画画布的纹理和笔触效果",
+    "data": {
+      "background": {
+        "canvasTexture": "radial-gradient(circle at 20% 30%, rgba(0,0,0,0.02) 1px, transparent 1px)",
+        "backgroundSize": "4px 4px"
+      },
+      "typography": {
+        "h1": "textShadow: 1px 1px 0px rgba(0,0,0,0.1) (depth effect)",
+        "fonts": "Georgia, Noto Serif SC (serif with personality)"
+      },
+      "borders": {
+        "technique": "Slightly uneven (use different widths top/bottom)",
+        "examples": "borderTop: 2px solid; borderBottom: 1px solid"
+      },
+      "colors": {
+        "approach": "Rich, layered (use slight variations)"
+      }
+    }
+  },
+  {
+    "id": "texture-watercolor",
+    "type": "texture",
+    "keywords": ["水彩", "watercolor", "wash", "柔和", "透明", "translucent", "艺术"],
+    "name": "水彩质感",
+    "description": "模拟水彩画的透明感和柔和边缘",
+    "data": {
+      "background": {
+        "washEffect": "linear-gradient(135deg, rgba(255,182,193,0.1) 0%, transparent 50%)"
+      },
+      "borders": {
+        "style": "Soft, uneven",
+        "examples": "border: 1px solid rgba(0,0,0,0.1)",
+        "borderRadius": "8px (soft corners)"
+      },
+      "h1": {
+        "watercolorBleed": "textShadow: 0 0 20px rgba(255,105,180,0.3) (glow effect)"
+      },
+      "colors": {
+        "approach": "Pastel, washed-out"
+      },
+      "spacing": {
+        "lineHeight": "1.9-2.0 (very generous, wash effect)"
+      }
+    }
+  },
+  {
+    "id": "texture-concrete",
+    "type": "texture",
+    "keywords": ["水泥", "concrete", "混凝土", "粗糙", "raw", "工业", "industrial"],
+    "name": "水泥质感",
+    "description": "原始、未加饰的水泥混凝土质感",
+    "data": {
+      "background": {
+        "color": "#F5F3EF (light gray)",
+        "noise": "Subtle grain texture (optional)"
+      },
+      "borders": {
+        "style": "Raw, thick (3-4px solid)",
+        "examples": "border: 3px solid #333"
+      },
+      "shapes": {
+        "borderRadius": "0px (sharp, no rounding)"
+      },
+      "colors": {
+        "palette": "Grays (#333-#999)"
+      },
+      "typography": {
+        "fontWeights": "Bold, industrial (700-800)"
+      }
+    }
+  },
+  {
+    "id": "texture-metallic",
+    "type": "texture",
+    "keywords": ["金属", "metallic", "金色", "gold", "silver", "shimmer", "sheen", "premium"],
+    "name": "金属质感",
+    "description": "模拟金属的光泽和反射效果",
+    "data": {
+      "background": {
+        "sheen": "linear-gradient(135deg, #F7E7CE 0%, #FFEFDB 100%) (gold gradient)"
+      },
+      "borders": {
+        "metallicSheen": "border: 1px solid #D4AF37",
+        "shadow": "boxShadow: 0 2px 4px rgba(212,175,55,0.2)"
+      },
+      "h1": {
+        "goldGradientText": "background: linear-gradient(to right, #D4AF37, #FFD700)",
+        "textClip": "-webkit-background-clip: text, -webkit-text-fill-color: transparent"
+      },
+      "colors": {
+        "palette": "Gold, silver, bronze tones"
+      }
+    }
+  },
+  {
+    "id": "texture-paper",
+    "type": "texture",
+    "keywords": ["纸张", "paper", "印刷", "print", "温暖", "warm", "vintage"],
+    "name": "纸张印刷质感",
+    "description": "模拟印刷纸张的温暖纹理",
+    "data": {
+      "background": {
+        "color": "#FAF9F6 (warm white)",
+        "texture": "radial-gradient(#E8E6E1 1px, transparent 1px)",
+        "backgroundSize": "20px 20px"
+      },
+      "typography": {
+        "fonts": "Georgia, Times, serif (literary feel)"
+      },
+      "colors": {
+        "text": "Warm black (#2C2C2C) not pure black"
+      },
+      "borders": {
+        "style": "1px, sharp (clean print edges)"
+      }
+    }
+  },
+  {
+    "id": "scene-cafe",
+    "type": "scene",
+    "keywords": ["咖啡馆", "cafe", "咖啡", "温暖", "cozy", "木质", "ambiance", "舒适"],
+    "name": "咖啡馆场景",
+    "description": "温暖、舒适、亲密的咖啡馆氛围",
+    "data": {
+      "colors": {
+        "woodBrown": "#D4A373",
+        "darkBrown": "#A98467",
+        "cream": "#FAEDCD",
+        "charcoal": "#3D405B"
+      },
+      "typography": {
+        "fonts": "Serif or rounded sans-serif",
+        "lineHeight": "1.75 (comfortable reading)"
+      },
+      "decorations": {
+        "borderRadius": "8-12px (cozy, not too round)",
+        "borders": "Subtle, warm-toned borders"
+      },
+      "spacing": {
+        "lineHeight": "1.7-1.8",
+        "margins": "Comfortable (1.5-1.8em)"
+      },
+      "special": "Can add coffee bean colors as accents"
+    }
+  },
+  {
+    "id": "scene-bookstore",
+    "type": "scene",
+    "keywords": ["书店", "bookstore", "quiet", "知识", "paper", "intellectual", "图书馆"],
+    "name": "书店场景",
+    "description": "安静、知性、纸张质感的书店氛围",
+    "data": {
+      "colors": {
+        "warmWhite": "#FAF9F6",
+        "woodTones": "#B8A99A",
+        "darkInk": "#2C2C2C"
+      },
+      "typography": {
+        "fonts": "Serif (Georgia, literary feel)",
+        "fontStyle": "Italic for quotes"
+      },
+      "decorations": {
+        "style": "Minimal, let typography speak",
+        "borders": "Very subtle (1px or none)"
+      },
+      "spacing": {
+        "lineHeight": "1.85-2.0 (generous, room to think)",
+        "margins": "2em+ (breathing room)"
+      }
+    }
+  },
+  {
+    "id": "scene-jazz-bar",
+    "type": "scene",
+    "keywords": ["爵士", "jazz", "酒吧", "sophisticated", "moody", "intimate", "夜晚", "night"],
+    "name": "爵士酒吧场景",
+    "description": "精致、情绪化、亲密的爵士酒吧氛围",
+    "data": {
+      "colors": {
+        "deepPurple": "#2D1B3E",
+        "gold": "#D4AF37",
+        "warmCream": "#F7E7CE",
+        "black": "#1A1A1A"
+      },
+      "typography": {
+        "fonts": "Elegant serif + wide letter-spacing (0.1-0.15em)"
+      },
+      "decorations": {
+        "accents": "Gold highlights, subtle gradients"
+      },
+      "spacing": {
+        "lineHeight": "1.7-1.8 (medium, not too loose)"
+      }
+    }
+  },
+  {
+    "id": "scene-art-gallery",
+    "type": "scene",
+    "keywords": ["美术馆", "art gallery", "画廊", "minimal", "极简", "white space", "留白"],
+    "name": "美术馆场景",
+    "description": "极简、让艺术说话的美术馆氛围",
+    "data": {
+      "colors": {
+        "pureWhite": "#FFFFFF",
+        "lightGray": "#F5F3EF",
+        "black": "#1A1A1A (text only)"
+      },
+      "typography": {
+        "fonts": "Sans-serif, light weights (300-400)"
+      },
+      "decorations": {
+        "style": "Minimal (1px borders or none)"
+      },
+      "spacing": {
+        "lineHeight": "2.0+ (very generous)",
+        "margins": "2em+ (maximum breathing room)"
+      }
+    }
+  },
+  {
+    "id": "style-bauhaus",
+    "type": "style",
+    "keywords": ["包豪斯", "bauhaus", "geometric", "几何", "构成主义", "三原色", "functional", "minimal"],
+    "name": "包豪斯风格",
+    "description": "几何、三原色、功能主义的经典设计语言",
+    "data": {
+      "colors": {
+        "red": "#FF0000",
+        "yellow": "#FFFF00",
+        "blue": "#0000FF",
+        "black": "#1A1A1A",
+        "white": "#FFFFFF"
+      },
+      "characteristics": [
+        "Geometric shapes",
+        "Primary triad + black/white",
+        "Sans-serif fonts, bold headers",
+        "Grid layouts",
+        "0px radius (sharp corners)",
+        "Thick borders (4-6px)"
+      ],
+      "typography": {
+        "h1": "900 weight + 0px letter-spacing (bold, tight)",
+        "h2": "borderBottom 3px solid #000000"
+      },
+      "decorations": {
+        "h1": "borderLeft 6px solid #FF0000 (thick accent bar)",
+        "blockquote": "backgroundColor #F5F3EF + borderLeft 4px",
+        "strong": "No decoration, just bold"
+      }
+    }
+  },
+  {
+    "id": "style-minimalist-zen",
+    "type": "style",
+    "keywords": ["极简", "minimalist", "禅意", "zen", "留白", "white space", "negative space", "clean"],
+    "name": "极简禅意",
+    "description": "留白、呼吸感、克制的字体排印",
+    "data": {
+      "colors": {
+        "neutrals": "White + single accent color",
+        "text": "#2C2C2C (dark gray, not pure black)"
+      },
+      "characteristics": [
+        "Negative space is key design element",
+        "Font weights: 300-400 (light/elegant)",
+        "Generous spacing: lineHeight 1.9-2.0, margins 2em+",
+        "Borders: 0-1px maximum (subtle)",
+        "No shadows or decorations"
+      ],
+      "typography": {
+        "h1": "300-400 weight + letterSpacing 0.05em",
+        "h2": "borderBottom 1px solid #E5E5E5 (very subtle)"
+      },
+      "decorations": {
+        "blockquote": "No decoration, italic only (pure text)",
+        "strong": "Font weight 500-600 (no background)"
+      }
+    }
+  },
+  {
+    "id": "style-brutalist",
+    "type": "style",
+    "keywords": ["野兽派", "brutalist", "raw", "粗野", "bold", "confrontational", "industrial"],
+    "name": "野兽派风格",
+    "description": "原始、未加饰、对抗性的设计语言",
+    "data": {
+      "colors": {
+        "highContrast": "Black/white only"
+      },
+      "characteristics": [
+        "Bold typography (700-900)",
+        "All caps headers",
+        "Thick borders (4-6px)",
+        "0px radius (sharp edges)",
+        "Tight spacing (1.5-1.6)"
+      ],
+      "typography": {
+        "h1": "900 weight + all caps + letter-spacing -0.02em",
+        "h2": "borderBottom 4px solid #000000"
+      },
+      "decorations": {
+        "blockquote": "backgroundColor #F5F3EF (contrast block)",
+        "strong": "900 weight + uppercase (brutal emphasis)"
+      }
+    }
+  },
+  {
+    "id": "style-cyberpunk",
+    "type": "style",
+    "keywords": ["赛博朋克", "cyberpunk", "neon", "霓虹", "futuristic", "dark mode", "glow"],
+    "name": "赛博朋克风格",
+    "description": "霓虹灯光、数字未来的视觉语言",
+    "data": {
+      "colors": {
+        "neonCyan": "#00FFFF",
+        "neonMagenta": "#FF00FF",
+        "neonYellow": "#FFFF00",
+        "dark": "#0A0A0A"
+      },
+      "characteristics": [
+        "Glow effects (textShadow: 0 0 10px)",
+        "High saturation accents",
+        "Bold typography (700-900)",
+        "Grid patterns (urban feel)"
+      ],
+      "typography": {
+        "h1": "textShadow: 0 0 10px #FF00FF + color #00FFFF",
+        "fonts": "Monospace for code elements"
+      },
+      "decorations": {
+        "h2": "backgroundColor #1A1A1A + color #FF00FF (neon on dark)",
+        "container": "Subtle grid pattern (background-image: linear-gradient)"
+      },
+      "constraints": {
+        "background": "Keep light (#FFFFFF or very light tint), use dark accents instead"
+      }
+    }
+  },
+  {
+    "id": "style-art-deco",
+    "type": "style",
+    "keywords": ["装饰艺术", "art deco", "奢华", "luxury", "geometric", "metallic", "1920s"],
+    "name": "装饰艺术风格",
+    "description": "奢华、几何、金属装饰的经典风格",
+    "data": {
+      "colors": {
+        "black": "#1A1A1A",
+        "gold": "#D4AF37",
+        "cream": "#FEFCE8"
+      },
+      "characteristics": [
+        "Gold accents",
+        "Geometric patterns",
+        "Symmetry",
+        "Elegant serif fonts"
+      ],
+      "typography": {
+        "h1": "Gold + serif + letter-spacing 0.15em + uppercase",
+        "h2": "backgroundColor black + gold text"
+      },
+      "decorations": {
+        "blockquote": "borderLeft 4px solid #D4AF37 + borderRight 4px solid (symmetrical luxury)"
+      }
+    }
+  },
+  {
+    "id": "style-vintage-retro",
+    "type": "style",
+    "keywords": ["复古", "vintage", "怀旧", "nostalgic", "old", "warm", "aged", "paper"],
+    "name": "复古怀旧风格",
+    "description": "温暖、陈旧、时光流逝的感觉",
+    "data": {
+      "colors": {
+        "warmTones": "Sepia, warm brown, amber",
+        "text": "#2C2C2C (warm dark)"
+      },
+      "characteristics": [
+        "Serif fonts (Georgia, Times)",
+        "Paper textures",
+        "Ornate borders",
+        "Warm shadows"
+      ],
+      "typography": {
+        "fonts": "Georgia, Times, serif"
+      },
+      "decorations": {
+        "background": "Subtle paper texture (radial-gradient dots)",
+        "blockquote": "borderLeft 2px solid #8B7E74 + backgroundColor #FEF7E7"
+      }
+    }
+  },
+  {
+    "id": "technique-h1-decoration",
+    "type": "technique",
+    "keywords": ["H1装饰", "h1 decoration", "title", "heading", "主标题"],
+    "name": "H1 装饰技法库",
+    "description": "多种 H1 装饰方法的具体 CSS 实现",
+    "data": {
+      "borderBased": [
+        "borderBottom: 2-4px solid (classic underline)",
+        "borderLeft: 4-8px solid (modern accent)",
+        "borderTop: 2px solid + paddingBottom: 16px (inverted underline)",
+        "border: 2px solid + padding: 8px 16px (framed)"
+      ],
+      "backgroundBased": [
+        "backgroundColor + padding (inline capsule)",
+        "backgroundColor + display inline-block (highlight style)",
+        "linearGradient background (color shift)"
+      ],
+      "shadowBased": [
+        "textShadow: 1px 1px 0px (retro/offset)",
+        "textShadow: 0 0 10px (glow/neon)",
+        "textShadow: 2px 2px 4px rgba(0,0,0,0.1) (elegant depth)"
+      ],
+      "typographyBased": [
+        "letterSpacing: 0.15-0.2em + textTransform uppercase (elegant caps)",
+        "fontWeight: 900 + letterSpacing: -0.02em (ultra bold condensed)",
+        "textTransform: uppercase (minimalist statement)"
+      ]
+    }
+  },
+  {
+    "id": "technique-h2-decoration",
+    "type": "technique",
+    "keywords": ["H2装饰", "h2 decoration", "subtitle", "二级标题"],
+    "name": "H2 装饰技法库",
+    "description": "多种 H2 装饰方法的具体 CSS 实现",
+    "data": {
+      "modernHierarchy": [
+        "borderLeft: 3-4px solid + paddingLeft: 8-12px (clean)",
+        "backgroundColor: light tint + padding: 4-12px (badge style)",
+        "borderBottom: 1-2px solid (subtle separation)",
+        "display: inline-block + backgroundColor (floating label)"
+      ],
+      "personality": [
+        "borderRadius: 4px + backgroundColor (soft modern)",
+        "borderRadius: 999px + backgroundColor (pill/organic)",
+        "boxShadow: 0 2px 4px rgba(0,0,0,0.05) (elevation)"
+      ],
+      "combinations": [
+        "borderLeft + backgroundColor (accent highlight)",
+        "borderBottom + display flex (centered underline)"
+      ]
+    }
+  },
+  {
+    "id": "technique-blockquote-decoration",
+    "type": "technique",
+    "keywords": ["引用装饰", "blockquote decoration", "引用块", "quote"],
+    "name": "引用块装饰技法库",
+    "description": "多种 blockquote 装饰方法的具体 CSS 实现",
+    "data": {
+      "classic": [
+        "borderLeft: 3-4px solid + paddingLeft (minimal)",
+        "borderLeft + borderRight: symmetrical (literary)"
+      ],
+      "creative": [
+        "::before content: '“' (large opening quote mark)",
+        "::after content: '”' (closing quote mark, float: right)",
+        "backgroundColor: light tint + borderRadius (card style)"
+      ],
+      "typography": [
+        "fontStyle: italic (traditional)",
+        "fontWeight: 500 (assertive quote)",
+        "textTransform: uppercase (statement quote)"
+      ]
+    }
+  },
+  {
+    "id": "emotion-lonely",
+    "type": "emotion",
+    "keywords": ["孤独", "lonely", "寂寞", "isolated", "alone", "empty", "melancholy"],
+    "name": "孤独情绪",
+    "description": "抽象情绪\\\"孤独\\\"的设计转译",
+    "data": {
+      "colors": {
+        "approach": "Monochrome or very muted, single color focus"
+      },
+      "typography": {
+        "h1": "900 weight + 2.0 line height (contrast of heavy + loose)",
+        "fonts": "Thin weights (300) for body text"
+      },
+      "spacing": {
+        "lineHeight": "2.0 (very loose, emptiness)",
+        "margins": "2.5-3em (maximum isolation)"
+      },
+      "decorations": {
+        "h2": "borderBottom 1px solid (minimal divider)",
+        "blockquote": "No decoration, italic only (pure text, pure loneliness)",
+        "allBorders": "0-1px maximum (subtle, withdrawn)"
+      }
+    }
+  },
+  {
+    "id": "emotion-passionate",
+    "type": "emotion",
+    "keywords": ["热烈", "passionate", "激情", "energetic", "bold", "dynamic", "fire"],
+    "name": "热烈激情情绪",
+    "description": "抽象情绪\\\"热烈\\\"的设计转译",
+    "data": {
+      "colors": {
+        "approach": "High saturation, warm tones (orange, red, yellow)"
+      },
+      "typography": {
+        "h1": "700-900 weight (bold, impactful)",
+        "fonts": "Bold, display fonts"
+      },
+      "spacing": {
+        "lineHeight": "1.5-1.6 (tight, energetic)",
+        "margins": "1-1.2em (compact)"
+      },
+      "decorations": {
+        "h1": "Thick borders (4-6px) + textShadow (impact)",
+        "strong": "700-900 weight + backgroundColor (marker style)",
+        "allElements": "High contrast, bold statements"
+      }
+    }
+  },
+  {
+    "id": "emotion-gentle",
+    "type": "emotion",
+    "keywords": ["温柔", "gentle", "soft", "治愈", "warm", "comforting", "tender"],
+    "name": "温柔治愈情绪",
+    "description": "抽象情绪\\\"温柔\\\"的设计转译",
+    "data": {
+      "colors": {
+        "approach": "Pastel colors, rounded, warm tones (pink, peach, cream)"
+      },
+      "typography": {
+        "h1": "400-500 weight (medium, approachable)"
+      },
+      "decorations": {
+        "borderRadius": "12-16px (soft, friendly)",
+        "borders": "1-2px (gentle)",
+        "blockquote": "backgroundColor light tint + borderRadius (soft card)"
+      }
+    }
+  },
+  {
+    "id": "emotion-calm",
+    "type": "emotion",
+    "keywords": ["冷静", "calm", "理性", "rational", "professional", "cool"],
+    "name": "冷静理性情绪",
+    "description": "抽象情绪\\\"冷静\\\"的设计转译",
+    "data": {
+      "colors": {
+        "approach": "Cool tones (blue, gray, teal)"
+      },
+      "typography": {
+        "fonts": "Sans-serif, geometric"
+      },
+      "decorations": {
+        "borders": "Geometric, clean borders",
+        "h2": "borderLeft 3-4px solid (clean hierarchy)"
+      }
+    }
+  }
+]

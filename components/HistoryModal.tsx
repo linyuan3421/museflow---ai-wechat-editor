@@ -206,7 +206,7 @@ const HistoryModal: React.FC<HistoryModalProps> = ({
                         {/* Delete Button */}
                         {version.id && (
                           <button
-                            onClick={(e) => handleDelete(e, version.id)}
+                            onClick={(e) => handleDelete(e, version.id!)}
                             className={`opacity-0 group-hover:opacity-100 transition-opacity p-1 rounded ${
                               selectedVersion?.id === version.id
                                 ? 'hover:bg-stone-600 text-stone-300'

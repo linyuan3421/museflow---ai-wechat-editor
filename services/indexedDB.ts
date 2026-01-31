@@ -20,15 +20,10 @@ export class IndexedDB {
     name: string;
     storeName: string;
     storeOptions?: IDBObjectStoreParameters;
-    storeInit?: (objectStore: IDBObjectStore) => void;
   }) {
     this.dbName = options.name;
     this.storeName = options.storeName;
     this.storeOptions = options.storeOptions || { keyPath: 'id', autoIncrement: true };
-
-    if (options.storeInit) {
-      this.initStore = options.storeInit;
-    }
   }
 
   async init(): Promise<IDBDatabase> {
