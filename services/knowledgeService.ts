@@ -217,16 +217,16 @@ export async function retrieveKnowledge(
       console.log(`[Orama Search] 第一条结果:`, searchResults.hits[0]);
     }
 
-    // 转换为统一格式（过滤掉 result 为 undefined 的项）
-    const validHits = searchResults.hits.filter((hit: any) => hit && hit.result);
+    // 转换为统一格式（注意：Orama 返回的是 hit.document，不是 hit.result）
+    const validHits = searchResults.hits.filter((hit: any) => hit && hit.document);
     console.log(`[Orama Search] 有效结果数量: ${validHits.length}/${searchResults.hits.length}`);
     
     const results: RetrievalResult[] = validHits.map((hit: any) => ({
       id: hit.id,
-      type: hit.result.type,
-      name: hit.result.name,
-      description: hit.result.description,
-      data: hit.result.data,
+      type: hit.document.type,
+      name: hit.document.name,
+      description: hit.document.description,
+      data: hit.document.data,
       score: hit.score
     }));
 
