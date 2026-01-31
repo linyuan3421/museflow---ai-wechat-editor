@@ -2800,5 +2800,939 @@
         "fonts": "Rounded sans-serif"
       }
     }
+  },
+  {
+    "id": "color-swiss-style",
+    "type": "color_palette",
+    "keywords": [
+      "swiss style",
+      "international typographic style",
+      "瑞士风格",
+      "国际主义风格",
+      "helvetica",
+      "grid",
+      "网格系统",
+      "秩序",
+      "clean",
+      "极简",
+      "rational",
+      "rationalism",
+      "muller-brockmann",
+      " Josef Müller-Brockmann"
+    ],
+    "name": "Swiss Style / International Typographic Style",
+    "description": "瑞士国际主义设计风格，强调网格系统、无衬线字体和不对称布局，追求秩序与清晰",
+    "data": {
+      "colors": {
+        "primaryRed": "#FF3B30",
+        "black": "#000000",
+        "white": "#FFFFFF",
+        "gray": "#8E8E93"
+      },
+      "background": "#FFFFFF",
+      "designApproach": [
+        "Mathematical grid system (modular grid)",
+        "Asymmetric layouts with strong alignment",
+        "Sans-serif typography (Helvetica, Univers)",
+        "Objective photography and imagery",
+        "Clean, minimalist aesthetic",
+        "Strong visual hierarchy through scale and weight"
+      ],
+      "typography": {
+        "fonts": "Helvetica, Univers, Arial (grotesque sans-serif)",
+        "sizes": "Modular scale (6pt, 8pt, 10pt, 12pt, 14pt, 18pt, 24pt)",
+        "weights": "Light, Regular, Bold (max 3 weights)",
+        "leading": "1.2-1.4 (tight for headlines, generous for body)"
+      },
+      "decorations": {
+        "grid": "Strict modular grid with visible guides (optional)",
+        "h1": "Large scale (48-72pt), bold, left-aligned",
+        "h2": "borderBottom 2-4px solid #FF3B30, tight leading",
+        "images": "Full-bleed or precisely aligned to grid",
+        "shapes": "Geometric shapes (circles, squares) in primary red"
+      },
+      "cssCode": ".swiss-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; } .swiss-headline { font-family: 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: -0.02em; }"
+    }
+  },
+  {
+    "id": "color-brutalism",
+    "type": "color_palette",
+    "keywords": [
+      "brutalism",
+      "粗野主义",
+      "raw",
+      "原始",
+      "concrete",
+      "混凝土",
+      "bold",
+      "大胆",
+      "unpolished",
+      "未修饰",
+      "aggressive",
+      "强烈",
+      "brutalist",
+      "brutalist web design"
+    ],
+    "name": "Brutalism Design",
+    "description": "粗野主义设计风格，原始、大胆、未修饰的视觉语言，强调原始材料和强烈对比",
+    "data": {
+      "colors": {
+        "concreteGray": "#808080",
+        "rawBlack": "#000000",
+        "brutalYellow": "#FFFF00",
+        "alertRed": "#FF0000",
+        "white": "#FFFFFF"
+      },
+      "background": "#F5F5F5",
+      "designApproach": [
+        "Raw, unpolished aesthetic",
+        "Heavy use of black borders (3-5px)",
+        "Bold, clashing colors",
+        "Monospace or system fonts",
+        "No rounded corners (sharp edges only)",
+        "Visible grid/structure",
+        "Overlapping elements and brutal alignment"
+      ],
+      "typography": {
+        "fonts": "Courier New, monospace, system-ui (raw, unstyled)",
+        "sizes": "Mixed sizes, often oversized",
+        "weights": "Normal and bold only",
+        "transform": "Uppercase for emphasis"
+      },
+      "decorations": {
+        "borders": "3-5px solid black, visible on all elements",
+        "h1": "uppercase, bold, black background with white text OR inverted",
+        "h2": "borderBottom 5px solid black",
+        "buttons": "sharp corners, brutal hover effects (invert colors)",
+        "shadows": "hard shadows (5px 5px 0px #000), no blur"
+      },
+      "cssCode": ".brutal-border { border: 4px solid #000; box-shadow: 5px 5px 0px #000; } .brutal-invert { background: #000; color: #fff; } .brutal-btn { border: 3px solid #000; background: #FFFF00; padding: 15px 30px; font-weight: bold; text-transform: uppercase; }"
+    }
+  },
+  {
+    "id": "color-neo-brutalism",
+    "type": "color_palette",
+    "keywords": [
+      "neo-brutalism",
+      "新粗野主义",
+      "soft brutalism",
+      "pop brutalism",
+      "现代粗野",
+      "colorful",
+      "playful",
+      "活泼",
+      "memphis",
+      "孟菲斯",
+      "bold colors",
+      "粗线条",
+      "chunky"
+    ],
+    "name": "Neo-Brutalism / Soft Brutalism",
+    "description": "新粗野主义，结合粗野主义的原始美学与波普艺术的色彩，更加活泼友好",
+    "data": {
+      "colors": {
+        "popYellow": "#FFDE59",
+        "hotPink": "#FF6B9D",
+        "brightBlue": "#00D9FF",
+        "limeGreen": "#BFFF00",
+        "deepPurple": "#8B5CF6",
+        "black": "#000000"
+      },
+      "background": "#FFF8DC",
+      "designApproach": [
+        "Bold, vibrant colors with black outlines",
+        "Thick black borders (2-3px)",
+        "Slightly rounded corners (4-8px)",
+        "Playful, approachable aesthetic",
+        "Pattern backgrounds (dots, stripes, checkerboard)",
+        "Chunky shadows (3px 3px 0px #000)",
+        "Memphis-inspired shapes and patterns"
+      ],
+      "typography": {
+        "fonts": "Space Grotesk, Poppins, or bold sans-serif",
+        "weights": "Bold and extra-bold (700-900)",
+        "transform": "Uppercase for headings"
+      },
+      "decorations": {
+        "borders": "2-3px solid black on everything",
+        "h1": "black background with bright text OR colored with black border",
+        "h2": "colored background, black text, thick border",
+        "buttons": "bold colors, black border, chunky shadow",
+        "patterns": "polka dots, squiggles, geometric shapes"
+      },
+      "cssCode": ".neo-brutal { border: 3px solid #000; box-shadow: 4px 4px 0px #000; border-radius: 6px; } .neo-pattern { background-image: radial-gradient(#000 1px, transparent 1px); background-size: 10px 10px; }"
+    }
+  },
+  {
+    "id": "color-vaporwave",
+    "type": "color_palette",
+    "keywords": [
+      "vaporwave",
+      "蒸汽波",
+      "retro 80s",
+      "80年代复古",
+      "aesthetic",
+      "美学",
+      "neon pink",
+      "霓虹粉",
+      "cyan",
+      "青色",
+      "glitch",
+      "故障",
+      "synthwave",
+      "outrun",
+      "vapor"
+    ],
+    "name": "Vaporwave Aesthetic",
+    "description": "蒸汽波美学，80-90年代复古未来主义，霓虹粉与青色的 glitch 艺术",
+    "data": {
+      "colors": {
+        "neonPink": "#FF71CE",
+        "brightCyan": "#01CDFE",
+        "lavender": "#B967FF",
+        "mintGreen": "#00F9A0",
+        "deepPurple": "#7B2CBF",
+        "black": "#0D0221"
+      },
+      "background": "linear-gradient(135deg, #1a0a2e 0%, #16213e 50%, #0f3460 100%)",
+      "designApproach": [
+        "Retro 80s/90s computer graphics",
+        "Neon pink and cyan color scheme",
+        "Glitch effects and distortions",
+        "Classical sculpture imagery (Roman statues, busts)",
+        "Grid patterns and checkerboards",
+        "VHS tape aesthetic (scanlines, noise)",
+        "Cherry blossoms, palm trees, sunsets"
+      ],
+      "typography": {
+        "fonts": "Courier New, monospace, or pixel fonts (retro computer)",
+        "effects": "text-shadow glitch effect, chromatic aberration"
+      },
+      "decorations": {
+        "h1": "gradient text (pink to cyan), glitch animation",
+        "h2": "neon pink/cyan borders, glow effects",
+        "backgrounds": "grid patterns, gradients, scanlines",
+        "images": "statues with neon filters, VHS effects"
+      },
+      "cssCode": ".vaporwave-gradient { background: linear-gradient(90deg, #FF71CE, #01CDFE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; } .vaporwave-grid { background-image: linear-gradient(#B967FF 1px, transparent 1px), linear-gradient(90deg, #B967FF 1px, transparent 1px); background-size: 20px 20px; } .vaporwave-glow { text-shadow: 0 0 10px #FF71CE, 0 0 20px #01CDFE; }"
+    }
+  },
+  {
+    "id": "color-synthwave",
+    "type": "color_palette",
+    "keywords": [
+      "synthwave",
+      "合成波",
+      "outrun",
+      "retrowave",
+      "复古未来",
+      "80s",
+      "neon",
+      "霓虹",
+      "sunset",
+      "grid",
+      "palm trees",
+      "sports cars",
+      "electronic",
+      "synth music"
+    ],
+    "name": "Synthwave / Retrowave",
+    "description": "合成波/复古未来主义，80年代霓虹美学，落日、网格与未来城市的幻想",
+    "data": {
+      "colors": {
+        "sunsetOrange": "#FF6B35",
+        "hotPink": "#FF006E",
+        "neonPurple": "#8338EC",
+        "electricBlue": "#3A86FF",
+        "sunYellow": "#FFBE0B",
+        "deepBlack": "#0A0A0A"
+      },
+      "background": "linear-gradient(to bottom, #FF6B35 0%, #8338EC 50%, #0A0A0A 100%)",
+      "designApproach": [
+        "Retro-futuristic 80s aesthetic",
+        "Sunset gradients (orange, pink, purple)",
+        "Perspective grid landscapes (Tron-like)",
+        "Neon glow effects",
+        "Sports cars, palm trees, cities",
+        "Synthesized music culture",
+        "Dark backgrounds with bright neon accents"
+      ],
+      "typography": {
+        "fonts": "Orbitron, Audiowide, or futuristic sans-serif",
+        "effects": "neon glow, letter-spacing, uppercase"
+      },
+      "decorations": {
+        "h1": "neon glow text-shadow, uppercase, wide letter-spacing",
+        "h2": "gradient borders, glow effects",
+        "backgrounds": "perspective grids, sunset gradients",
+        "accents": "geometric shapes (triangles, grids) in neon colors"
+      },
+      "cssCode": ".synthwave-grid { background: linear-gradient(transparent 0%, #8338EC 100%), repeating-linear-gradient(0deg, transparent, transparent 1px, #FF006E 1px, #FF006E 2px); } .synthwave-glow { text-shadow: 0 0 5px #FF006E, 0 0 10px #8338EC, 0 0 20px #3A86FF; letter-spacing: 0.1em; }"
+    }
+  },
+  {
+    "id": "color-y2k",
+    "type": "color_palette",
+    "keywords": [
+      "y2k",
+      "year 2000",
+      "千禧年",
+      "millennium",
+      "1990s",
+      "2000s",
+      "pop",
+      "波普",
+      "shiny",
+      "闪光",
+      "metallic",
+      "金属",
+      "bubble",
+      "bubblegum",
+      "optimistic",
+      "乐观"
+    ],
+    "name": "Y2K Aesthetic",
+    "description": "千禧年美学，1999-2003年的乐观未来主义，闪光金属、泡泡糖粉与科技感",
+    "data": {
+      "colors": {
+        "metallicSilver": "#C0C0C0",
+        "bubblegumPink": "#FF69B4",
+        "electricBlue": "#00BFFF",
+        "limeGreen": "#32CD32",
+        "lavender": "#E6E6FA",
+        "white": "#FFFFFF"
+      },
+      "background": "linear-gradient(135deg, #E6E6FA 0%, #C0C0C0 50%, #FFFFFF 100%)",
+      "designApproach": [
+        "Optimistic futurism (pre-9/11)",
+        "Metallic and shiny surfaces",
+        "Bubblegum colors (pink, blue, lavender)",
+        "Rounded, organic shapes",
+        "Tech-inspired motifs (computers, phones)",
+        "Pop culture and celebrity worship",
+        "Glitter and sparkle effects"
+      ],
+      "typography": {
+        "fonts": "Verdana, Comic Sans MS (period-appropriate), rounded sans-serif",
+        "styles": "bold, playful, sometimes italicized"
+      },
+      "decorations": {
+        "h1": "shiny gradient text, rounded borders",
+        "h2": "bubblegum pink/blue, playful fonts",
+        "backgrounds": "metallic gradients, sparkles",
+        "shapes": "bubbles, stars, hearts, rounded corners"
+      },
+      "cssCode": ".y2k-shiny { background: linear-gradient(135deg, #C0C0C0 0%, #FFFFFF 50%, #C0C0C0 100%); border-radius: 20px; } .y2k-bubble { background: radial-gradient(circle at 30% 30%, #FF69B4, #FF1493); border-radius: 50%; } .y2k-text { background: linear-gradient(to right, #00BFFF, #FF69B4); -webkit-background-clip: text; }"
+    }
+  },
+  {
+    "id": "color-minimalism",
+    "type": "color_palette",
+    "keywords": [
+      "minimalism",
+      "极简主义",
+      "minimal",
+      "simple",
+      "简洁",
+      "clean",
+      "干净",
+      "less is more",
+      "少即是多",
+      "monochrome",
+      "单色",
+      "negative space",
+      "留白",
+      "breathing room",
+      "essential"
+    ],
+    "name": "Minimalism Design",
+    "description": "极简主义设计，少即是多，强调留白、单色调和功能性",
+    "data": {
+      "colors": {
+        "primaryBlack": "#1A1A1A",
+        "primaryWhite": "#FFFFFF",
+        "softGray": "#F5F5F5",
+        "mediumGray": "#E0E0E0",
+        "textGray": "#757575"
+      },
+      "background": "#FFFFFF",
+      "designApproach": [
+        "Less is more philosophy",
+        "Maximum negative space (60-70% white space)",
+        "Limited color palette (monochrome or 2-3 colors max)",
+        "Clean, grid-based layouts",
+        "No unnecessary decorations",
+        "Typography-focused design",
+        "Functional over ornamental"
+      ],
+      "typography": {
+        "fonts": "Inter, SF Pro, Helvetica Neue (clean sans-serif)",
+        "sizes": "Clear hierarchy (32pt H1, 24pt H2, 16pt body)",
+        "weights": "Light (300), Regular (400), Medium (500)",
+        "leading": "generous (1.6-1.8)"
+      },
+      "decorations": {
+        "h1": "black, bold, generous spacing, no decorations",
+        "h2": "borderBottom 1px solid #E0E0E0 (optional, minimal)",
+        "paragraph": "max-width 65ch, centered, generous line-height",
+        "buttons": "minimal borders or no borders, subtle hover states"
+      },
+      "cssCode": ".minimal-container { max-width: 65ch; margin: 0 auto; padding: 2rem; } .minimal-text { color: #1A1A1A; line-height: 1.7; font-weight: 400; } .minimal-border { border: 1px solid #E0E0E0; }"
+    }
+  },
+  {
+    "id": "color-victorian",
+    "type": "color_palette",
+    "keywords": [
+      "victorian",
+      "维多利亚",
+      "vintage",
+      "复古",
+      "ornate",
+      "华丽",
+      "ornamentation",
+      "装饰",
+      "elegant",
+      "优雅",
+      "classical",
+      "古典",
+      "19th century",
+      "19世纪",
+      "floral",
+      "花卉"
+    ],
+    "name": "Victorian Era Design",
+    "description": "维多利亚时代设计风格，华丽装饰、繁复花纹与古典优雅",
+    "data": {
+      "colors": {
+        "burgundy": "#800020",
+        "forestGreen": "#228B22",
+        "gold": "#D4AF37",
+        "cream": "#FFFDD0",
+        "navy": "#000080",
+        "antiqueWhite": "#FAEBD7"
+      },
+      "background": "#FFFDD0",
+      "designApproach": [
+        "Heavy ornamentation and decoration",
+        "Floral and nature-inspired motifs",
+        "Rich, deep colors (burgundy, forest green, navy)",
+        "Gold accents and borders",
+        "Serif typography with elaborate details",
+        "Picture frames, decorative borders",
+        "Vintage textures (paper, fabric)"
+      ],
+      "typography": {
+        "fonts": "Didot, Bodoni, Garamond (elegant serif with high contrast)",
+        "weights": "Regular and bold",
+        "decorations": "drop caps, ornamental initials"
+      },
+      "decorations": {
+        "borders": "double borders, floral patterns, gold frames",
+        "h1": "drop cap (3x size), burgundy or navy, ornamental flourishes",
+        "h2": "gold underline with decorative ends",
+        "backgrounds": "floral patterns, damask, vintage paper textures",
+        "ornaments": "corner decorations, divider lines with flourishes"
+      },
+      "cssCode": ".victorian-border { border: 3px double #D4AF37; padding: 20px; position: relative; } .victorian-border::before, .victorian-border::after { content: '❧'; position: absolute; color: #800020; font-size: 24px; } .victorian-dropcap { float: left; font-size: 3.5em; line-height: 0.8; padding-right: 8px; color: #800020; font-family: 'Didot', serif; }"
+    }
+  },
+  {
+    "id": "color-new-chinese",
+    "type": "color_palette",
+    "keywords": [
+      "新中式",
+      "new chinese style",
+      "现代中式",
+      "contemporary chinese",
+      "eastern aesthetics",
+      "东方美学",
+      "minimalist chinese",
+      "极简中式",
+      "禅意",
+      "zen",
+      "chinese modern",
+      "新东方",
+      "elegant chinese",
+      "雅致中式"
+    ],
+    "name": "新中式风格 (New Chinese Style)",
+    "description": "现代新中式美学，融合传统中国色彩与极简设计理念，追求雅致与禅意",
+    "data": {
+      "colors": {
+        "porcelainBlue": "#A8D8EA",
+        "noblePurple": "#6B5B95",
+        "inkBlack": "#1A1A1A",
+        "vermilion": "#E64A19",
+        "jadeGreen": "#7D9D9C",
+        "ricePaper": "#F5F3EF"
+      },
+      "background": "#F5F3EF",
+      "designApproach": [
+        "Traditional Chinese colors with modern minimalism",
+        "Ink painting aesthetics (negative space, subtle gradients)",
+        "Porcelain and jade color palettes",
+        "Calligraphy-inspired typography",
+        "Zen philosophy (simplicity, harmony with nature)",
+        "Rice paper textures and subtle patterns"
+      ],
+      "typography": {
+        "fonts": "Noto Serif SC, Songti SC (宋体), serif",
+        "writingMode": "vertical writing for poetic effect (optional)",
+        "lineHeight": "1.8-2.0 (generous, like calligraphy)"
+      },
+      "decorations": {
+        "h1": "ink black, centered, generous spacing, subtle vermillion accent",
+        "h2": "borderLeft 3px solid #E64A19 (vermilion), jade green background",
+        "blockquote": "porcelain blue background, ink gray text, elegant border",
+        "patterns": "subtle cloud patterns (祥云), bamboo leaves, ink wash effects"
+      },
+      "cssCode": ".new-chinese-ink { background: linear-gradient(to right, #1A1A1A, #3D3D3D); -webkit-background-clip: text; } .new-chinese-vermilion { color: #E64A19; border-left: 3px solid #E64A19; } .new-chinese-jade { background: #7D9D9C; color: #fff; padding: 8px 16px; }"
+    }
+  },
+  {
+    "id": "color-song-typography",
+    "type": "color_palette",
+    "keywords": [
+      "宋体",
+      "songti",
+      "宋体字",
+      "chinese serif",
+      "中文衬线",
+      "traditional chinese",
+      "传统中文",
+      "elegant serif",
+      "优雅衬线",
+      "printing",
+      "印刷",
+      "classic chinese",
+      "古典中文",
+      "song typeface"
+    ],
+    "name": "宋体美学 (Song Typography)",
+    "description": "宋体字的美学特征，源自宋代雕版印刷的优雅衬线字体风格",
+    "data": {
+      "colors": {
+        "inkBlack": "#2C2C2C",
+        "riceWhite": "#FAF9F6",
+        "sealRed": "#C8102E",
+        "indigo": "#1E4D8C",
+        "warmGray": "#8B8680"
+      },
+      "background": "#FAF9F6",
+      "designApproach": [
+        "Songti (宋体) as primary font",
+        "Ink black text on rice paper white",
+        "Seal red accents (like traditional seals)",
+        "Indigo blue for secondary elements",
+        "Clean, scholarly aesthetic",
+        "Respect for white space"
+      ],
+      "typography": {
+        "fonts": "Songti SC, Noto Serif SC, STSong (宋体优先)",
+        "weights": "Regular (400) and Bold (700)",
+        "characteristics": "Horizontal strokes thin, vertical strokes thick (diamond-shaped terminals)"
+      },
+      "decorations": {
+        "h1": "Songti, ink black, centered, traditional vertical layout option",
+        "h2": "seal red underline (borderBottom 2px solid #C8102E)",
+        "blockquote": "indigo text, warm gray background, elegant left border",
+        "accents": "seal red for important elements (buttons, links)"
+      },
+      "cssCode": ".song-ink { color: #2C2C2C; font-family: 'Songti SC', 'Noto Serif SC', serif; } .song-seal { color: #C8102E; border-bottom: 2px solid #C8102E; } .song-indigo { color: #1E4D8C; background: #F0F4F8; padding: 12px 20px; }"
+    }
+  },
+  {
+    "id": "color-showa-era",
+    "type": "color_palette",
+    "keywords": [
+      "昭和",
+      "showa",
+      "昭和时代",
+      "showa era",
+      "retro japanese",
+      "复古日本",
+      "taisho",
+      "大正",
+      "meiji",
+      "明治",
+      "japanese retro",
+      "日式复古",
+      "nostalgic japan",
+      "怀旧日本",
+      "wasei"
+    ],
+    "name": "昭和时代美学 (Showa Era Aesthetic)",
+    "description": "日本昭和时代（1926-1989）的复古美学，融合大正浪漫与现代主义",
+    "data": {
+      "colors": {
+        "showaRed": "#DC143C",
+        "antiqueWhite": "#FAF0E6",
+        "deepNavy": "#191970",
+        "mustardYellow": "#E1AD01",
+        "softPink": "#FFB6C1",
+        "brownGray": "#696969"
+      },
+      "background": "#FAF0E6",
+      "designApproach": [
+        "Showa-era nostalgia (1926-1989)",
+        "Mixture of Taisho Romanticism and modernism",
+        "Red and navy color schemes",
+        "Retro typography with decorative elements",
+        "Showa posters and advertisements aesthetic",
+        "Vintage Japanese packaging design"
+      ],
+      "typography": {
+        "fonts": "Noto Serif JP, Yu Mincho (明朝体), serif with Japanese aesthetic",
+        "decorations": "vertical text, decorative borders"
+      },
+      "decorations": {
+        "h1": "Showa red or navy, decorative borders, vintage poster style",
+        "h2": "mustard yellow accents, decorative underlines",
+        "backgrounds": "vintage paper textures, subtle patterns",
+        "motifs": "cherry blossoms, waves, bamboo (traditional Japanese)"
+      },
+      "cssCode": ".showa-red { color: #DC143C; border: 3px solid #DC143C; padding: 10px 20px; } .showa-navy { background: #191970; color: #fff; } .showa-retro { background: linear-gradient(to bottom, #FAF0E6, #FFB6C1); }"
+    }
+  },
+  {
+    "id": "color-karesansui",
+    "type": "color_palette",
+    "keywords": [
+      "枯山水",
+      "karesansui",
+      "zen garden",
+      "禅意庭园",
+      "zen aesthetics",
+      "禅宗美学",
+      "rock garden",
+      "岩石庭园",
+      "japanese zen",
+      "日本禅宗",
+      "minimalist zen",
+      "极简禅意",
+      "meditation",
+      "冥想",
+      "wabi-sabi",
+      "侘寂"
+    ],
+    "name": "枯山水禅意 (Karesansui Zen Garden)",
+    "description": "日本枯山水庭园美学，岩石与砂石表现的自然山水，禅宗极简主义",
+    "data": {
+      "colors": {
+        "sandGray": "#D4D4D4",
+        "rockDark": "#4A4A4A",
+        "mossGreen": "#6B8E23",
+        "shadowBlack": "#1C1C1C",
+        "paperWhite": "#F8F8F8",
+        "woodBrown": "#8B7355"
+      },
+      "background": "#F8F8F8",
+      "designApproach": [
+        "Zen garden aesthetics (rock and sand)",
+        "Extreme minimalism",
+        "Monochromatic with subtle moss green accents",
+        "Natural textures (stone, sand, moss, wood)",
+        "Negative space (ma) as design element",
+        "Wabi-sabi philosophy (imperfection, impermanence)"
+      ],
+      "typography": {
+        "fonts": "Noto Sans JP, lightweight sans-serif",
+        "weights": "Light (300) and Regular (400)",
+        "spacing": "generous letter-spacing and line-height"
+      },
+      "decorations": {
+        "h1": "rock dark, centered, minimal, generous spacing",
+        "h2": "subtle moss green accents, thin borders",
+        "backgrounds": "sand-like textures, subtle raked patterns",
+        "elements": "stone shapes, organic curves, minimal decoration"
+      },
+      "cssCode": ".zen-sand { background: linear-gradient(135deg, #F8F8F8 0%, #D4D4D4 100%); } .zen-rock { color: #4A4A4A; font-weight: 300; letter-spacing: 0.15em; } .zen-moss { color: #6B8E23; border-left: 2px solid #6B8E23; }"
+    }
+  },
+  {
+    "id": "color-old-shanghai",
+    "type": "color_palette",
+    "keywords": [
+      "老上海",
+      "old shanghai",
+      "1930s shanghai",
+      "1930年代上海",
+      "shanghai vintage",
+      "上海复古",
+      "republican era",
+      "民国时期",
+      "art deco shanghai",
+      "上海装饰艺术",
+      "bund",
+      "外滩",
+      "qipao",
+      "旗袍",
+      "shanghai glamour",
+      "上海风情",
+      "east meets west"
+    ],
+    "name": "老上海风情 (Old Shanghai 1930s)",
+    "description": "1930年代上海的装饰艺术风格，东西方文化交融的黄金时代",
+    "data": {
+      "colors": {
+        "artDecoGold": "#D4AF37",
+        "shanghaiRed": "#B22222",
+        "jadeGreen": "#00A86B",
+        "velvetBlack": "#1C1C1C",
+        "cream": "#FFF8DC",
+        "pearlWhite": "#FDF5E6"
+      },
+      "background": "#FFF8DC",
+      "designApproach": [
+        "1930s Shanghai Art Deco aesthetic",
+        "East-meets-West fusion",
+        "Gold accents and geometric patterns",
+        "Jade green (jewelry, qipao)",
+        "Shanghai red (lanterns, seals)",
+        "Velvet textures and luxurious materials"
+      ],
+      "typography": {
+        "fonts": "Noto Serif SC, elegant serif with Art Deco influence",
+        "styles": "elegant, sophisticated, sometimes decorative"
+      },
+      "decorations": {
+        "h1": "Art Deco gold, centered, decorative geometric patterns",
+        "h2": "shanghai red or jade green, elegant borders",
+        "backgrounds": "Art Deco geometric patterns, fan shapes",
+        "motifs": "chevrons, sunbursts, bamboo, plum blossoms"
+      },
+      "cssCode": ".shanghai-gold { color: #D4AF37; background: linear-gradient(135deg, #D4AF37 0%, #FFF8DC 50%, #D4AF37 100%); } .shanghai-red { color: #B22222; border: 2px solid #B22222; } .shanghai-jade { background: #00A86B; color: #fff; } .shanghai-deco { background-image: repeating-linear-gradient(45deg, #D4AF37 0px, #D4AF37 2px, transparent 2px, transparent 10px); }"
+    }
+  },
+  {
+    "id": "color-law-firm",
+    "type": "color_palette",
+    "keywords": [
+      "law firm",
+      "律师事务所",
+      "legal",
+      "法律",
+      "attorney",
+      "律师",
+      "professional services",
+      "专业服务",
+      "trust",
+      "信任",
+      "authority",
+      "权威",
+      "corporate",
+      "企业",
+      "conservative",
+      "保守"
+    ],
+    "name": "Law Firm Professional (律师事务所专业)",
+    "description": "律师事务所专业设计系统，强调信任、权威与专业可靠性",
+    "data": {
+      "colors": {
+        "navyBlue": "#1E3A8A",
+        "burgundy": "#7F1D1D",
+        "charcoal": "#374151",
+        "goldAccent": "#D97706",
+        "cream": "#FFFBEB",
+        "slateGray": "#64748B"
+      },
+      "background": "#FFFFFF",
+      "designApproach": [
+        "Professional and trustworthy",
+        "Conservative color palette (navy, burgundy, charcoal)",
+        "Minimal decoration, maximum clarity",
+        "Strong typography hierarchy",
+        "Gold accents for premium feel",
+        "Clean layouts with generous white space"
+      ],
+      "typography": {
+        "fonts": "Georgia, Times New Roman (classic serif for authority), Garamond",
+        "sizes": "Clear hierarchy (18pt H1, 14pt H2, 11pt body)",
+        "weights": "Regular (400) and Semi-Bold (600)",
+        "leading": "1.5-1.6 (comfortable, professional)"
+      },
+      "decorations": {
+        "h1": "navy blue or charcoal, serif, centered or left-aligned, no decoration",
+        "h2": "borderBottom 2px solid #D97706 (gold) or navy blue",
+        "blockquote": "cream background, charcoal text, left border",
+        "accents": "gold for CTAs, important elements",
+        "borders": "subtle 1px slate gray borders"
+      },
+      "cssCode": ".law-navy { color: #1E3A8A; } .law-burgundy { color: #7F1D1D; } .law-gold-border { border-bottom: 2px solid #D97706; } .law-cream-bg { background: #FFFBEB; border-left: 3px solid #1E3A8A; }"
+    }
+  },
+  {
+    "id": "color-mother-baby",
+    "type": "color_palette",
+    "keywords": [
+      "mother baby",
+      "母婴",
+      "maternal",
+      "母性",
+      "infant",
+      "婴儿",
+      "soft",
+      "柔和",
+      "warm",
+      "温暖",
+      "gentle",
+      "温柔",
+      "nurturing",
+      "呵护",
+      "pastel",
+      "粉彩",
+      "caring",
+      "关爱"
+    ],
+    "name": "Mother & Baby Care (母婴呵护)",
+    "description": "母婴产品设计系统，柔和温暖的色彩传递关爱与呵护",
+    "data": {
+      "colors": {
+        "softPink": "#FFD1DC",
+        "babyBlue": "#B4D8E7",
+        "warmPeach": "#FFCBA4",
+        "sageGreen": "#C5E1A5",
+        "cream": "#FFF8E7",
+        "lavender": "#E6E6FA"
+      },
+      "background": "#FFF8E7",
+      "designApproach": [
+        "Soft, nurturing color palette",
+        "Pastel tones (pink, blue, peach, green)",
+        "Rounded corners everywhere (12-20px)",
+        "Gentle shadows (no harsh contrasts)",
+        "Warm and welcoming atmosphere",
+        "Playful but not chaotic"
+      ],
+      "typography": {
+        "fonts": "Quicksand, Nunito, or rounded sans-serif",
+        "weights": "Regular (400) and Semi-Bold (600)",
+        "sizes": "Generous (16-18pt body text)",
+        "leading": "1.6-1.8 (breathing room)"
+      },
+      "decorations": {
+        "h1": "warm peach or soft pink, rounded, friendly",
+        "h2": "baby blue or sage green, subtle underlines",
+        "backgrounds": "pastel gradients, soft patterns",
+        "shapes": "circles, hearts, stars (playful but elegant)",
+        "borders": "2-3px rounded, soft colors"
+      },
+      "cssCode": ".baby-pink { background: #FFD1DC; color: #5D4037; border-radius: 16px; padding: 12px 24px; } .baby-blue { background: #B4D8E7; color: #fff; } .baby-soft-shadow { box-shadow: 0 4px 12px rgba(255, 203, 164, 0.3); border-radius: 20px; }"
+    }
+  },
+  {
+    "id": "color-eco-detailed",
+    "type": "color_palette",
+    "keywords": [
+      "eco friendly",
+      "环保",
+      "sustainable",
+      "可持续",
+      "green",
+      "绿色",
+      "nature",
+      "自然",
+      "organic",
+      "有机",
+      "environmental",
+      "环境",
+      "earth",
+      "地球",
+      "renewable",
+      "可再生",
+      "clean energy",
+      "清洁能源"
+    ],
+    "name": "Eco-Friendly Sustainable (环保可持续)",
+    "description": "环保品牌设计系统，强调可持续性、自然与生态友好",
+    "data": {
+      "colors": {
+        "forestGreen": "#2D5016",
+        "leafGreen": "#4A7C23",
+        "skyBlue": "#87CEEB",
+        "earthBrown": "#8B4513",
+        "sunYellow": "#FFD700",
+        "cloudWhite": "#F0F8FF"
+      },
+      "background": "#F0F8FF",
+      "designApproach": [
+        "Nature-inspired color palette",
+        "Earth tones (green, brown, blue)",
+        "Clean, fresh aesthetic",
+        "Organic shapes and patterns",
+        "Transparency and authenticity",
+        "Sustainability messaging"
+      ],
+      "typography": {
+        "fonts": "Nunito, Poppins, or rounded sans-serif (approachable)",
+        "weights": "Regular (400) and Bold (700)",
+        "sizes": "Clear and readable",
+        "leading": "1.6-1.7 (comfortable)"
+      },
+      "decorations": {
+        "h1": "forest green, centered, nature-inspired",
+        "h2": "leaf green accents, subtle borders",
+        "backgrounds": "leaf patterns, organic shapes",
+        "icons": "leaves, trees, recycling symbols",
+        "gradients": "subtle green-to-blue gradients"
+      },
+      "cssCode": ".eco-forest { background: linear-gradient(135deg, #2D5016 0%, #4A7C23 100%); color: #fff; } .eco-leaf { border-left: 4px solid #4A7C23; background: #E8F5E9; padding: 16px; } .eco-sun { color: #FFD700; } .eco-nature-bg { background-image: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><circle cx=\"20\" cy=\"80\" r=\"5\" fill=\"%234A7C23\" opacity=\"0.1\"/></svg>'); }"
+    }
+  },
+  {
+    "id": "color-cream",
+    "type": "color_palette",
+    "keywords": [
+      "cream",
+      "奶油色",
+      "ivory",
+      "象牙白",
+      "off-white",
+      "米白",
+      "warm white",
+      "暖白",
+      "neutral",
+      "中性色",
+      "soft",
+      "柔和",
+      "elegant",
+      "优雅",
+      "timeless",
+      "经典"
+    ],
+    "name": "Cream Neutral (奶油中性色)",
+    "description": "经典的奶油色系，温暖优雅的米白色调，永恒而百搭",
+    "data": {
+      "colors": {
+        "cream": "#FFFDD0",
+        "ivory": "#FFFFF0",
+        "warmWhite": "#FFFAF0",
+        "beige": "#F5F5DC",
+        "champagne": "#F7E7CE",
+        "softGray": "#E8E8E8"
+      },
+      "background": "#FFFDD0",
+      "designApproach": [
+        "Warm, elegant neutral palette",
+        "Cream and ivory tones (not stark white)",
+        "Timeless and sophisticated",
+        "Versatile for any content type",
+        "Subtle contrast with soft grays",
+        "Classic and refined"
+      ],
+      "typography": {
+        "fonts": "Georgia, Palatino, or elegant serif",
+        "colors": "dark gray (#4A4A4A) on cream backgrounds",
+        "leading": "1.6-1.7 (comfortable)"
+      },
+      "decorations": {
+        "h1": "dark gray or charcoal, serif, elegant",
+        "h2": "champagne or beige accents, subtle borders",
+        "backgrounds": "cream to ivory gradients",
+        "borders": "1px soft gray or champagne"
+      },
+      "cssCode": ".cream-bg { background: #FFFDD0; } .cream-text { color: #4A4A4A; } .cream-champagne { background: #F7E7CE; color: #4A4A4A; padding: 12px 20px; } .cream-elegant { border: 1px solid #E8E8E8; }"
+    }
   }
 ]
