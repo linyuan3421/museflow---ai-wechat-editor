@@ -1,0 +1,587 @@
+[
+  {
+    "id": "color-morandi",
+    "type": "color_palette",
+    "keywords": [
+      "莫兰迪",
+      "morandi",
+      "灰粉",
+      "灰绿",
+      "高级灰",
+      "低饱和",
+      "muted",
+      "oil painting",
+      "油画",
+      "giorgio morandi",
+      "意大利",
+      "静物",
+      "quiet luxury",
+      "宁静",
+      "克制"
+    ],
+    "name": "莫兰迪色系",
+    "description": "Giorgio Morandi 画作的 muted color system，所有颜色都有灰色底色",
+    "data": {
+      "colors": {
+        "mutedPink": "#BFA89A",
+        "sageGreen": "#9C8B7A",
+        "dustyBlue": "#8B9DAF",
+        "warmGray": "#A8A69D",
+        "earth": "#B8A99A",
+        "accent": "#D4C4B0"
+      },
+      "background": "#FAF9F6",
+      "designApproach": [
+        "All colors have gray undertones",
+        "Use 2-3 colors from palette",
+        "Low contrast between elements (gentle transitions)",
+        "Background: #FAF9F6 or #F5F3EF (warm white)"
+      ],
+      "typography": {
+        "fonts": "Georgia, Noto Serif SC (serif with artistic personality)",
+        "lineHeight": "1.85-1.95 (generous, breathing)"
+      },
+      "decorations": {
+        "borders": "Subtle, 1-2px, rounded corners (8px)",
+        "strong": "No background, just color or italic"
+      }
+    }
+  },
+  {
+    "id": "color-klein-blue",
+    "type": "color_palette",
+    "keywords": [
+      "克莱因蓝",
+      "klein blue",
+      "国际克莱因蓝",
+      "#002FA7",
+      "monochrome",
+      "single color",
+      "yves klein",
+      "法国",
+      "极简",
+      "单色系",
+      "强烈",
+      "pure blue"
+    ],
+    "name": "克莱因蓝",
+    "description": "International Klein Blue (IKB) by Yves Klein, 单色系设计，极简而强烈",
+    "data": {
+      "colors": {
+        "primary": "#002FA7",
+        "black": "#1A1A1A",
+        "white": "#FFFFFF"
+      },
+      "background": "#FFFFFF",
+      "designApproach": [
+        "Monochrome design (only Klein Blue + black + white)",
+        "Use Klein Blue for all accents (H1, H2, strong, links)",
+        "High contrast (Klein Blue vs white)",
+        "Minimal decorations (let the color speak)"
+      ],
+      "typography": {
+        "fonts": "Helvetica, Arial, sans-serif (clean, modern)",
+        "fontWeights": "700-900 for H1 (bold statement)"
+      },
+      "decorations": {
+        "h1": "Klein Blue + 700 weight + letter-spacing 0.1em",
+        "h2": "borderBottom 2px solid #002FA7",
+        "blockquote": "borderLeft 3px solid #002FA7",
+        "strong": "Klein Blue, no background"
+      }
+    }
+  },
+  {
+    "id": "color-dopamine",
+    "type": "color_palette",
+    "keywords": [
+      "多巴胺",
+      "dopamine",
+      "高饱和",
+      "bright",
+      "colorful",
+      "五颜六色",
+      "playful",
+      "快乐",
+      "活力",
+      "糖果色",
+      "鲜艳",
+      "fun",
+      "energetic"
+    ],
+    "name": "多巴胺配色",
+    "description": "高饱和度的糖果色系，充满活力和快乐",
+    "data": {
+      "colors": {
+        "hotPink": "#FF6B9D",
+        "brightYellow": "#FFD93D",
+        "cyan": "#6BCF77",
+        "orange": "#FF8C42",
+        "purple": "#A78BFA",
+        "limeGreen": "#CBF3F0"
+      },
+      "background": "#FFFFFF",
+      "designApproach": [
+        "Use 3-4 colors freely (mix and match)",
+        "High saturation (80-100%)",
+        "Playful decorations (rounded corners 12-16px)",
+        "Bold font weights (600-700)"
+      ],
+      "typography": {
+        "fonts": "system-ui, -apple-system, sans-serif",
+        "letterSpacing": "0.05em (slightly expanded)"
+      },
+      "decorations": {
+        "borderRadius": "12-16px (friendly)",
+        "h1": "96D or higher weight",
+        "strong": "backgroundColor + padding (marker style)"
+      }
+    }
+  },
+  {
+    "id": "color-tiffany-blue",
+    "type": "color_palette",
+    "keywords": [
+      "蒂芙尼蓝",
+      "tiffany blue",
+      "优雅",
+      "feminine",
+      "#0ABAB5",
+      "蓝绿色",
+      "精致",
+      "经典",
+      "elegant",
+      "teal"
+    ],
+    "name": "蒂芙尼蓝",
+    "description": "优雅的蓝绿色系，经典而精致",
+    "data": {
+      "colors": {
+        "primary": "#0ABAB5",
+        "black": "#1A1A1A",
+        "white": "#FFFFFF",
+        "softGray": "#F0F0F0"
+      },
+      "background": "#FFFFFF",
+      "designApproach": [
+        "Feminine, elegant",
+        "Use Tiffany Blue for H1, H2 borders, links",
+        "Black text on white background",
+        "Rounded corners (8px)",
+        "Medium font weights (500-600)"
+      ],
+      "typography": {
+        "fonts": "system-ui, sans-serif"
+      },
+      "decorations": {
+        "h2": "borderLeft 3px solid #0ABAB5",
+        "blockquote": "borderLeft 3px solid #0ABAB5 + padding 16px",
+        "strong": "color #0ABAB5, fontWeight 600"
+      }
+    }
+  },
+  {
+    "id": "color-avocado-green",
+    "type": "color_palette",
+    "keywords": [
+      "牛油果绿",
+      "avocado",
+      "organic",
+      "自然",
+      "green",
+      "earthy",
+      "温暖",
+      "舒适",
+      "有机",
+      "sage green"
+    ],
+    "name": "牛油果绿",
+    "description": "温暖的有机绿色系，自然舒适",
+    "data": {
+      "colors": {
+        "primary": "#84A98C",
+        "darkGreen": "#5F8D78",
+        "cream": "#F5F3EF",
+        "brown": "#B8A99A"
+      },
+      "background": "#F5F3EF",
+      "designApproach": [
+        "Organic, natural feel",
+        "Use green tones as primary",
+        "Cream background (warm white)",
+        "Rounded corners (8-12px)",
+        "Serif or rounded sans-serif fonts"
+      ],
+      "typography": {
+        "fonts": "Noto Serif SC, Georgia (serif) or rounded sans-serif",
+        "lineHeight": "1.75-1.85 (comfortable)"
+      },
+      "decorations": {
+        "h1": "color #5F8D78 + textAlign center",
+        "h2": "borderLeft 4px solid #84A98C + backgroundColor #F5F3EF",
+        "blockquote": "borderTop 2px solid #84A98C + borderBottom 2px"
+      }
+    }
+  },
+  {
+    "id": "color-whiskey-amber",
+    "type": "color_palette",
+    "keywords": [
+      "威士忌",
+      "whiskey",
+      "琥珀色",
+      "amber",
+      "温暖",
+      "复古",
+      "vintage",
+      "cozy",
+      "棕色",
+      "下午茶"
+    ],
+    "name": "威士忌琥珀色",
+    "description": "温暖的琥珀色和棕色系，如午后的咖啡馆",
+    "data": {
+      "colors": {
+        "amber": "#D4A373",
+        "darkBrown": "#A98467",
+        "warmCream": "#FAEDCD",
+        "charcoal": "#3D405B"
+      },
+      "background": "#FAEDCD",
+      "designApproach": [
+        "Warm, cozy, sophisticated",
+        "Use amber/brown tones",
+        "Cream background",
+        "Serif fonts (elegant, vintage)",
+        "Medium spacing (1.7-1.8)"
+      ],
+      "typography": {
+        "fonts": "Georgia, Noto Serif SC, serif"
+      },
+      "decorations": {
+        "h1": "color #3D405B + fontWeight bold + textAlign center",
+        "h2": "borderBottom 2px solid #D4A373",
+        "blockquote": "borderLeft 3px solid #D4A373 + backgroundColor #FAEDCD",
+        "strong": "background: linear-gradient(to top, #D4A373 50%, transparent 50%)"
+      }
+    }
+  },
+  {
+    "id": "color-black-gold",
+    "type": "color_palette",
+    "keywords": [
+      "黑金",
+      "black gold",
+      "奢华",
+      "luxury",
+      "premium",
+      "高贵",
+      "黑金色",
+      "金色",
+      "高端",
+      "典雅"
+    ],
+    "name": "黑金奢华",
+    "description": "经典的黑色与金色搭配，奢华而高贵",
+    "data": {
+      "colors": {
+        "black": "#1A1A1A",
+        "gold": "#D4AF37",
+        "champagne": "#F7E7CE",
+        "white": "#FFFFFF"
+      },
+      "background": "#FFFFFF",
+      "designApproach": [
+        "Premium, luxurious",
+        "Black background with gold accents OR Gold background with black text (inverted)",
+        "Serif fonts + wide letter-spacing (0.15em)",
+        "Minimal borders (1px, let contrast speak)"
+      ],
+      "typography": {
+        "fonts": "Georgia, Noto Serif SC, serif",
+        "letterSpacing": "0.15em (elegant spacing)"
+      },
+      "decorations": {
+        "h1": "gold color + serif font + letter-spacing 0.15em",
+        "h2": "backgroundColor black + gold text (inverted luxury) OR borderBottom 2px solid gold",
+        "blockquote": "borderLeft 4px solid #D4AF37 + padding 20px (elegant)",
+        "strong": "gold + italic or fontWeight bold"
+      }
+    }
+  },
+  {
+    "id": "color-custom-01",
+    "type": "color_palette",
+    "keywords": [
+      "深蓝",
+      "青色",
+      "渐变",
+      "科技感",
+      "深色调",
+      "冷色系",
+      "blue",
+      "cyan",
+      "gradient",
+      "深色主题",
+      "现代",
+      "professional",
+      "cool"
+    ],
+    "name": "深蓝青渐变",
+    "description": "深蓝与青色的渐变组合，科技感强烈",
+    "data": {
+      "colors": ["#11222e", "#88dcdd", "#00b6c9", "#0d7997"],
+      "background": "#11222e",
+      "designApproach": ["深色背景", "青色渐变", "科技感", "冷色调"]
+    }
+  },
+  {
+    "id": "color-custom-02",
+    "type": "color_palette",
+    "keywords": [
+      "紫色",
+      "蓝色",
+      "渐变",
+      "梦幻",
+      "紫蓝色",
+      "优雅",
+      "purple",
+      "dreamy",
+      "柔和",
+      "神秘"
+    ],
+    "name": "紫蓝梦幻渐变",
+    "description": "紫色与蓝色的梦幻渐变组合",
+    "data": {
+      "colors": ["#26104e", "#4cbdef", "#8e7eda", "#4e6093"],
+      "background": "#26104e",
+      "designApproach": ["深紫背景", "蓝紫渐变", "梦幻感", "优雅"]
+    }
+  },
+  {
+    "id": "color-custom-03",
+    "type": "color_palette",
+    "keywords": [
+      "黑白",
+      "简约",
+      "现代",
+      "极简",
+      "monochrome",
+      "minimalist",
+      "clean",
+      "简单",
+      "高级"
+    ],
+    "name": "黑黄简约",
+    "description": "深灰与亮黄的极简搭配",
+    "data": {
+      "colors": ["#27282a", "#f9e19e"],
+      "background": "#27282a",
+      "designApproach": ["深灰背景", "亮黄点缀", "极简", "高对比"]
+    }
+  },
+  {
+    "id": "color-custom-04",
+    "type": "color_palette",
+    "keywords": [
+      "黄色",
+      "蓝色",
+      "对比",
+      "活力",
+      "complementary",
+      "energetic",
+      "bright",
+      "醒目"
+    ],
+    "name": "黄蓝对比活力",
+    "description": "黄色与蓝色的强对比搭配",
+    "data": {
+      "colors": ["#fdce0c", "#f4f9f9", "#1d1e54", "#0052a1"],
+      "background": "#f4f9f9",
+      "designApproach": ["黄蓝对比", "活力", "醒目", "运动感"]
+    }
+  },
+  {
+    "id": "color-custom-05",
+    "type": "color_palette",
+    "keywords": [
+      "深蓝",
+      "亮蓝",
+      "粉红",
+      "清透",
+      "fresh",
+      "light",
+      "airy",
+      "清爽"
+    ],
+    "name": "深蓝粉红清透",
+    "description": "深蓝、亮蓝与粉红的清透组合",
+    "data": {
+      "colors": ["#3d3e4f", "#558fff", "#fbffff", "#fe6061"],
+      "background": "#fbffff",
+      "designApproach": ["清透", "粉蓝搭配", "轻盈", "温柔"]
+    }
+  },
+  {
+    "id": "color-custom-06",
+    "type": "color_palette",
+    "keywords": [
+      "紫色",
+      "灰蓝",
+      "柔和",
+      "elegant",
+      "muted",
+      "graceful",
+      "温婉"
+    ],
+    "name": "紫灰柔和",
+    "description": "紫色与灰蓝的柔和组合",
+    "data": {
+      "colors": ["#d9d4f8", "#302928", "#c6cfdd", "#5c5c61"],
+      "background": "#d9d4f8",
+      "designApproach": ["紫灰调", "柔和", "温婉", "优雅"]
+    }
+  },
+  {
+    "id": "color-custom-07",
+    "type": "color_palette",
+    "keywords": [
+      "蓝色",
+      "亮蓝",
+      "天蓝",
+      "清澈",
+      "clear",
+      "sky",
+      "bright blue",
+      "fresh"
+    ],
+    "name": "深蓝天蓝清澈",
+    "description": "深蓝与天蓝的清澈组合",
+    "data": {
+      "colors": ["#fffefd", "#092488", "#2a4efc", "#24aace"],
+      "background": "#fffefd",
+      "designApproach": ["蓝色系", "清澈", "明亮", "清新"]
+    }
+  },
+  {
+    "id": "color-custom-08",
+    "type": "color_palette",
+    "keywords": [
+      "灰色",
+      "深灰",
+      "紫色",
+      "muted",
+      "低调",
+      "sophisticated",
+      "高级灰"
+    ],
+    "name": "灰紫低调",
+    "description": "灰色与紫色的低调组合",
+    "data": {
+      "colors": ["#e9e4e6", "#2e2f2f", "#525050", "#3a2fef"],
+      "background": "#e9e4e6",
+      "designApproach": ["灰紫调", "低调", "高级", "克制"]
+    }
+  },
+  {
+    "id": "color-custom-09",
+    "type": "color_palette",
+    "keywords": [
+      "紫色",
+      "蓝色",
+      "浅紫",
+      "dreamy",
+      "柔和紫",
+      "purple",
+      "romantic"
+    ],
+    "name": "紫蓝柔梦",
+    "description": "紫色与蓝色的柔梦组合",
+    "data": {
+      "colors": ["#e1dbf6", "#1c3767", "#0439ac", "#b2c5f5"],
+      "background": "#e1dbf6",
+      "designApproach": ["紫蓝调", "柔美", "梦幻", "浪漫"]
+    }
+  },
+  {
+    "id": "color-custom-10",
+    "type": "color_palette",
+    "keywords": [
+      "深绿",
+      "浅绿",
+      "黄绿",
+      "自然",
+      "nature",
+      "forest",
+      "green",
+      "organic"
+    ],
+    "name": "深绿浅绿自然",
+    "description": "深绿与浅绿的自然组合",
+    "data": {
+      "colors": ["#0d2a00", "#d5e6ea", "#c1ce82", "#609076"],
+      "background": "#d5e6ea",
+      "designApproach": ["绿色系", "自然", "有机", "清新"]
+    }
+  },
+  {
+    "id": "color-custom-11",
+    "type": "color_palette",
+    "keywords": [
+      "深蓝",
+      "白色",
+      "灰色",
+      "橙红",
+      "contrast",
+      "strong",
+      "对比强烈"
+    ],
+    "name": "深蓝白灰橙红对比",
+    "description": "深蓝、白、灰与橙红的强对比",
+    "data": {
+      "colors": ["#273c91", "#fafcfc", "#dadddf", "#ba6733"],
+      "background": "#fafcfc",
+      "designApproach": ["深蓝橙红对比", "强烈", "醒目", "现代"]
+    }
+  },
+  {
+    "id": "color-custom-12",
+    "type": "color_palette",
+    "keywords": [
+      "蓝色",
+      "红橙",
+      "清新",
+      "fresh",
+      "vibrant",
+      "活力",
+      "活泼"
+    ],
+    "name": "蓝红橙清新活力",
+    "description": "蓝色与红橙的清新活力组合",
+    "data": {
+      "colors": ["#fefdfd", "#0e296a", "#4f6d96", "#d04332"],
+      "background": "#fefdfd",
+      "designApproach": ["蓝红橙", "清新", "活力", "活泼"]
+    }
+  },
+  {
+    "id": "color-custom-13",
+    "type": "color_palette",
+    "keywords": [
+      "黑色",
+      "灰白",
+      "粉红",
+      "romantic",
+      "浪漫",
+      "温柔",
+      "sweet"
+    ],
+    "name": "黑灰白粉红浪漫",
+    "description": "黑、灰白与粉红的浪漫组合",
+    "data": {
+      "colors": ["#2b2928", "#f2f4f2", "#f07195"],
+      "background": "#f2f4f2",
+      "designApproach": ["黑白粉", "浪漫", "温柔", "甜美"]
+    }
+  }
+]

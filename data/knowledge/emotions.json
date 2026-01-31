@@ -1,0 +1,551 @@
+[
+  {
+    "id": "emotion-lonely",
+    "type": "emotion",
+    "keywords": [
+      "孤独",
+      "lonely",
+      "寂寞",
+      "isolated",
+      "alone",
+      "empty",
+      "melancholy",
+      "孤单",
+      "凄凉",
+      "独处"
+    ],
+    "name": "孤独情绪",
+    "description": "抽象情绪\"孤独\"的设计转译",
+    "data": {
+      "colors": {
+        "approach": "Monochrome or very muted, single color focus"
+      },
+      "typography": {
+        "h1": "900 weight + 2.0 line height (contrast of heavy + loose)",
+        "fonts": "Thin weights (300) for body text"
+      },
+      "spacing": {
+        "lineHeight": "2.0 (very loose, emptiness)",
+        "margins": "2.5-3em (maximum isolation)"
+      },
+      "decorations": {
+        "h2": "borderBottom 1px solid (minimal divider)",
+        "blockquote": "No decoration, italic only",
+        "allBorders": "0-1px maximum (subtle, withdrawn)"
+      }
+    }
+  },
+  {
+    "id": "emotion-passionate",
+    "type": "emotion",
+    "keywords": [
+      "热烈",
+      "passionate",
+      "激情",
+      "energetic",
+      "bold",
+      "dynamic",
+      "fire",
+      "燃烧",
+      "活力",
+      "冲动"
+    ],
+    "name": "热烈激情情绪",
+    "description": "抽象情绪\"热烈\"的设计转译",
+    "data": {
+      "colors": {
+        "approach": "High saturation, warm tones (orange, red, yellow)"
+      },
+      "typography": {
+        "h1": "700-900 weight (bold, impactful)",
+        "fonts": "Bold, display fonts"
+      },
+      "spacing": {
+        "lineHeight": "1.5-1.6 (tight, energetic)",
+        "margins": "1-1.2em (compact)"
+      },
+      "decorations": {
+        "h1": "Thick borders (4-6px) + textShadow (impact)",
+        "strong": "700-900 weight + backgroundColor (marker style)",
+        "allElements": "High contrast, bold statements"
+      }
+    }
+  },
+  {
+    "id": "emotion-gentle",
+    "type": "emotion",
+    "keywords": [
+      "温柔",
+      "gentle",
+      "soft",
+      "治愈",
+      "warm",
+      "comforting",
+      "tender",
+      "柔和",
+      "温暖",
+      "安抚"
+    ],
+    "name": "温柔治愈情绪",
+    "description": "抽象情绪\"温柔\"的设计转译",
+    "data": {
+      "colors": {
+        "approach": "Pastel colors, rounded, warm tones (pink, peach, cream)"
+      },
+      "typography": {
+        "h1": "400-500 weight (medium, approachable)"
+      },
+      "decorations": {
+        "borderRadius": "12-16px (soft, friendly)",
+        "borders": "1-2px (gentle)",
+        "blockquote": "backgroundColor light tint + borderRadius (soft card)"
+      }
+    }
+  },
+  {
+    "id": "emotion-calm",
+    "type": "emotion",
+    "keywords": [
+      "冷静",
+      "calm",
+      "理性",
+      "rational",
+      "professional",
+      "cool",
+      "沉着",
+      "理智",
+      "专业",
+      "清凉"
+    ],
+    "name": "冷静理性情绪",
+    "description": "抽象情绪\"冷静\"的设计转译",
+    "data": {
+      "colors": {
+        "approach": "Cool tones (blue, gray, teal)"
+      },
+      "typography": {
+        "fonts": "Sans-serif, geometric"
+      },
+      "decorations": {
+        "borders": "Geometric, clean borders",
+        "h2": "borderLeft 3-4px solid (clean hierarchy)"
+      }
+    }
+  },
+  {
+    "id": "emotion-nostalgic",
+    "type": "emotion",
+    "keywords": [
+      "怀旧",
+      "nostalgic",
+      "复古",
+      "vintage",
+      "回忆",
+      "memory",
+      "温暖",
+      "warm",
+      "回忆杀",
+      "时光"
+    ],
+    "name": "怀旧情绪",
+    "description": "深深的怀念与回忆",
+    "data": {
+      "colors": {
+        "approach": "Sepia, warm brown, amber, faded tones"
+      },
+      "typography": {
+        "h1": "Serif + italic or letter-spacing 0.1em",
+        "fonts": "Georgia, Times, serif"
+      },
+      "decorations": {
+        "background": "Subtle paper texture or sepia tint",
+        "borders": "2px solid, slightly rounded (6px)",
+        "images": "Slightly desaturated or sepia-toned"
+      },
+      "spacing": {
+        "lineHeight": "1.8-1.9 (relaxed, reminiscent)"
+      }
+    }
+  },
+  {
+    "id": "emotion-mysterious",
+    "type": "emotion",
+    "keywords": [
+      "神秘",
+      "mysterious",
+      "深邃",
+      "dark",
+      "enigma",
+      "shadow",
+      "深色",
+      "谜团",
+      "暗黑",
+      "hidden"
+    ],
+    "name": "神秘情绪",
+    "description": "神秘莫测、深邃的设计语言",
+    "data": {
+      "colors": {
+        "approach": "Deep purples, navies, blacks with subtle accents"
+      },
+      "typography": {
+        "h1": "Thin weights (300) + wide letter-spacing (0.15em)",
+        "fonts": "Light, elegant serif or sans-serif"
+      },
+      "decorations": {
+        "borders": "Very subtle (1px transparent or low contrast)",
+        "shadows": "Soft shadows creating depth",
+        "accents": "Subtle glowing accents (cyan, magenta)"
+      },
+      "spacing": {
+        "lineHeight": "1.9-2.0 (airy, mysterious)"
+      }
+    }
+  },
+  {
+    "id": "emotion-playful",
+    "type": "emotion",
+    "keywords": [
+      "俏皮",
+      "playful",
+      "活泼",
+      "fun",
+      "cheerful",
+      "joyful",
+      "有趣",
+      "欢乐",
+      "愉快",
+      "bouncy"
+    ],
+    "name": "俏皮情绪",
+    "description": "活泼有趣的快乐情绪",
+    "data": {
+      "colors": {
+        "approach": "Bright, saturated colors (pink, yellow, cyan, orange)"
+      },
+      "typography": {
+        "h1": "Bold, rounded fonts + slight letter-spacing (0.05em)",
+        "fonts": "Rounded sans-serif (Nunito, Quicksand)"
+      },
+      "decorations": {
+        "borderRadius": "12-16px (friendly, organic)",
+        "borders": "2-3px solid, colorful",
+        "background": "Playful patterns or bright colors"
+      },
+      "spacing": {
+        "lineHeight": "1.6-1.7 (energetic, not too loose)"
+      }
+    }
+  },
+  {
+    "id": "emotion-elegant",
+    "type": "emotion",
+    "keywords": [
+      "优雅",
+      "elegant",
+      "高贵",
+      "refined",
+      "sophisticated",
+      "graceful",
+      "经典",
+      "高级",
+      "精致",
+      "classy"
+    ],
+    "name": "优雅情绪",
+    "description": "高贵、精致、优雅的设计语言",
+    "data": {
+      "colors": {
+        "approach": "Muted, sophisticated colors (navy, burgundy, gold, cream)"
+      },
+      "typography": {
+        "h1": "Serif + wide letter-spacing (0.15-0.2em) + italic",
+        "fonts": "Elegant serif (Bodoni, Didot, Playfair Display)"
+      },
+      "decorations": {
+        "borders": "Thin, elegant (1px solid)",
+        "accents": "Gold or silver subtle accents",
+        "background": "Clean white or very light tint"
+      },
+      "spacing": {
+        "lineHeight": "1.8-2.0 (generous, elegant)"
+      }
+    }
+  },
+  {
+    "id": "emotion-melancholic",
+    "type": "emotion",
+    "keywords": [
+      "忧郁",
+      "melancholic",
+      "伤感",
+      "sad",
+      "somber",
+      "wistful",
+      "悲伤",
+      "沉郁",
+      "惆怅",
+      "blue"
+    ],
+    "name": "忧郁情绪",
+    "description": "伤感、沉郁的悲伤情绪",
+    "data": {
+      "colors": {
+        "approach": "Muted blues, grays, desaturated purples"
+      },
+      "typography": {
+        "h1": "Medium weights (500-600) + italic or wide spacing",
+        "fonts": "Serif with character"
+      },
+      "decorations": {
+        "borders": "Subtle, slightly uneven (1-2px)",
+        "background": "Light gray or muted blue tint"
+      },
+      "spacing": {
+        "lineHeight": "1.9-2.0 (loose, contemplative)"
+      }
+    }
+  },
+  {
+    "id": "emotion-energetic",
+    "type": "emotion",
+    "keywords": [
+      "充满活力",
+      "energetic",
+      "dynamic",
+      "vibrant",
+      "alive",
+      "powerful",
+      "活力",
+      "动感",
+      "强劲",
+      "bursting"
+    ],
+    "name": "充满活力情绪",
+    "description": "能量满满、动感十足的情绪",
+    "data": {
+      "colors": {
+        "approach": "High saturation, warm accents (orange, red, yellow)"
+      },
+      "typography": {
+        "h1": "900 weight + tight letter-spacing (-0.02em)",
+        "fonts": "Bold sans-serif (Montserrat, Poppins)"
+      },
+      "decorations": {
+        "borders": "Thick (3-4px), angled or diagonal",
+        "background": "Dynamic gradients or bold solid colors"
+      },
+      "spacing": {
+        "lineHeight": "1.4-1.5 (very tight, compressed energy)"
+      }
+    }
+  },
+  {
+    "id": "emotion-serene",
+    "type": "emotion",
+    "keywords": [
+      "宁静",
+      "serene",
+      "平和",
+      "peaceful",
+      "tranquil",
+      "calm",
+      "安详",
+      "平和",
+      "quiet",
+      "still"
+    ],
+    "name": "宁静情绪",
+    "description": "平和、安详的宁静情绪",
+    "data": {
+      "colors": {
+        "approach": "Soft blues, greens, lavenders, whites"
+      },
+      "typography": {
+        "h1": "Light weights (300-400) + wide letter-spacing (0.1em)",
+        "fonts": "Light serif or sans-serif"
+      },
+      "decorations": {
+        "borders": "Very subtle or none (0-1px)",
+        "background": "White or very light tint",
+        "shadows": "Minimal or none"
+      },
+      "spacing": {
+        "lineHeight": "2.0+ (very generous, peaceful)",
+        "margins": "2.5em+ (maximum breathing room)"
+      }
+    }
+  },
+  {
+    "id": "emotion-intimate",
+    "type": "emotion",
+    "keywords": [
+      "亲密",
+      "intimate",
+      "温暖",
+      "warm",
+      "close",
+      "personal",
+      "温暖",
+      "亲近",
+      "私密",
+      "cozy"
+    ],
+    "name": "亲密温暖情绪",
+    "description": "亲密、温暖、私密的情感",
+    "data": {
+      "colors": {
+        "approach": "Warm tones (peach, coral, cream, warm brown)"
+      },
+      "typography": {
+        "h1": "Medium weights (500) + slightly rounded",
+        "fonts": "Friendly serif or rounded sans-serif"
+      },
+      "decorations": {
+        "borderRadius": "12-16px (soft, approachable)",
+        "borders": "1-2px solid (subtle, warm-toned)"
+      },
+      "spacing": {
+        "lineHeight": "1.8-1.9 (comfortable, intimate)"
+      }
+    }
+  },
+  {
+    "id": "emotion-majestic",
+    "type": "emotion",
+    "keywords": [
+      "壮丽",
+      "majestic",
+      "宏伟",
+      "grand",
+      "imposing",
+      "noble",
+      "雄伟",
+      "庄严",
+      "宏大",
+      "imperial"
+    ],
+    "name": "壮丽情绪",
+    "description": "宏伟、庄严的壮丽情绪",
+    "data": {
+      "colors": {
+        "approach": "Rich, deep colors (navy, burgundy, gold, forest green)"
+      },
+      "typography": {
+        "h1": "900 weight + wide letter-spacing (0.15em) + all caps",
+        "fonts": "Strong serif or display serif"
+      },
+      "decorations": {
+        "borders": "Thick (4-6px), solid, gold or accent color",
+        "background": "Rich colors or white with strong borders"
+      },
+      "spacing": {
+        "lineHeight": "1.6-1.7 (balanced, not too loose)"
+      }
+    }
+  },
+  {
+    "id": "emotion-ethereal",
+    "type": "emotion",
+    "keywords": [
+      "空灵",
+      "ethereal",
+      "梦幻",
+      "dreamy",
+      "delicate",
+      "airy",
+      "梦幻",
+      "轻盈",
+      "飘逸",
+      "otherworldly"
+    ],
+    "name": "空灵梦幻情绪",
+    "description": "空灵、飘逸、梦幻的情绪",
+    "data": {
+      "colors": {
+        "approach": "Pastels, light tints (lavender, mint, sky blue, peach)"
+      },
+      "typography": {
+        "h1": "Light weights (300) + wide letter-spacing (0.15em)",
+        "fonts": "Light, elegant serif or thin sans-serif"
+      },
+      "decorations": {
+        "borders": "None or very subtle transparent",
+        "background": "Gradient overlays or soft tints",
+        "shadows": "Soft, diffuse shadows"
+      },
+      "spacing": {
+        "lineHeight": "2.0+ (very airy, floating)"
+      }
+    }
+  },
+  {
+    "id": "emotion-cozy",
+    "type": "emotion",
+    "keywords": [
+      "温馨",
+      "cozy",
+      "舒适",
+      "comfortable",
+      "snug",
+      "homey",
+      "舒适",
+      "安逸",
+      "温暖",
+      "welcoming"
+    ],
+    "name": "温馨舒适情绪",
+    "description": "温馨、舒适、安逸的居家情绪",
+    "data": {
+      "colors": {
+        "approach": "Warm neutrals (beige, tan, cream, warm gray)"
+      },
+      "typography": {
+        "h1": "Medium weights (500) + slightly rounded",
+        "fonts": "Friendly serif or rounded sans-serif"
+      },
+      "decorations": {
+        "borderRadius": "8-12px (soft, not too round)",
+        "borders": "2px solid (clear but not harsh)"
+      },
+      "spacing": {
+        "lineHeight": "1.75-1.85 (comfortable reading)"
+      }
+    }
+  },
+  {
+    "id": "emotion-dramatic",
+    "type": "emotion",
+    "keywords": [
+      "戏剧性",
+      "dramatic",
+      "强烈",
+      "intense",
+      "bold",
+      "theatrical",
+      "强烈",
+      "戏剧",
+      "夸张",
+      "striking"
+    ],
+    "name": "戏剧性情绪",
+    "description": "强烈对比、戏剧性的视觉语言",
+    "data": {
+      "colors": {
+        "approach": "High contrast (black/white, or bold complementary colors)"
+      },
+      "typography": {
+        "h1": "900 weight + dramatic decorations (underlines, backgrounds)",
+        "fonts": "Bold display fonts or strong serif"
+      },
+      "decorations": {
+        "borders": "Very thick (6-8px) or multiple borders",
+        "background": "Bold colors or high contrast patterns",
+        "shadows": "Strong shadows or none (flat boldness)"
+      },
+      "spacing": {
+        "lineHeight": "1.5-1.6 (tight, dramatic)"
+      }
+    }
+  }
+]

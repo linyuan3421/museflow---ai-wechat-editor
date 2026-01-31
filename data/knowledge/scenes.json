@@ -1,0 +1,568 @@
+[
+  {
+    "id": "scene-cafe",
+    "type": "scene",
+    "keywords": [
+      "咖啡馆",
+      "cafe",
+      "咖啡",
+      "温暖",
+      "cozy",
+      "木质",
+      "ambiance",
+      "舒适",
+      "coffee shop",
+      "下午茶",
+      "休闲"
+    ],
+    "name": "咖啡馆场景",
+    "description": "温暖、舒适、亲密的咖啡馆氛围",
+    "data": {
+      "colors": {
+        "woodBrown": "#D4A373",
+        "darkBrown": "#A98467",
+        "cream": "#FAEDCD",
+        "charcoal": "#3D405B"
+      },
+      "typography": {
+        "fonts": "Serif or rounded sans-serif",
+        "lineHeight": "1.75"
+      },
+      "decorations": {
+        "borderRadius": "8-12px",
+        "borders": "Subtle, warm-toned"
+      },
+      "spacing": {
+        "lineHeight": "1.7-1.8",
+        "margins": "1.5-1.8em"
+      },
+      "special": "咖啡色点缀"
+    }
+  },
+  {
+    "id": "scene-bookstore",
+    "type": "scene",
+    "keywords": [
+      "书店",
+      "bookstore",
+      "quiet",
+      "知识",
+      "paper",
+      "intellectual",
+      "图书馆",
+      "安静",
+      "知性",
+      "书香"
+    ],
+    "name": "书店场景",
+    "description": "安静、知性、纸张质感的书店氛围",
+    "data": {
+      "colors": {
+        "warmWhite": "#FAF9F6",
+        "woodTones": "#B8A99A",
+        "darkInk": "#2C2C2C"
+      },
+      "typography": {
+        "fonts": "Serif (Georgia, literary feel)",
+        "fontStyle": "Italic for quotes"
+      },
+      "decorations": {
+        "style": "Minimal",
+        "borders": "Very subtle (1px or none)"
+      },
+      "spacing": {
+        "lineHeight": "1.85-2.0",
+        "margins": "2em+"
+      }
+    }
+  },
+  {
+    "id": "scene-jazz-bar",
+    "type": "scene",
+    "keywords": [
+      "爵士",
+      "jazz",
+      "酒吧",
+      "sophisticated",
+      "moody",
+      "intimate",
+      "夜晚",
+      "night",
+      "精致",
+      "情调"
+    ],
+    "name": "爵士酒吧场景",
+    "description": "精致、情绪化、亲密的爵士酒吧氛围",
+    "data": {
+      "colors": {
+        "deepPurple": "#2D1B3E",
+        "gold": "#D4AF37",
+        "warmCream": "#F7E7CE",
+        "black": "#1A1A1A"
+      },
+      "typography": {
+        "fonts": "Elegant serif + wide letter-spacing (0.1-0.15em)"
+      },
+      "decorations": {
+        "accents": "金色调精致点缀"
+      },
+      "spacing": {
+        "lineHeight": "1.7-1.8"
+      }
+    }
+  },
+  {
+    "id": "scene-art-gallery",
+    "type": "scene",
+    "keywords": [
+      "美术馆",
+      "art gallery",
+      "画廊",
+      "minimal",
+      "极简",
+      "white space",
+      "留白",
+      "艺术",
+      "干净",
+      "现代"
+    ],
+    "name": "美术馆场景",
+    "description": "极简、让艺术说话的美术馆氛围",
+    "data": {
+      "colors": {
+        "pureWhite": "#FFFFFF",
+        "lightGray": "#F5F3EF",
+        "black": "#1A1A1A"
+      },
+      "typography": {
+        "fonts": "Sans-serif, light weights (300-400)"
+      },
+      "decorations": {
+        "style": "Minimal (1px borders or none)"
+      },
+      "spacing": {
+        "lineHeight": "2.0+",
+        "margins": "2em+"
+      }
+    }
+  },
+  {
+    "id": "scene-office",
+    "type": "scene",
+    "keywords": [
+      "办公室",
+      "office",
+      "现代",
+      "professional",
+      "clean",
+      "efficient",
+      "商务",
+      "工作",
+      "简洁",
+      "高效"
+    ],
+    "name": "现代办公室场景",
+    "description": "现代、专业、高效的办公环境",
+    "data": {
+      "colors": {
+        "coolWhite": "#F8F9FA",
+        "coolGray": "#6C757D",
+        "accentBlue": "#0D6EFD",
+        "darkGray": "#343A40"
+      },
+      "typography": {
+        "fonts": "Sans-serif (Inter, Roboto, system-ui)",
+        "lineHeight": "1.6-1.7"
+      },
+      "decorations": {
+        "style": "Clean, minimal borders (1px)",
+        "structure": "Grid-based layouts"
+      },
+      "spacing": {
+        "lineHeight": "1.6-1.7",
+        "margins": "1.2-1.5em"
+      }
+    }
+  },
+  {
+    "id": "scene-bedroom",
+    "type": "scene",
+    "keywords": [
+      "卧室",
+      "bedroom",
+      "舒适",
+      "cozy",
+      "private",
+      "warm",
+      "私密",
+      "温暖",
+      "安宁",
+      "restful"
+    ],
+    "name": "舒适卧室场景",
+    "description": "舒适、私密、安宁的卧室空间",
+    "data": {
+      "colors": {
+        "softLavender": "#E6E6FA",
+        "warmBeige": "#F5F5DC",
+        "softGray": "#D3D3D3",
+        "accentPink": "#FFB6C1"
+      },
+      "typography": {
+        "fonts": "Soft serif or rounded sans-serif",
+        "lineHeight": "1.8-1.9"
+      },
+      "decorations": {
+        "borderRadius": "12-16px (soft, cozy)",
+        "borders": "Very subtle or none"
+      },
+      "spacing": {
+        "lineHeight": "1.9-2.0 (relaxed)",
+        "margins": "2em+ (breathing room)"
+      }
+    }
+  },
+  {
+    "id": "scene-kitchen",
+    "type": "scene",
+    "keywords": [
+      "厨房",
+      "kitchen",
+      "温暖",
+      "cooking",
+      "homey",
+      "fresh",
+      "烹饪",
+      "家",
+      "清新",
+      "welcoming"
+    ],
+    "name": "温暖厨房场景",
+    "description": "温暖、清新、好客的厨房空间",
+    "data": {
+      "colors": {
+        "warmWhite": "#FFFAF0",
+        "sageGreen": "#9CAF88",
+        "terracotta": "#E2725B",
+        "warmYellow": "#F4D03F"
+      },
+      "typography": {
+        "fonts": "Friendly sans-serif or rounded serif",
+        "lineHeight": "1.7-1.8"
+      },
+      "decorations": {
+        "borderRadius": "6-8px (friendly)",
+        "borders": "2px solid (clear structure)"
+      },
+      "spacing": {
+        "lineHeight": "1.7-1.8",
+        "margins": "1.5-1.8em"
+      }
+    }
+  },
+  {
+    "id": "scene-garden",
+    "type": "scene",
+    "keywords": [
+      "花园",
+      "garden",
+      "自然",
+      "nature",
+      "fresh",
+      "green",
+      "organic",
+      "清新",
+      "生机",
+      "natural"
+    ],
+    "name": "自然花园场景",
+    "description": "自然、清新、充满生机的花园",
+    "data": {
+      "colors": {
+        "freshGreen": "#90EE90",
+        "skyBlue": "#87CEEB",
+        "earthBrown": "#8B4513",
+        "flowerPink": "#FF69B4"
+      },
+      "typography": {
+        "fonts": "Organic serif or rounded sans-serif",
+        "lineHeight": "1.8-2.0"
+      },
+      "decorations": {
+        "borderRadius": "12-16px (organic shapes)",
+        "borders": "1-2px solid (subtle)"
+      },
+      "spacing": {
+        "lineHeight": "1.9-2.0 (airy)",
+        "margins": "1.8-2em"
+      }
+    }
+  },
+  {
+    "id": "scene-beach",
+    "type": "scene",
+    "keywords": [
+      "海滩",
+      "beach",
+      "ocean",
+      "sand",
+      "tropical",
+      "vacation",
+      "海滨",
+      "沙滩",
+      "度假",
+      "relaxing"
+    ],
+    "name": "海滨海滩场景",
+    "description": "放松、热带、度假的海滩氛围",
+    "data": {
+      "colors": {
+        "oceanBlue": "#0077BE",
+        "sandBeige": "#F5DEB3",
+        "coralPink": "#FF7F50",
+        "skyLight": "#E0F7FA"
+      },
+      "typography": {
+        "fonts": "Relaxed sans-serif (Open Sans, Lato)",
+        "lineHeight": "1.8-2.0"
+      },
+      "decorations": {
+        "borderRadius": "8-12px (soft, beach-like)",
+        "borders": "1-2px solid (subtle)"
+      },
+      "spacing": {
+        "lineHeight": "2.0+ (very relaxed)",
+        "margins": "2em+ (spacious)"
+      }
+    }
+  },
+  {
+    "id": "scene-mountains",
+    "type": "scene",
+    "keywords": [
+      "山脉",
+      "mountains",
+      "majestic",
+      "nature",
+      "grand",
+      "wild",
+      "壮丽",
+      "自然",
+      "雄伟",
+      "wilderness"
+    ],
+    "name": "壮丽山脉场景",
+    "description": "壮丽、雄伟的山脉自然景观",
+    "data": {
+      "colors": {
+        "slateGray": "#708090",
+        "forestGreen": "#228B22",
+        "skyBlue": "#87CEEB",
+        "earthBrown": "#8B4513"
+      },
+      "typography": {
+        "fonts": "Strong serif (Merriweather, Georgia)",
+        "lineHeight": "1.7-1.8"
+      },
+      "decorations": {
+        "borderRadius": "2-4px (slight softness)",
+        "borders": "2-3px solid (strong structure)"
+      },
+      "spacing": {
+        "lineHeight": "1.7-1.8",
+        "margins": "1.5-1.8em"
+      }
+    }
+  },
+  {
+    "id": "scene-city-night",
+    "type": "scene",
+    "keywords": [
+      "城市夜景",
+      "city night",
+      "urban",
+      "neon",
+      "vibrant",
+      "metropolitan",
+      "都市",
+      "霓虹",
+      "繁华",
+      "cosmopolitan"
+    ],
+    "name": "都市夜景场景",
+    "description": "繁华、霓虹、活力的都市夜晚",
+    "data": {
+      "colors": {
+        "darkNavy": "#0A192F",
+        "neonPink": "#FF00FF",
+        "neonBlue": "#00FFFF",
+        "yellowLight": "#FFFF00"
+      },
+      "typography": {
+        "fonts": "Bold sans-serif (Montserrat, Poppins)",
+        "lineHeight": "1.5-1.6"
+      },
+      "decorations": {
+        "borderRadius": "0px (sharp, urban)",
+        "borders": "2-3px solid (strong)",
+        "glow": "Subtle box-shadow glow"
+      },
+      "spacing": {
+        "lineHeight": "1.5-1.6 (tight, energetic)",
+        "margins": "1-1.2em (compact)"
+      }
+    }
+  },
+  {
+    "id": "scene-snow",
+    "type": "scene",
+    "keywords": [
+      "雪景",
+      "snow",
+      "winter",
+      "pure",
+      "serene",
+      "white",
+      "冬日",
+      "纯净",
+      "宁静",
+      "peaceful"
+    ],
+    "name": "冬日雪景场景",
+    "description": "纯净、宁静、白色的冬日雪景",
+    "data": {
+      "colors": {
+        "pureWhite": "#FFFFFF",
+        "iceBlue": "#E0FFFF",
+        "softGray": "#D3D3D3",
+        "deepBlue": "#00008B"
+      },
+      "typography": {
+        "fonts": "Light, elegant serif or sans-serif (300-400 weight)",
+        "lineHeight": "2.0+"
+      },
+      "decorations": {
+        "borderRadius": "8-12px (soft, snow-like)",
+        "borders": "1px solid (very subtle)"
+      },
+      "spacing": {
+        "lineHeight": "2.0+ (very generous)",
+        "margins": "2.5-3em (maximum breathing room)"
+      }
+    }
+  },
+  {
+    "id": "scene-cherry-blossom",
+    "type": "scene",
+    "keywords": [
+      "樱花",
+      "cherry blossom",
+      "sakura",
+      "spring",
+      "romantic",
+      "pink",
+      "春日",
+      "浪漫",
+      "粉色",
+      "ethereal"
+    ],
+    "name": "春日樱花场景",
+    "description": "浪漫、粉色、空灵的春日樱花",
+    "data": {
+      "colors": {
+        "sakuraPink": "#FFB7C5",
+        "softWhite": "#FFF5F7",
+        "leafGreen": "#C1E1C1",
+        "branchBrown": "#8B4513"
+      },
+      "typography": {
+        "fonts": "Elegant, light serif or rounded sans-serif (300-400 weight)",
+        "lineHeight": "1.9-2.0"
+      },
+      "decorations": {
+        "borderRadius": "12-16px (soft, petal-like)",
+        "borders": "1px solid (very subtle, pink-tinted)"
+      },
+      "spacing": {
+        "lineHeight": "2.0+ (airy, floating)",
+        "margins": "2em+ (generous, ethereal)"
+      }
+    }
+  },
+  {
+    "id": "scene-forest",
+    "type": "scene",
+    "keywords": [
+      "森林",
+      "forest",
+      "deep",
+      "mysterious",
+      "green",
+      "nature",
+      "深邃",
+      "神秘",
+      "绿色",
+      "wilderness"
+    ],
+    "name": "深邃森林场景",
+    "description": "深邃、神秘、绿色的森林",
+    "data": {
+      "colors": {
+        "deepGreen": "#006400",
+        "mossGreen": "#8FBC8F",
+        "earthBrown": "#654321",
+        "filterLight": "#DAA520"
+      },
+      "typography": {
+        "fonts": "Earthy serif (Crimson Text, Merriweather)",
+        "lineHeight": "1.7-1.8"
+      },
+      "decorations": {
+        "borderRadius": "4-6px (slight organic softness)",
+        "borders": "2px solid (clear structure)"
+      },
+      "spacing": {
+        "lineHeight": "1.7-1.8",
+        "margins": "1.5-1.8em"
+      }
+    }
+  },
+  {
+    "id": "scene-desert",
+    "type": "scene",
+    "keywords": [
+      "沙漠",
+      "desert",
+      "vast",
+      "warm",
+      "sandy",
+      "minimal",
+      "广袤",
+      "温暖",
+      "沙质",
+      "minimalist"
+    ],
+    "name": "广袤沙漠场景",
+    "description": "广袤、温暖、极简的沙漠",
+    "data": {
+      "colors": {
+        "sandBeige": "#EDC9AF",
+        "terracotta": "#CC5533",
+        "skyBlue": "#87CEEB",
+        "sunsetOrange": "#FF6347"
+      },
+      "typography": {
+        "fonts": "Clean sans-serif (light weights)",
+        "lineHeight": "1.8-2.0"
+      },
+      "decorations": {
+        "borderRadius": "0-2px (minimal, sharp)",
+        "borders": "1px solid (very subtle)"
+      },
+      "spacing": {
+        "lineHeight": "2.0+ (very generous, vast)",
+        "margins": "2.5em+ (maximum openness)"
+      }
+    }
+  }
+]

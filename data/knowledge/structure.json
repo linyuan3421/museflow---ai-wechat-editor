@@ -1,0 +1,598 @@
+[
+  {
+    "id": "style-bauhaus",
+    "type": "style",
+    "keywords": [
+      "包豪斯",
+      "bauhaus",
+      "geometric",
+      "几何",
+      "构成主义",
+      "三原色",
+      "functional",
+      "minimal",
+      "德国",
+      "功能主义",
+      "现代主义"
+    ],
+    "name": "包豪斯风格",
+    "description": "几何、三原色、功能主义的经典设计语言",
+    "data": {
+      "colors": {
+        "red": "#FF0000",
+        "yellow": "#FFFF00",
+        "blue": "#0000FF",
+        "black": "#1A1A1A",
+        "white": "#FFFFFF"
+      },
+      "characteristics": [
+        "Geometric shapes",
+        "Primary triad + black/white",
+        "Sans-serif fonts, bold headers",
+        "Grid layouts",
+        "0px radius",
+        "Thick borders (4-6px)"
+      ],
+      "typography": {
+        "h1": "900 weight + 0px letter-spacing",
+        "h2": "borderBottom 3px solid #000000"
+      },
+      "decorations": {
+        "h1": "borderLeft 6px solid #FF0000",
+        "blockquote": "backgroundColor #F5F3EF + borderLeft 4px",
+        "strong": "No decoration, just bold"
+      }
+    }
+  },
+  {
+    "id": "style-minimalist-zen",
+    "type": "style",
+    "keywords": [
+      "极简",
+      "minimalist",
+      "禅意",
+      "zen",
+      "留白",
+      "white space",
+      "negative space",
+      "clean",
+      "简约",
+      "克制",
+      "呼吸感"
+    ],
+    "name": "极简禅意",
+    "description": "留白、呼吸感、克制的字体排印",
+    "data": {
+      "colors": {
+        "neutrals": "White + single accent color",
+        "text": "#2C2C2C"
+      },
+      "characteristics": [
+        "Negative space is key",
+        "Font weights: 300-400",
+        "Generous spacing: lineHeight 1.9-2.0, margins 2em+",
+        "Borders: 0-1px maximum",
+        "No shadows or decorations"
+      ],
+      "typography": {
+        "h1": "300-400 weight + letterSpacing 0.05em",
+        "h2": "borderBottom 1px solid #E5E5E5"
+      },
+      "decorations": {
+        "blockquote": "No decoration, italic only",
+        "strong": "Font weight 500-600"
+      }
+    }
+  },
+  {
+    "id": "style-brutalist",
+    "type": "style",
+    "keywords": [
+      "野兽派",
+      "brutalist",
+      "raw",
+      "粗野",
+      "bold",
+      "confrontational",
+      "industrial",
+      "原始",
+      "大胆",
+      "对抗性"
+    ],
+    "name": "野兽派风格",
+    "description": "原始、未加饰、对抗性的设计语言",
+    "data": {
+      "colors": {
+        "highContrast": "Black/white only"
+      },
+      "characteristics": [
+        "Bold typography (700-900)",
+        "All caps headers",
+        "Thick borders (4-6px)",
+        "0px radius",
+        "Tight spacing (1.5-1.6)"
+      ],
+      "typography": {
+        "h1": "900 weight + all caps + letter-spacing -0.02em",
+        "h2": "borderBottom 4px solid #000000"
+      },
+      "decorations": {
+        "blockquote": "backgroundColor #F5F3EF",
+        "strong": "900 weight + uppercase"
+      }
+    }
+  },
+  {
+    "id": "style-cyberpunk",
+    "type": "style",
+    "keywords": [
+      "赛博朋克",
+      "cyberpunk",
+      "neon",
+      "霓虹",
+      "futuristic",
+      "dark mode",
+      "glow",
+      "未来主义",
+      "数字",
+      "科技感"
+    ],
+    "name": "赛博朋克风格",
+    "description": "霓虹灯光、数字未来的视觉语言",
+    "data": {
+      "colors": {
+        "neonCyan": "#00FFFF",
+        "neonMagenta": "#FF00FF",
+        "neonYellow": "#FFFF00",
+        "dark": "#0A0A0A"
+      },
+      "characteristics": [
+        "Glow effects (textShadow: 0 0 10px)",
+        "High saturation accents",
+        "Bold typography (700-900)",
+        "Grid patterns"
+      ],
+      "typography": {
+        "h1": "textShadow: 0 0 10px #FF00FF + color #00FFFF",
+        "fonts": "Monospace for code elements"
+      },
+      "decorations": {
+        "h2": "backgroundColor #1A1A1A + color #FF00FF",
+        "container": "Subtle grid pattern"
+      },
+      "constraints": {
+        "background": "Keep light (#FFFFFF), use dark accents"
+      }
+    }
+  },
+  {
+    "id": "style-art-deco",
+    "type": "style",
+    "keywords": [
+      "装饰艺术",
+      "art deco",
+      "奢华",
+      "luxury",
+      "geometric",
+      "metallic",
+      "1920s",
+      "几何装饰",
+      "金色",
+      "对称"
+    ],
+    "name": "装饰艺术风格",
+    "description": "奢华、几何、金属装饰的经典风格",
+    "data": {
+      "colors": {
+        "black": "#1A1A1A",
+        "gold": "#D4AF37",
+        "cream": "#FEFCE8"
+      },
+      "characteristics": [
+        "Gold accents",
+        "Geometric patterns",
+        "Symmetry",
+        "Elegant serif fonts"
+      ],
+      "typography": {
+        "h1": "Gold + serif + letter-spacing 0.15em + uppercase",
+        "h2": "backgroundColor black + gold text"
+      },
+      "decorations": {
+        "blockquote": "borderLeft 4px solid #D4AF37 + borderRight 4px solid"
+      }
+    }
+  },
+  {
+    "id": "style-vintage-retro",
+    "type": "style",
+    "keywords": [
+      "复古",
+      "vintage",
+      "怀旧",
+      "nostalgic",
+      "old",
+      "warm",
+      "aged",
+      "paper",
+      "老派",
+      "经典"
+    ],
+    "name": "复古怀旧风格",
+    "description": "温暖、陈旧、时光流逝的感觉",
+    "data": {
+      "colors": {
+        "warmTones": "Sepia, warm brown, amber",
+        "text": "#2C2C2C"
+      },
+      "characteristics": [
+        "Serif fonts (Georgia, Times)",
+        "Paper textures",
+        "Ornate borders",
+        "Warm shadows"
+      ],
+      "typography": {
+        "fonts": "Georgia, Times, serif"
+      },
+      "decorations": {
+        "background": "Subtle paper texture",
+        "blockquote": "borderLeft 2px solid #8B7E74 + backgroundColor #FEF7E7"
+      }
+    }
+  },
+  {
+    "id": "style-wabi-sabi",
+    "type": "style",
+    "keywords": [
+      "侘寂",
+      "wabi-sabi",
+      "日本",
+      "japanese",
+      "imperfect",
+      "不完美",
+      "natural",
+      "自然",
+      "minimal",
+      "rustic",
+      "质朴"
+    ],
+    "name": "侘寂风格",
+    "description": "日本美学，欣赏不完美、自然、质朴",
+    "data": {
+      "colors": {
+        "earthTones": "Browns, grays, muted greens (#8B7355, #A9A9A9, #6B8E23)",
+        "offWhite": "#F5F5DC"
+      },
+      "characteristics": [
+        "Asymmetry",
+        "Rough textures",
+        "Natural materials",
+        "Muted, earthy colors",
+        "Handcrafted feel"
+      ],
+      "typography": {
+        "fonts": "Serif with character (Noto Serif SC, Georgia)",
+        "lineHeight": "1.9-2.0 (generous)"
+      },
+      "decorations": {
+        "borders": "Irregular, hand-drawn feel",
+        "textures": "Subtle grain or paper texture"
+      }
+    }
+  },
+  {
+    "id": "style-memphis",
+    "type": "style",
+    "keywords": [
+      "孟菲斯",
+      "memphis",
+      "playful",
+      "colorful",
+      "patterns",
+      "1980s",
+      "俏皮",
+      "鲜艳",
+      "几何图案",
+      "fun"
+    ],
+    "name": "孟菲斯风格",
+    "description": "80年代意大利设计集团，俏皮、多彩、几何图案",
+    "data": {
+      "colors": {
+        "brightYellow": "#FFFF00",
+        "hotPink": "#FF69B4",
+        "cyan": "#00FFFF",
+        "black": "#000000"
+      },
+      "characteristics": [
+        "Bold geometric patterns (triangles, squiggles)",
+        "High contrast colors",
+        "Playful decorations",
+        "Mix of shapes and patterns"
+      ],
+      "typography": {
+        "h1": "Bold sans-serif + playful decorations",
+        "fonts": "Geometric sans-serif (Helvetica, Futura)"
+      },
+      "decorations": {
+        "patterns": "Triangles, dots, squiggles as backgrounds",
+        "borders": "Thick, colorful (3-4px)"
+      }
+    }
+  },
+  {
+    "id": "style-solarpunk",
+    "type": "style",
+    "keywords": [
+      "太阳朋克",
+      "solarpunk",
+      "optimistic",
+      "green",
+      "sustainable",
+      "bright",
+      "乐观",
+      "绿色",
+      "可持续",
+      "未来"
+    ],
+    "name": "太阳朋克风格",
+    "description": "乐观、绿色、可持续的未来主义",
+    "data": {
+      "colors": {
+        "brightGreen": "#00FF7F",
+        "skyBlue": "#87CEEB",
+        "solarYellow": "#FFD700",
+        "white": "#FFFFFF"
+      },
+      "characteristics": [
+        "Bright, optimistic colors",
+        "Nature + technology fusion",
+        "Art nouveau inspired curves",
+        "Solar panels, plants motifs"
+      ],
+      "typography": {
+        "h1": "Bold, rounded sans-serif + green accents",
+        "fonts": "Rounded sans-serif (Quicksand, Nunito)"
+      },
+      "decorations": {
+        "borders": "2px solid, rounded (8-12px)",
+        "background": "Subtle plant or solar patterns"
+      }
+    }
+  },
+  {
+    "id": "style-glassmorphism",
+    "type": "style",
+    "keywords": [
+      "玻璃拟态",
+      "glassmorphism",
+      "transparent",
+      "blur",
+      "modern",
+      "ui",
+      "透明",
+      "模糊",
+      "现代ui",
+      "frosted"
+    ],
+    "name": "玻璃拟态风格",
+    "description": "现代UI设计，透明背景与模糊效果",
+    "data": {
+      "colors": {
+        "background": "rgba(255, 255, 255, 0.1)",
+        "accent": "Vibrant gradients"
+      },
+      "characteristics": [
+        "Transparency (rgba)",
+        "Backdrop blur (backdrop-filter: blur(10px))",
+        "Subtle white borders",
+        "Soft shadows"
+      ],
+      "typography": {
+        "h1": "Clean sans-serif, slight shadow",
+        "fonts": "Sans-serif (Inter, San Francisco)"
+      },
+      "decorations": {
+        "borders": "1px solid rgba(255, 255, 255, 0.2)",
+        "shadows": "box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1)"
+      }
+    }
+  },
+  {
+    "id": "style-neumorphism",
+    "type": "style",
+    "keywords": [
+      "新拟态",
+      "neumorphism",
+      "soft",
+      "subtle",
+      "shadows",
+      "modern",
+      "柔和",
+      "微妙",
+      "阴影",
+      "flat"
+    ],
+    "name": "新拟态风格",
+    "description": "柔和阴影、微凸起的现代扁平设计",
+    "data": {
+      "colors": {
+        "base": "#E0E5EC",
+        "lightShadow": "#FFFFFF",
+        "darkShadow": "#A3B1C6"
+      },
+      "characteristics": [
+        "Soft shadows creating depth",
+        "Monochromatic color schemes",
+        "Low contrast",
+        "Convex/concave elements"
+      ],
+      "typography": {
+        "h1": "Medium weight (500-600), subtle shadow",
+        "fonts": "Sans-serif (Roboto, Inter)"
+      },
+      "decorations": {
+        "shadows": "box-shadow: 8px 8px 16px #A3B1C6, -8px -8px 16px #FFFFFF",
+        "borders": "None (shadows create edges)"
+      }
+    }
+  },
+  {
+    "id": "style-steampunk",
+    "type": "style",
+    "keywords": [
+      "蒸汽朋克",
+      "steampunk",
+      "victorian",
+      "industrial",
+      "brass",
+      "gears",
+      "维多利亚",
+      "工业",
+      "黄铜",
+      "复古未来"
+    ],
+    "name": "蒸汽朋克风格",
+    "description": "维多利亚时代与工业机械的复古未来主义",
+    "data": {
+      "colors": {
+        "brass": "#B5A642",
+        "copper": "#B87333",
+        "leather": "#8B4513",
+        "cream": "#F5F5DC"
+      },
+      "characteristics": [
+        "Victorian typography",
+        "Gear, cog motifs",
+        "Brass/copper metallic accents",
+        "Industrial textures"
+      ],
+      "typography": {
+        "h1": "Victorian serif + ornate decorations",
+        "fonts": "Serif (Playfair Display, Crimson Text)"
+      },
+      "decorations": {
+        "borders": "2-3px solid brass/copper colors",
+        "background": "Subtle gear or industrial patterns"
+      }
+    }
+  },
+  {
+    "id": "style-art-nouveau",
+    "type": "style",
+    "keywords": [
+      "新艺术",
+      "art nouveau",
+      "organic",
+      "curved",
+      "elegant",
+      "floral",
+      "有机",
+      "曲线",
+      "优雅",
+      "花卉"
+    ],
+    "name": "新艺术风格",
+    "description": "有机曲线、花卉、优雅的自然主义",
+    "data": {
+      "colors": {
+        "gold": "#D4AF37",
+        "sageGreen": "#9CAF88",
+        "deepPurple": "#4B0082",
+        "cream": "#FFFDD0"
+      },
+      "characteristics": [
+        "Organic, flowing curves",
+        "Floral and vine motifs",
+        "Elegant serif typography",
+        "Gold accents"
+      ],
+      "typography": {
+        "h1": "Elegant serif with decorative elements",
+        "fonts": "Art nouveau inspired serif"
+      },
+      "decorations": {
+        "borders": "Ornate, curved decorations",
+        "background": "Subtle floral or vine patterns"
+      }
+    }
+  },
+  {
+    "id": "style-pop-art",
+    "type": "style",
+    "keywords": [
+      "波普艺术",
+      "pop art",
+      "warhol",
+      "bold",
+      "comic",
+      "vibrant",
+      "沃霍尔",
+      "大胆",
+      "漫画",
+      "鲜艳"
+    ],
+    "name": "波普艺术风格",
+    "description": "大胆色彩、漫画风格、流行文化",
+    "data": {
+      "colors": {
+        "brightRed": "#FF0000",
+        "brightYellow": "#FFFF00",
+        "cyan": "#00FFFF",
+        "magenta": "#FF00FF"
+      },
+      "characteristics": [
+        "Halftone dots pattern",
+        "Bold black outlines",
+        "High contrast, vibrant colors",
+        "Comic book aesthetics"
+      ],
+      "typography": {
+        "h1": "Bold, chunky fonts with outlines",
+        "fonts": "Bold display fonts (Impact, Anton)"
+      },
+      "decorations": {
+        "borders": "Thick black outlines (3-4px)",
+        "background": "Halftone dot patterns"
+      }
+    }
+  },
+  {
+    "id": "style-flat-design",
+    "type": "style",
+    "keywords": [
+      "扁平设计",
+      "flat design",
+      "minimal",
+      "clean",
+      "simple",
+      "modern",
+      "简洁",
+      "干净",
+      "简单",
+      "material"
+    ],
+    "name": "扁平设计风格",
+    "description": "简洁、干净、无阴影的现代扁平设计",
+    "data": {
+      "colors": {
+        "primary": "Vibrant solid colors",
+        "background": "#FFFFFF or light gray"
+      },
+      "characteristics": [
+        "No gradients or shadows",
+        "Bold solid colors",
+        "Simple geometric shapes",
+        "Clear hierarchy"
+      ],
+      "typography": {
+        "h1": "Bold sans-serif, solid color",
+        "fonts": "Sans-serif (Roboto, Open Sans)"
+      },
+      "decorations": {
+        "borders": "None or simple 1px solid",
+        "background": "Solid colors, no patterns"
+      }
+    }
+  }
+]
