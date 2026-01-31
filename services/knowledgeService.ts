@@ -45,17 +45,17 @@ export async function initKnowledgeDB(): Promise<void> {
     const KNOWLEDGE_BASE = (knowledgeBaseModule.default || knowledgeBaseModule) as unknown as KnowledgeEntry[];
 
     // 创建 Orama 数据库
-    // 注意：由于 Orama 的类型定义问题，这里使用 any 绕过
+    // 注意：data 字段不加入 schema（不会索引但仍然存储和返回）
     knowledgeDB = await create({
       schema: {
         id: 'string',
         type: 'string',
         keywords: 'string',
         name: 'string',
-        description: 'string',
-        data: 'any'
+        description: 'string'
+        // data 字段不在 schema 中，但仍会随搜索结果返回
       }
-    } as any); // 使用 any 来兼容 Orama 的类型要求
+    });
 
     // 索引所有知识条目
     for (const entry of KNOWLEDGE_BASE) {
@@ -65,7 +65,7 @@ export async function initKnowledgeDB(): Promise<void> {
         keywords: entry.keywords.join(' '), // 用空格连接关键词
         name: entry.name,
         description: entry.description,
-        data: entry.data as any // 转换为 any 以兼容 Orama
+        data: entry.data // data 字段会完整存储并返回
       });
     }
 
