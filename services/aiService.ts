@@ -1,4 +1,5 @@
 import { ThemeStyles, RedNoteData, RedNoteStyleConfig, AIConfig } from "../types";
+import { enhancePromptWithKnowledge } from "./knowledgeService";
 
 // Helper: Parse JSON safely
 const parseJSON = <T>(text: string | undefined): T => {
@@ -633,10 +634,13 @@ Return ONLY valid JSON.
 // --- Exported Functions ---
 
 export const generateThemeFromPrompt = async (config: AIConfig, prompt: string): Promise<ThemeStyles> => {
+  // Enhance system prompt with relevant knowledge from RAG
+  const enhancedSystemPrompt = await enhancePromptWithKnowledge(THEME_SYSTEM_PROMPT, prompt);
+
   return await chatCompletion(
     config,
     [
-      { role: "system", content: THEME_SYSTEM_PROMPT },
+      { role: "system", content: enhancedSystemPrompt },
       { role: "user", content: `Create a WeChat article theme based on this description: "${prompt}". Return strict JSON.` }
     ],
     true
