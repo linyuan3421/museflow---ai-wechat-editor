@@ -330,9 +330,19 @@
     "name": "深蓝青渐变",
     "description": "深蓝与青色的渐变组合，科技感强烈",
     "data": {
-      "colors": ["#11222e", "#88dcdd", "#00b6c9", "#0d7997"],
+      "colors": [
+        "#11222e",
+        "#88dcdd",
+        "#00b6c9",
+        "#0d7997"
+      ],
       "background": "#11222e",
-      "designApproach": ["深色背景", "青色渐变", "科技感", "冷色调"]
+      "designApproach": [
+        "深色背景",
+        "青色渐变",
+        "科技感",
+        "冷色调"
+      ]
     }
   },
   {
@@ -353,9 +363,19 @@
     "name": "紫蓝梦幻渐变",
     "description": "紫色与蓝色的梦幻渐变组合",
     "data": {
-      "colors": ["#26104e", "#4cbdef", "#8e7eda", "#4e6093"],
+      "colors": [
+        "#26104e",
+        "#4cbdef",
+        "#8e7eda",
+        "#4e6093"
+      ],
       "background": "#26104e",
-      "designApproach": ["深紫背景", "蓝紫渐变", "梦幻感", "优雅"]
+      "designApproach": [
+        "深紫背景",
+        "蓝紫渐变",
+        "梦幻感",
+        "优雅"
+      ]
     }
   },
   {
@@ -375,9 +395,17 @@
     "name": "黑黄简约",
     "description": "深灰与亮黄的极简搭配",
     "data": {
-      "colors": ["#27282a", "#f9e19e"],
+      "colors": [
+        "#27282a",
+        "#f9e19e"
+      ],
       "background": "#27282a",
-      "designApproach": ["深灰背景", "亮黄点缀", "极简", "高对比"]
+      "designApproach": [
+        "深灰背景",
+        "亮黄点缀",
+        "极简",
+        "高对比"
+      ]
     }
   },
   {
@@ -396,9 +424,19 @@
     "name": "黄蓝对比活力",
     "description": "黄色与蓝色的强对比搭配",
     "data": {
-      "colors": ["#fdce0c", "#f4f9f9", "#1d1e54", "#0052a1"],
+      "colors": [
+        "#fdce0c",
+        "#f4f9f9",
+        "#1d1e54",
+        "#0052a1"
+      ],
       "background": "#f4f9f9",
-      "designApproach": ["黄蓝对比", "活力", "醒目", "运动感"]
+      "designApproach": [
+        "黄蓝对比",
+        "活力",
+        "醒目",
+        "运动感"
+      ]
     }
   },
   {
@@ -417,9 +455,19 @@
     "name": "深蓝粉红清透",
     "description": "深蓝、亮蓝与粉红的清透组合",
     "data": {
-      "colors": ["#3d3e4f", "#558fff", "#fbffff", "#fe6061"],
+      "colors": [
+        "#3d3e4f",
+        "#558fff",
+        "#fbffff",
+        "#fe6061"
+      ],
       "background": "#fbffff",
-      "designApproach": ["清透", "粉蓝搭配", "轻盈", "温柔"]
+      "designApproach": [
+        "清透",
+        "粉蓝搭配",
+        "轻盈",
+        "温柔"
+      ]
     }
   },
   {
@@ -437,9 +485,19 @@
     "name": "紫灰柔和",
     "description": "紫色与灰蓝的柔和组合",
     "data": {
-      "colors": ["#d9d4f8", "#302928", "#c6cfdd", "#5c5c61"],
+      "colors": [
+        "#d9d4f8",
+        "#302928",
+        "#c6cfdd",
+        "#5c5c61"
+      ],
       "background": "#d9d4f8",
-      "designApproach": ["紫灰调", "柔和", "温婉", "优雅"]
+      "designApproach": [
+        "紫灰调",
+        "柔和",
+        "温婉",
+        "优雅"
+      ]
     }
   },
   {
@@ -458,9 +516,19 @@
     "name": "深蓝天蓝清澈",
     "description": "深蓝与天蓝的清澈组合",
     "data": {
-      "colors": ["#fffefd", "#092488", "#2a4efc", "#24aace"],
+      "colors": [
+        "#fffefd",
+        "#092488",
+        "#2a4efc",
+        "#24aace"
+      ],
       "background": "#fffefd",
-      "designApproach": ["蓝色系", "清澈", "明亮", "清新"]
+      "designApproach": [
+        "蓝色系",
+        "清澈",
+        "明亮",
+        "清新"
+      ]
     }
   },
   {
@@ -478,9 +546,19 @@
     "name": "灰紫低调",
     "description": "灰色与紫色的低调组合",
     "data": {
-      "colors": ["#e9e4e6", "#2e2f2f", "#525050", "#3a2fef"],
+      "colors": [
+        "#e9e4e6",
+        "#2e2f2f",
+        "#525050",
+        "#3a2fef"
+      ],
       "background": "#e9e4e6",
-      "designApproach": ["灰紫调", "低调", "高级", "克制"]
+      "designApproach": [
+        "灰紫调",
+        "低调",
+        "高级",
+        "克制"
+      ]
     }
   },
   {
@@ -498,9 +576,19 @@
     "name": "紫蓝柔梦",
     "description": "紫色与蓝色的柔梦组合",
     "data": {
-      "colors": ["#e1dbf6", "#1c3767", "#0439ac", "#b2c5f5"],
+      "colors": [
+        "#e1dbf6",
+        "#1c3767",
+        "#0439ac",
+        "#b2c5f5"
+      ],
       "background": "#e1dbf6",
-      "designApproach": ["紫蓝调", "柔美", "梦幻", "浪漫"]
+      "designApproach": [
+        "紫蓝调",
+        "柔美",
+        "梦幻",
+        "浪漫"
+      ]
     }
   },
   {
@@ -519,9 +607,19 @@
     "name": "深绿浅绿自然",
     "description": "深绿与浅绿的自然组合",
     "data": {
-      "colors": ["#0d2a00", "#d5e6ea", "#c1ce82", "#609076"],
+      "colors": [
+        "#0d2a00",
+        "#d5e6ea",
+        "#c1ce82",
+        "#609076"
+      ],
       "background": "#d5e6ea",
-      "designApproach": ["绿色系", "自然", "有机", "清新"]
+      "designApproach": [
+        "绿色系",
+        "自然",
+        "有机",
+        "清新"
+      ]
     }
   },
   {
@@ -539,9 +637,19 @@
     "name": "深蓝白灰橙红对比",
     "description": "深蓝、白、灰与橙红的强对比",
     "data": {
-      "colors": ["#273c91", "#fafcfc", "#dadddf", "#ba6733"],
+      "colors": [
+        "#273c91",
+        "#fafcfc",
+        "#dadddf",
+        "#ba6733"
+      ],
       "background": "#fafcfc",
-      "designApproach": ["深蓝橙红对比", "强烈", "醒目", "现代"]
+      "designApproach": [
+        "深蓝橙红对比",
+        "强烈",
+        "醒目",
+        "现代"
+      ]
     }
   },
   {
@@ -559,9 +667,19 @@
     "name": "蓝红橙清新活力",
     "description": "蓝色与红橙的清新活力组合",
     "data": {
-      "colors": ["#fefdfd", "#0e296a", "#4f6d96", "#d04332"],
+      "colors": [
+        "#fefdfd",
+        "#0e296a",
+        "#4f6d96",
+        "#d04332"
+      ],
       "background": "#fefdfd",
-      "designApproach": ["蓝红橙", "清新", "活力", "活泼"]
+      "designApproach": [
+        "蓝红橙",
+        "清新",
+        "活力",
+        "活泼"
+      ]
     }
   },
   {
@@ -579,9 +697,1538 @@
     "name": "黑灰白粉红浪漫",
     "description": "黑、灰白与粉红的浪漫组合",
     "data": {
-      "colors": ["#2b2928", "#f2f4f2", "#f07195"],
+      "colors": [
+        "#2b2928",
+        "#f2f4f2",
+        "#f07195"
+      ],
       "background": "#f2f4f2",
-      "designApproach": ["黑白粉", "浪漫", "温柔", "甜美"]
+      "designApproach": [
+        "黑白粉",
+        "浪漫",
+        "温柔",
+        "甜美"
+      ]
+    }
+  },
+  {
+    "id": "color-wes-anderson",
+    "type": "color_palette",
+    "keywords": [
+      "Wes Anderson",
+      "韦斯安德森",
+      "糖果色",
+      "pastel",
+      "对称构图",
+      "symmetrical",
+      "复古",
+      "vintage",
+      "whimsical",
+      "nostalgic",
+      "高饱和度",
+      "vibrant",
+      "柔和色调",
+      "muted colors",
+      "布达佩斯",
+      "grand budapest",
+      "月升王国"
+    ],
+    "name": "Wes Anderson 糖果色系",
+    "description": "韦斯安德森电影的标志性糖果色系，对称构图与复古怀旧",
+    "data": {
+      "colors": {
+        "mutedPink": "#E6A8B5",
+        "mustardYellow": "#F4D35E",
+        "pastelBlue": "#A7C5EB",
+        "mutedGreen": "#8BAF9F",
+        "richPurple": "#7B3B8B",
+        "earthyBrown": "#B78B56"
+      },
+      "background": "#FAF9F6",
+      "designApproach": [
+        "Symmetrical framing",
+        "Pastel-heavy vibrant colors",
+        "Nostalgic whimsical feel"
+      ],
+      "typography": {
+        "fonts": "Futura, bold sans-serif"
+      }
+    }
+  },
+  {
+    "id": "color-cyberpunk-2077",
+    "type": "color_palette",
+    "keywords": [
+      "赛博朋克2077",
+      "cyberpunk",
+      "霓虹",
+      "neon",
+      "未来",
+      "futuristic",
+      "cyber",
+      "高科技",
+      "high tech",
+      "dark mode",
+      "暗色主题",
+      "电光蓝",
+      "electric blue",
+      "洋红",
+      "magenta"
+    ],
+    "name": "Cyberpunk 2077 霓虹风格",
+    "description": "高对比度黑背景与霓虹蓝/洋红的赛博朋克美学",
+    "data": {
+      "colors": {
+        "cyberCyan": "#00f7ff",
+        "neonMagenta": "#ff00ff",
+        "deepBlack": "#0a0a0a",
+        "electricBlue": "#00d9ff"
+      },
+      "background": "#0a0a0a",
+      "designApproach": [
+        "High contrast black background",
+        "Neon Cyan & Magenta",
+        "Tech glitch aesthetic"
+      ],
+      "cssCode": ".cyberpunk-text { color: #00f7ff; text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff; }"
+    }
+  },
+  {
+    "id": "color-japan-nadeshiko",
+    "type": "color_palette",
+    "keywords": [
+      "撫子",
+      "nadeshiko",
+      "日本传统色",
+      "japanese traditional",
+      "粉色",
+      "pink",
+      "温柔",
+      "gentle",
+      "樱花色",
+      "cherry blossom",
+      "和风",
+      "japanese style",
+      "传统",
+      "traditional"
+    ],
+    "name": "日本传统色 - 撫子",
+    "description": "日本传统色「撫子」，温柔的粉红色，如同樱花般柔美",
+    "data": {
+      "colors": [
+        "#DC9FB4"
+      ],
+      "englishName": "Pink",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japan-kohbai",
+    "type": "color_palette",
+    "keywords": [
+      "紅梅",
+      "kohbai",
+      "日本传统色",
+      "japanese traditional",
+      "梅红",
+      "plum red",
+      "优雅",
+      "elegant",
+      "古典",
+      "classic",
+      "和风",
+      "japanese style"
+    ],
+    "name": "日本传统色 - 紅梅",
+    "description": "日本传统色「紅梅」，优雅的梅红色，古典美学的体现",
+    "data": {
+      "colors": [
+        "#E16B8C"
+      ],
+      "englishName": "Red Plum",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-dunhuang-cinnabar",
+    "type": "color_palette",
+    "keywords": [
+      "朱砂",
+      "cinnabar",
+      "敦煌",
+      "dunhuang",
+      "中国红",
+      "china red",
+      "唐代",
+      "tang dynasty",
+      "矿物颜料",
+      "mineral pigment",
+      "传统色",
+      "traditional color"
+    ],
+    "name": "敦煌色彩 - 朱砂",
+    "description": "敦煌壁画中的朱砂色，唐代矿物颜料的典型代表",
+    "data": {
+      "colors": [
+        "#E64A19"
+      ],
+      "period": "唐代",
+      "source": "矿物颜料",
+      "usage": "敦煌壁画主色"
+    }
+  },
+  {
+    "id": "color-dunhuang-azurite",
+    "type": "color_palette",
+    "keywords": [
+      "石青",
+      "azurite",
+      "敦煌",
+      "dunhuang",
+      "青金石",
+      "lapis lazuli",
+      "蓝色",
+      "blue",
+      "唐代",
+      "tang dynasty",
+      "矿物颜料"
+    ],
+    "name": "敦煌色彩 - 石青",
+    "description": "敦煌壁画中的石青色，源自青金石的深邃蓝色",
+    "data": {
+      "colors": [
+        "#1E4D8C"
+      ],
+      "period": "唐代",
+      "source": "青金石（阿富汗进口）"
+    }
+  },
+  {
+    "id": "color-japan-suoh",
+    "type": "color_palette",
+    "keywords": [
+      "蘇芳",
+      "suoh",
+      "日本传统色",
+      "紫红",
+      "深紫",
+      "古典",
+      "优雅"
+    ],
+    "name": "日本传统色 - 蘇芳",
+    "description": "日本传统色「蘇芳」，深沉的紫红色",
+    "data": {
+      "colors": [
+        "#8E354A"
+      ],
+      "englishName": "Suoh Purple"
+    }
+  },
+  {
+    "id": "color-japan-taiko",
+    "type": "color_palette",
+    "keywords": [
+      "退紅",
+      "taiko",
+      "日本传统色",
+      "淡粉",
+      "柔和",
+      "温柔"
+    ],
+    "name": "日本传统色 - 退紅",
+    "description": "日本传统色「退紅」，柔和的淡粉色",
+    "data": {
+      "colors": [
+        "#F8C3CD"
+      ],
+      "englishName": "Faded Crimson"
+    }
+  },
+  {
+    "id": "color-japan-momo",
+    "type": "color_palette",
+    "keywords": [
+      "桃",
+      "momo",
+      "日本传统色",
+      "桃红",
+      "鲜活",
+      "甜美"
+    ],
+    "name": "日本传统色 - 桃",
+    "description": "日本传统色「桃」，鲜活的桃红色",
+    "data": {
+      "colors": [
+        "#F596AA"
+      ],
+      "englishName": "Peach"
+    }
+  },
+  {
+    "id": "color-japan-ichigo",
+    "type": "color_palette",
+    "keywords": [
+      "苺",
+      "ichigo",
+      "日本传统色",
+      "草莓红",
+      "深红",
+      "鲜艳"
+    ],
+    "name": "日本传统色 - 苺",
+    "description": "日本传统色「苺」，鲜艳的草莓红色",
+    "data": {
+      "colors": [
+        "#B5495B"
+      ],
+      "englishName": "Strawberry"
+    }
+  },
+  {
+    "id": "color-japan-matuba",
+    "type": "color_palette",
+    "keywords": [
+      "松葉",
+      "matuba",
+      "日本传统色",
+      "松绿",
+      "深绿",
+      "自然"
+    ],
+    "name": "日本传统色 - 松葉",
+    "description": "日本传统色「松葉」，深沉的松绿色",
+    "data": {
+      "colors": [
+        "#66997B"
+      ],
+      "englishName": "Pine Needle"
+    }
+  },
+  {
+    "id": "color-japan-ruri",
+    "type": "color_palette",
+    "keywords": [
+      "瑠璃",
+      "ruri",
+      "日本传统色",
+      "深蓝",
+      "青金石蓝",
+      "高贵"
+    ],
+    "name": "日本传统色 - 瑠璃",
+    "description": "日本传统色「瑠璃」，深邃的青金石蓝色",
+    "data": {
+      "colors": [
+        "#1A236E"
+      ],
+      "englishName": "Lapis Lazuli"
+    }
+  },
+  {
+    "id": "color-japan-asagi",
+    "type": "color_palette",
+    "keywords": [
+      "浅葱",
+      "asagi",
+      "日本传统色",
+      "浅绿蓝",
+      "清新",
+      "淡雅"
+    ],
+    "name": "日本传统色 - 浅葱",
+    "description": "日本传统色「浅葱」，清新的浅绿蓝色",
+    "data": {
+      "colors": [
+        "#4A9082"
+      ],
+      "englishName": "Pale Onion"
+    }
+  },
+  {
+    "id": "color-japan-kikyo",
+    "type": "color_palette",
+    "keywords": [
+      "桔梗",
+      "kikyo",
+      "日本传统色",
+      "紫罗兰",
+      "优雅",
+      "秋之花"
+    ],
+    "name": "日本传统色 - 桔梗",
+    "description": "日本传统色「桔梗」，优雅的紫罗兰色，秋七草之一",
+    "data": {
+      "colors": [
+        "#C04A8C"
+      ],
+      "englishName": "Bellflower"
+    }
+  },
+  {
+    "id": "color-dunhuang-ochre",
+    "type": "color_palette",
+    "keywords": [
+      "赭石",
+      "ochre",
+      "敦煌",
+      "dunhuang",
+      "土红",
+      "北魏",
+      "矿物颜料"
+    ],
+    "name": "敦煌色彩 - 赭石",
+    "description": "敦煌壁画中的赭石色，北魏时期的典型土红色",
+    "data": {
+      "colors": [
+        "#8B4513"
+      ],
+      "period": "北魏"
+    }
+  },
+  {
+    "id": "color-dunhuang-lazuli",
+    "type": "color_palette",
+    "keywords": [
+      "青金石",
+      "lapis lazuli",
+      "敦煌",
+      "dunhuang",
+      "深蓝",
+      "隋代",
+      "进口"
+    ],
+    "name": "敦煌色彩 - 青金石",
+    "description": "敦煌壁画中的青金石色，隋代从阿富汗进口的珍贵颜料",
+    "data": {
+      "colors": [
+        "#1A236E"
+      ],
+      "period": "隋代"
+    }
+  },
+  {
+    "id": "color-japan-ikkonzome",
+    "type": "color_palette",
+    "keywords": [
+      "一斤染",
+      "ikkonzome",
+      "日本传统色",
+      "粉红",
+      "淡雅",
+      "和风"
+    ],
+    "name": "日本传统色 - 一斤染",
+    "description": "日本传统色「一斤染」，淡雅的粉红色",
+    "data": {
+      "colors": [
+        "#F4A7B9"
+      ],
+      "englishName": "One Kin Dye"
+    }
+  },
+  {
+    "id": "color-japan-benihi",
+    "type": "color_palette",
+    "keywords": [
+      "紅緋",
+      "benihi",
+      "日本传统色",
+      "鲜红",
+      "鲜艳",
+      "传统红"
+    ],
+    "name": "日本传统色 - 紅緋",
+    "description": "日本传统色「紅緋」，鲜艳的传统红色",
+    "data": {
+      "colors": [
+        "#D93A6F"
+      ],
+      "englishName": "Crimson"
+    }
+  },
+  {
+    "id": "color-japan-sakurazaki",
+    "type": "color_palette",
+    "keywords": [
+      "桜色",
+      "sakurazaki",
+      "日本传统色",
+      "樱粉",
+      "樱花",
+      "春之色"
+    ],
+    "name": "日本传统色 - 桜色",
+    "description": "日本传统色「桜色」，如同樱花般的粉红色",
+    "data": {
+      "colors": [
+        "#FEAECA"
+      ],
+      "englishName": "Cherry Blossom"
+    }
+  },
+  {
+    "id": "color-japan-fujimurasaki",
+    "type": "color_palette",
+    "keywords": [
+      "藤紫",
+      "fujimurasaki",
+      "日本传统色",
+      "藤紫",
+      "淡紫",
+      "优雅"
+    ],
+    "name": "日本传统色 - 藤紫",
+    "description": "日本传统色「藤紫」，优雅的淡紫色",
+    "data": {
+      "colors": [
+        "#B886AE"
+      ],
+      "englishName": "Wisteria"
+    }
+  },
+  {
+    "id": "color-japan-kariyasu",
+    "type": "color_palette",
+    "keywords": [
+      "枯茶",
+      "kariyasu",
+      "日本传统色",
+      "深茶",
+      "深褐",
+      "沉稳"
+    ],
+    "name": "日本传统色 - 枯茶",
+    "description": "日本传统色「枯茶」，沉稳的深茶色",
+    "data": {
+      "colors": [
+        "#5C4033"
+      ],
+      "englishName": "Dried Tea"
+    }
+  },
+  {
+    "id": "color-japan-nezu",
+    "type": "color_palette",
+    "keywords": [
+      "濡墨",
+      "nezu",
+      "日本传统色",
+      "灰墨",
+      "淡灰",
+      "水墨"
+    ],
+    "name": "日本传统色 - 濡墨",
+    "description": "日本传统色「濡墨」，如水墨画般的淡灰色",
+    "data": {
+      "colors": [
+        "#9CA0B3"
+      ],
+      "englishName": "Light Gray"
+    }
+  },
+  {
+    "id": "color-japan-ai-ai",
+    "type": "color_palette",
+    "keywords": [
+      "藍",
+      "ai-ai",
+      "日本传统色",
+      "靛蓝",
+      "蓝草",
+      "植物染"
+    ],
+    "name": "日本传统色 - 藍",
+    "description": "日本传统色「藍」，从蓝草提取的靛蓝色",
+    "data": {
+      "colors": [
+        "#1C3839"
+      ],
+      "englishName": "Indigo"
+    }
+  },
+  {
+    "id": "color-japan-botan",
+    "type": "color_palette",
+    "keywords": [
+      "牡丹",
+      "botan",
+      "日本传统色",
+      "深紫红",
+      "华丽",
+      "高贵"
+    ],
+    "name": "日本传统色 - 牡丹",
+    "description": "日本传统色「牡丹」，华丽的深紫红色",
+    "data": {
+      "colors": [
+        "#AA4B79"
+      ],
+      "englishName": "Peony"
+    }
+  },
+  {
+    "id": "color-japan-yamabuki",
+    "type": "color_palette",
+    "keywords": [
+      "山吹",
+      "yamabuki",
+      "日本传统色",
+      "金黄",
+      "春黄",
+      "明亮"
+    ],
+    "name": "日本传统色 - 山吹",
+    "description": "日本传统色「山吹」，明亮的金黄色，象征春天",
+    "data": {
+      "colors": [
+        "#F9A636"
+      ],
+      "englishName": "Yamabuki"
+    }
+  },
+  {
+    "id": "color-japan-uguisu",
+    "type": "color_palette",
+    "keywords": [
+      "鶯",
+      "uguisu",
+      "日本传统色",
+      "深绿",
+      "鸟羽色",
+      "自然"
+    ],
+    "name": "日本传统色 - 鶯",
+    "description": "日本传统色「鶯」，如同鸟羽般的深绿色",
+    "data": {
+      "colors": [
+        "#364F46"
+      ],
+      "englishName": "Dark Green"
+    }
+  },
+  {
+    "id": "color-japan-cha-cha",
+    "type": "color_palette",
+    "keywords": [
+      "茶色",
+      "cha-cha",
+      "日本传统色",
+      "茶色",
+      "和风",
+      "温暖"
+    ],
+    "name": "日本传统色 - 茶色",
+    "description": "日本传统色「茶色」，温暖的茶褐色",
+    "data": {
+      "colors": [
+        "#835437"
+      ],
+      "englishName": "Tea Color"
+    }
+  },
+  {
+    "id": "color-japan-kuchiba",
+    "type": "color_palette",
+    "keywords": [
+      "朽葉",
+      "kuchiba",
+      "日本传统色",
+      "枯黄",
+      "秋色",
+      "季节"
+    ],
+    "name": "日本传统色 - 朽葉",
+    "description": "日本传统色「朽葉」，象征秋天的枯黄色",
+    "data": {
+      "colors": [
+        "#C9A66B"
+      ],
+      "englishName": "Decayed Leaf"
+    }
+  },
+  {
+    "id": "color-japan-shuwa",
+    "type": "color_palette",
+    "keywords": [
+      "朱",
+      "shu",
+      "日本传统色",
+      "朱红",
+      "朱砂",
+      "传统红"
+    ],
+    "name": "日本传统色 - 朱",
+    "description": "日本传统色「朱」，传统的朱红色",
+    "data": {
+      "colors": [
+        "#CB3642"
+      ],
+      "englishName": "Vermilion"
+    }
+  },
+  {
+    "id": "color-japan-ginnan",
+    "type": "color_palette",
+    "keywords": [
+      "銀杏",
+      "ginnan",
+      "日本传统色",
+      "银杏黄",
+      "秋黄",
+      "季节"
+    ],
+    "name": "日本传统色 - 銀杏",
+    "description": "日本传统色「銀杏」，秋天银杏的黄色",
+    "data": {
+      "colors": [
+        "#DFC68C"
+      ],
+      "englishName": "Ginkgo"
+    }
+  },
+  {
+    "id": "color-japan-toki",
+    "type": "color_palette",
+    "keywords": [
+      "鳶",
+      "toki",
+      "日本传统色",
+      "朱鴇",
+      "鲜橙",
+      "鸟类"
+    ],
+    "name": "日本传统色 - 鳶",
+    "description": "日本传统色「鳶」，朱鴇鸟的鲜橙色",
+    "data": {
+      "colors": [
+        "#F05E40"
+      ],
+      "englishName": "Ibis"
+    }
+  },
+  {
+    "id": "color-japan-ame",
+    "type": "color_palette",
+    "keywords": [
+      "飴",
+      "ame",
+      "日本传统色",
+      "糖色",
+      "甜色",
+      "和风"
+    ],
+    "name": "日本传统色 - 飴",
+    "description": "日本传统色「飴」，甜美的糖色",
+    "data": {
+      "colors": [
+        "#D4A66E"
+      ],
+      "englishName": "Candy"
+    }
+  },
+  {
+    "id": "color-japan-karashi",
+    "type": "color_palette",
+    "keywords": [
+      "唐紅",
+      "karashi",
+      "日本传统色",
+      "芥子黄",
+      "深黄",
+      "浓郁"
+    ],
+    "name": "日本传统色 - 唐紅",
+    "description": "日本传统色「唐紅」，浓郁的芥子黄色",
+    "data": {
+      "colors": [
+        "#B36B38"
+      ],
+      "englishName": "Karashi Mustard"
+    }
+  },
+  {
+    "id": "color-japon-rokusho",
+    "type": "color_palette",
+    "keywords": [
+      "緑青",
+      "rokusho",
+      "日本传统色",
+      "绿青",
+      "矿物绿",
+      "古老"
+    ],
+    "name": "日本传统色 - 緑青",
+    "description": "日本传统色「緑青」，古老的矿物绿色",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Rokusho"
+    }
+  },
+  {
+    "id": "color-japan-shion",
+    "type": "color_palette",
+    "keywords": [
+      "紫",
+      "shion",
+      "深紫",
+      "古典",
+      "日本传统色",
+      "japanese traditional color",
+      "Purple"
+    ],
+    "name": "日本传统色 - 紫",
+    "description": "日本传统色「紫」，紫的传统色彩",
+    "data": {
+      "colors": [
+        "#5D3A4A"
+      ],
+      "englishName": "Purple",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japan-futa-ai",
+    "type": "color_palette",
+    "keywords": [
+      "二藍",
+      "futa-ai",
+      "深靛",
+      "双染",
+      "日本传统色",
+      "japanese traditional color",
+      "Double Indigo"
+    ],
+    "name": "日本传统色 - 二藍",
+    "description": "日本传统色「二藍」，二藍的传统色彩",
+    "data": {
+      "colors": [
+        "#1B4D72"
+      ],
+      "englishName": "Double Indigo",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-konpara",
+    "type": "color_palette",
+    "keywords": [
+      "紺",
+      "konpara",
+      "深紅",
+      "暗红",
+      "日本传统色",
+      "japanese traditional color",
+      "Dark Red"
+    ],
+    "name": "日本传统色 - 紺",
+    "description": "日本传统色「紺」，紺的传统色彩",
+    "data": {
+      "colors": [
+        "#9D6B79"
+      ],
+      "englishName": "Dark Red",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-murasaki",
+    "type": "color_palette",
+    "keywords": [
+      "紫",
+      "murasaki",
+      "皇家紫",
+      "高级",
+      "日本传统色",
+      "japanese traditional color",
+      "Purple"
+    ],
+    "name": "日本传统色 - 紫",
+    "description": "日本传统色「紫」，紫的传统色彩",
+    "data": {
+      "colors": [
+        "#5A3F6A"
+      ],
+      "englishName": "Purple",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-ebi",
+    "type": "color_palette",
+    "keywords": [
+      "海老茶",
+      "ebi",
+      "虾茶",
+      "茶色",
+      "日本传统色",
+      "japanese traditional color",
+      "Shrimp Tea"
+    ],
+    "name": "日本传统色 - 海老茶",
+    "description": "日本传统色「海老茶」，海老茶的传统色彩",
+    "data": {
+      "colors": [
+        "#765E5F"
+      ],
+      "englishName": "Shrimp Tea",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-kitsutsuji",
+    "type": "color_palette",
+    "keywords": [
+      "枞茶",
+      "kitsutsuji",
+      "铁茶",
+      "深茶",
+      "日本传统色",
+      "japanese traditional color",
+      "Iron Tea"
+    ],
+    "name": "日本传统色 - 枞茶",
+    "description": "日本传统色「枞茶」，枞茶的传统色彩",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Iron Tea",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-yamabuki-cha",
+    "type": "color_palette",
+    "keywords": [
+      "山吹茶",
+      "yamabuki-cha",
+      "金黄茶",
+      "日本传统色",
+      "japanese traditional color",
+      "Yamabuki Tea"
+    ],
+    "name": "日本传统色 - 山吹茶",
+    "description": "日本传统色「山吹茶」，山吹茶的传统色彩",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Yamabuki Tea",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-natan",
+    "type": "color_palette",
+    "keywords": [
+      "楮",
+      "natan",
+      "栗色",
+      "坚果",
+      "日本传统色",
+      "japanese traditional color",
+      "Chestnut"
+    ],
+    "name": "日本传统色 - 楮",
+    "description": "日本传统色「楮」，楮的传统色彩",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Chestnut",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-koma",
+    "type": "color_palette",
+    "keywords": [
+      "胡粉",
+      "koma",
+      "铅粉",
+      "白色",
+      "日本传统色",
+      "japanese traditional color",
+      "Lead Powder"
+    ],
+    "name": "日本传统色 - 胡粉",
+    "description": "日本传统色「胡粉」，胡粉的传统色彩",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Lead Powder",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-enji",
+    "type": "color_palette",
+    "keywords": [
+      "臙脂",
+      "enji",
+      "胭脂",
+      "鲜红",
+      "日本传统色",
+      "japanese traditional color",
+      "Carmine"
+    ],
+    "name": "日本传统色 - 臙脂",
+    "description": "日本传统色「臙脂」，臙脂的传统色彩",
+    "data": {
+      "colors": [
+        "#9E382F"
+      ],
+      "englishName": "Carmine",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-shiki",
+    "type": "color_palette",
+    "keywords": [
+      "蝋汁",
+      "shiki",
+      "黄褐",
+      "植物染",
+      "日本传统色",
+      "japanese traditional color",
+      "Rattan Juice"
+    ],
+    "name": "日本传统色 - 蝋汁",
+    "description": "日本传统色「蝋汁」，蝋汁的传统色彩",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Rattan Juice",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-kobai",
+    "type": "color_palette",
+    "keywords": [
+      "深黄",
+      "kobai",
+      "深黄",
+      "浓郁",
+      "日本传统色",
+      "japanese traditional color",
+      "Deep Yellow"
+    ],
+    "name": "日本传统色 - 深黄",
+    "description": "日本传统色「深黄」，深黄的传统色彩",
+    "data": {
+      "colors": [
+        "#FFB347"
+      ],
+      "englishName": "Deep Yellow",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-choji",
+    "type": "color_palette",
+    "keywords": [
+      "丁子",
+      "choji",
+      "丁香",
+      "紫褐",
+      "日本传统色",
+      "japanese traditional color",
+      "Clove"
+    ],
+    "name": "日本传统色 - 丁子",
+    "description": "日本传统色「丁子」，丁子的传统色彩",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Clove",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-natane",
+    "type": "color_palette",
+    "keywords": [
+      "茄子",
+      "natane",
+      "茄紫",
+      "深紫",
+      "日本传统色",
+      "japanese traditional color",
+      "Eggplant"
+    ],
+    "name": "日本传统色 - 茄子",
+    "description": "日本传统色「茄子」，茄子的传统色彩",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Eggplant",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-hasu",
+    "type": "color_palette",
+    "keywords": [
+      "肌",
+      "hasu",
+      "肌色",
+      "肉色",
+      "日本传统色",
+      "japanese traditional color",
+      "Carnation"
+    ],
+    "name": "日本传统色 - 肌",
+    "description": "日本传统色「肌」，肌的传统色彩",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Carnation",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-odake",
+    "type": "color_palette",
+    "keywords": [
+      "小豆",
+      "odake",
+      "豆红",
+      "红褐色",
+      "日本传统色",
+      "japanese traditional color",
+      "Adzuki Bean"
+    ],
+    "name": "日本传统色 - 小豆",
+    "description": "日本传统色「小豆」，小豆的传统色彩",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Adzuki Bean",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-gurenju",
+    "type": "color_palette",
+    "keywords": [
+      "紅海老茶",
+      "gurenju",
+      "红茶色",
+      "日本传统色",
+      "japanese traditional color",
+      "Crimson Shrimp Tea"
+    ],
+    "name": "日本传统色 - 紅海老茶",
+    "description": "日本传统色「紅海老茶」，紅海老茶的传统色彩",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Crimson Shrimp Tea",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-kohakuto",
+    "type": "color_palette",
+    "keywords": [
+      "琥珀",
+      "kohakuto",
+      "琥珀色",
+      "透明",
+      "日本传统色",
+      "japanese traditional color",
+      "Amber"
+    ],
+    "name": "日本传统色 - 琥珀",
+    "description": "日本传统色「琥珀」，琥珀的传统色彩",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Amber",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-tamago",
+    "type": "color_palette",
+    "keywords": [
+      "玉子",
+      "tamago",
+      "蛋黄色",
+      "明亮",
+      "日本传统色",
+      "japanese traditional color",
+      "Egg"
+    ],
+    "name": "日本传统色 - 玉子",
+    "description": "日本传统色「玉子」，玉子的传统色彩",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Egg",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-ume",
+    "type": "color_palette",
+    "keywords": [
+      "梅",
+      "ume",
+      "梅紫",
+      "早春",
+      "日本传统色",
+      "japanese traditional color",
+      "Plum"
+    ],
+    "name": "日本传统色 - 梅",
+    "description": "日本传统色「梅」，梅的传统色彩",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Plum",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-fuji",
+    "type": "color_palette",
+    "keywords": [
+      "藤",
+      "fuji",
+      "藤紫",
+      "春之藤",
+      "日本传统色",
+      "japanese traditional color",
+      "Wisteria"
+    ],
+    "name": "日本传统色 - 藤",
+    "description": "日本传统色「藤」，藤的传统色彩",
+    "data": {
+      "colors": [
+        "#C3A6C9"
+      ],
+      "englishName": "Wisteria",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-ayame",
+    "type": "color_palette",
+    "keywords": [
+      "菖蒲",
+      "ayame",
+      "紫菖蒲",
+      "五月",
+      "日本传统色",
+      "japanese traditional color",
+      "Iris"
+    ],
+    "name": "日本传统色 - 菖蒲",
+    "description": "日本传统色「菖蒲」，菖蒲的传统色彩",
+    "data": {
+      "colors": [
+        "#847B6D"
+      ],
+      "englishName": "Iris",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-haji",
+    "type": "color_palette",
+    "keywords": [
+      "膚",
+      "haji",
+      "肉色",
+      "自然",
+      "日本传统色",
+      "japanese traditional color",
+      "Flesh"
+    ],
+    "name": "日本传统色 - はだい",
+    "description": "日本传统色「はだい」，膚的传统色彩",
+    "data": {
+      "colors": [
+        "#887F68"
+      ],
+      "englishName": "Flesh",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-yamabuki",
+    "type": "color_palette",
+    "keywords": [
+      "山吹",
+      "yamabuki",
+      "棣棠",
+      "春黄",
+      "日本传统色",
+      "japanese traditional color",
+      "Yamabuki"
+    ],
+    "name": "日本传统色 - 山吹",
+    "description": "日本传统色「山吹」，山吹的传统色彩",
+    "data": {
+      "colors": [
+        "#F9A636"
+      ],
+      "englishName": "Yamabuki",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-kuchinashi",
+    "type": "color_palette",
+    "keywords": [
+      "椿",
+      "kuchinashi",
+      "山茶花",
+      "深红",
+      "日本传统色",
+      "japanese traditional color",
+      "Camellia"
+    ],
+    "name": "日本传统色 - 椿",
+    "description": "日本传统色「椿」，椿的传统色彩",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Camellia",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-susutake",
+    "type": "color_palette",
+    "keywords": [
+      "煤竹",
+      "susutake",
+      "烟竹",
+      "黑竹",
+      "日本传统色",
+      "japanese traditional color",
+      "Smoked Bamboo"
+    ],
+    "name": "日本传统色 - 煤竹",
+    "description": "日本传统色「煤竹」，煤竹的传统色彩",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Smoked Bamboo",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-matcha",
+    "type": "color_palette",
+    "keywords": [
+      "抹茶",
+      "matcha",
+      "茶绿",
+      "和风",
+      "日本传统色",
+      "japanese traditional color",
+      "Matcha"
+    ],
+    "name": "日本传统色 - 抹茶",
+    "description": "日本传统色「抹茶」，抹茶的传统色彩",
+    "data": {
+      "colors": [
+        "#7A9F57"
+      ],
+      "englishName": "Matcha",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-wasure-guro",
+    "type": "color_palette",
+    "keywords": [
+      "故意後",
+      "wasure-guro",
+      "淡灰",
+      "怀旧",
+      "日本传统色",
+      "japanese traditional color",
+      "Faded Gray"
+    ],
+    "name": "日本传统色 - 故意後",
+    "description": "日本传统色「故意後」，故意後的传统色彩",
+    "data": {
+      "colors": [
+        "#8F7C68"
+      ],
+      "englishName": "Faded Gray",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-bara-iro",
+    "type": "color_palette",
+    "keywords": [
+      "巴色",
+      "bara-iro",
+      "蔷薇",
+      "粉褐",
+      "日本传统色",
+      "japanese traditional color",
+      "Rose"
+    ],
+    "name": "日本传统色 - 巴色",
+    "description": "日本传统色「巴色」，巴色的传统色彩",
+    "data": {
+      "colors": [
+        "#736B60"
+      ],
+      "englishName": "Rose",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-fuki",
+    "type": "color_palette",
+    "keywords": [
+      "葎",
+      "fuki",
+      "葱绿",
+      "浅绿",
+      "日本传统色",
+      "japanese traditional color",
+      "Rice Plant"
+    ],
+    "name": "日本传统色 - 葎",
+    "description": "日本传统色「葎」，葎的传统色彩",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Rice Plant",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-aizu",
+    "type": "color_palette",
+    "keywords": [
+      "会津",
+      "aizu",
+      "深藍",
+      "蓝靛",
+      "日本传统色",
+      "japanese traditional color",
+      "Aizu"
+    ],
+    "name": "日本传统色 - 会津",
+    "description": "日本传统色「会津」，会津的传统色彩",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Aizu",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-kachiwabi",
+    "type": "color_palette",
+    "keywords": [
+      "建翳",
+      "kachiwabi",
+      "柿色",
+      "橘红",
+      "日本传统色",
+      "japanese traditional color",
+      "Persimmon"
+    ],
+    "name": "日本传统色 - 建翳",
+    "description": "日本传统色「建翳」，建翳的传统色彩",
+    "data": {
+      "colors": [
+        ""
+      ],
+      "englishName": "Persimmon",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-yamabuki",
+    "type": "color_palette",
+    "keywords": [
+      "山吹",
+      "yamabuki",
+      "棣棠",
+      "金黄",
+      "日本传统色",
+      "japanese traditional color",
+      "Yamabuki"
+    ],
+    "name": "日本传统色 - 山吹",
+    "description": "日本传统色「山吹」，山吹的传统色彩",
+    "data": {
+      "colors": [
+        "#F9A636"
+      ],
+      "englishName": "Yamabuki",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-tokusa",
+    "type": "color_palette",
+    "keywords": [
+      "木賊",
+      "tokusa",
+      "草绿",
+      "初春",
+      "spring green",
+      "japanese"
+    ],
+    "name": "日本传统色 - 木賊",
+    "description": "日本传统色「木賊」，象征初春的草绿色",
+    "data": {
+      "colors": [
+        "#5D4037"
+      ],
+      "englishName": "Moss Green",
+      "culturalOrigin": "日本传统色"
+    }
+  },
+  {
+    "id": "color-japon-wakatake",
+    "type": "color_palette",
+    "keywords": [
+      "若竹",
+      "wakatake",
+      "嫩竹",
+      "light bamboo",
+      "japanese"
+    ],
+    "name": "日本传统色 - 若竹",
+    "description": "日本传统色「若竹」，嫩竹的浅绿色",
+    "data": {
+      "colors": [
+        "#8FA68C"
+      ],
+      "englishName": "Light Bamboo",
+      "culturalOrigin": "日本传统色"
     }
   }
 ]

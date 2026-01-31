@@ -547,5 +547,110 @@
         "lineHeight": "1.5-1.6 (tight, dramatic)"
       }
     }
+  },
+  {
+    "id": "emotion-petrichor",
+    "type": "emotion",
+    "keywords": [
+      "petrichor",
+      "雨后",
+      "泥土芬芳",
+      "清新",
+      "自然",
+      "潮湿"
+    ],
+    "name": "Petrichor 雨后芬芳",
+    "description": "雨后泥土散发的清新芬芳气息",
+    "data": {
+      "colors": {
+        "approach": "Earth tones, fresh greens, damp browns"
+      },
+      "typography": {
+        "h1": "Light weights (300-400)"
+      }
+    }
+  },
+  {
+    "id": "emotion-old-bookstore",
+    "type": "emotion",
+    "keywords": [
+      "old bookstore",
+      "旧书店",
+      "书籍",
+      "books",
+      "怀旧",
+      "nostalgic",
+      "纸张",
+      "paper",
+      "安静"
+    ],
+    "name": "Old Bookstore 旧书店",
+    "description": "充满书香的安静旧书店氛围",
+    "data": {
+      "colors": {
+        "approach": "Warm wood tones (#B8A99A), cream (#F5F3EF), ink (#2C2C2C)"
+      },
+      "typography": {
+        "h1": "Serif + italic + letter-spacing 0.1em"
+      },
+      "decorations": {
+        "background": "Paper texture (radial-gradient dots)"
+      }
+    }
+  },
+  {
+    "id": "emotion-electric-energy",
+    "type": "emotion",
+    "keywords": [
+      "electric energy",
+      "电流能量",
+      "energetic",
+      "vibrant",
+      "动态",
+      "dynamic",
+      "bright"
+    ],
+    "name": "Electric Energy 电流能量",
+    "description": "电流般的能量感和活力",
+    "data": {
+      "colors": {
+        "approach": "Electric blue (#00D9FF), vibrant purple, cyan gradients"
+      },
+      "typography": {
+        "h1": "Bold sans-serif + text-shadow glow"
+      },
+      "decorations": {
+        "background": "Dark with neon accents",
+        "borders": "Glowing"
+      }
+    }
+  },
+  {
+    "id": "emotion-urban-loneliness",
+    "type": "emotion",
+    "keywords": [
+      "urban loneliness",
+      "城市孤独",
+      "lonely",
+      "isolated",
+      "城市",
+      "city",
+      "夜晚",
+      "night city"
+    ],
+    "name": "Urban Loneliness 城市孤独",
+    "description": "城市夜晚的孤独与疏离感",
+    "data": {
+      "colors": {
+        "approach": "Dark grays, cool blues, isolated lights"
+      },
+      "typography": {
+        "h1": "Light weights (300) + wide spacing"
+      },
+      "decorations": {
+        "background": "Dark gradient",
+        "borders": "Minimal"
+      }
+    }
   }
 ]
