@@ -161,6 +161,7 @@ These rules ensure quality baseline and readability. NEVER violate them.
 - Li: 1.7-1.8 (readable lists)
 
 ### Spacing System (8px base unit)
+- **Container padding: 24-32px** (CRITICAL - not too narrow, ensure breathing room)
 - Paragraph margin: 1.5em (consistent vertical rhythm)
 - H1 margin-bottom: 20-32px
 - H2 margin-top: 32-40px, margin-bottom: 20-28px
