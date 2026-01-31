@@ -163,7 +163,7 @@ async function rewriteQueryWithLLM(query: string, config?: any): Promise<string>
       .replace(/英文翻译|翻译|keywords|关键词|扩展|输出|输入/gi, '')  // 移除标注
       .replace(/\s+/g, ' ')  // 多个空格压缩为一个
       .split(' ')  // 分割成数组
-      .filter(word => word.length > 0)  // 移除空词
+      .filter((word: string) => word.length > 0)  // 移除空词
       .slice(0, 15)  // 限制最多15个关键词
       .join(' ')
       .trim();
@@ -206,20 +206,29 @@ export async function retrieveKnowledge(
       term: expandedQuery,
       limit: topK,
       properties: ['keywords', 'name', 'description'],
-      threshold: 0.05
+      threshold: 0.05, // 降低阈值以提高召回率（原 0.1 → 0.05）
+      exact: false  // 允许模糊匹配
     });
 
+    // 调试：输出原始搜索结果
+    console.log(`[Orama Search] 查询: "${expandedQuery}"`);
+    console.log(`[Orama Search] 原始结果数量: ${searchResults.hits.length}`);
+    if (searchResults.hits.length > 0) {
+      console.log(`[Orama Search] 第一条结果:`, searchResults.hits[0]);
+    }
+
     // 转换为统一格式（过滤掉 result 为 undefined 的项）
-    const results: RetrievalResult[] = searchResults.hits
-      .filter((hit: any) => hit && hit.result)  // 过滤无效结果
-      .map((hit: any) => ({
-        id: hit.id,
-        type: hit.result.type,
-        name: hit.result.name,
-        description: hit.result.description,
-        data: hit.result.data,
-        score: hit.score
-      }));
+    const validHits = searchResults.hits.filter((hit: any) => hit && hit.result);
+    console.log(`[Orama Search] 有效结果数量: ${validHits.length}/${searchResults.hits.length}`);
+    
+    const results: RetrievalResult[] = validHits.map((hit: any) => ({
+      id: hit.id,
+      type: hit.result.type,
+      name: hit.result.name,
+      description: hit.result.description,
+      data: hit.result.data,
+      score: hit.score
+    }));
 
     console.log(`[KnowledgeService] 检索 "${expandedQuery}" 找到 ${results.length} 条相关知识`);
     console.log(`[KnowledgeService] 检索结果:`, results.map(r => ({
