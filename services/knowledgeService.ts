@@ -27,17 +27,26 @@ export interface RetrievalResult {
   score: number;
 }
 
-// Orama 数据库实例
-let knowledgeDB: any = null;
-let isInitialized = false;
+// 使用全局单例模式，避免模块重载导致重复初始化
+// 浏览器环境使用 window
+function getDBStore() {
+  if (!(window as any).__museflowKnowledgeDB) {
+    (window as any).__museflowKnowledgeDB = {
+      db: null,
+      isInitialized: false
+    };
+  }
+  return (window as any).__museflowKnowledgeDB;
+}
 
 /**
  * 初始化知识库数据库
  */
 export async function initKnowledgeDB(): Promise<void> {
-  // 双重检查：使用 knowledgeDB 实例而不是标志位
-  // 避免在 React Strict Mode 下的重复初始化
-  if (knowledgeDB !== null) {
+  const store = getDBStore();
+
+  // 双重检查：使用全局实例检查
+  if (store.isInitialized || store.db !== null) {
     return;
   }
 
@@ -71,9 +80,9 @@ export async function initKnowledgeDB(): Promise<void> {
       });
     }
 
-    // 在所有插入成功后再赋值，避免部分初始化
-    knowledgeDB = db;
-    isInitialized = true;
+    // 在所有插入成功后再赋值到全局存储
+    store.db = db;
+    store.isInitialized = true;
     console.log(`[KnowledgeService] 成功初始化知识库，已索引 ${KNOWLEDGE_BASE.length} 条知识`);
   } catch (error: unknown) {
     console.error('[KnowledgeService] 初始化失败:', error);
@@ -83,7 +92,7 @@ export async function initKnowledgeDB(): Promise<void> {
 
 /**
  * 语义检索：根据用户查询返回相关知识
- * 
+ *
  * @param query 用户的查询文本（如"莫兰迪色系的咖啡馆"）
  * @param topK 返回前 K 个最相关的结果
  * @returns 检索结果列表
@@ -92,14 +101,16 @@ export async function retrieveKnowledge(
   query: string,
   topK: number = 5
 ): Promise<RetrievalResult[]> {
+  const store = getDBStore();
+
   // 确保数据库已初始化
-  if (!isInitialized) {
+  if (!store.isInitialized || !store.db) {
     await initKnowledgeDB();
   }
 
   try {
     // 使用 Orama 进行语义搜索
-    const searchResults = await search(knowledgeDB, {
+    const searchResults = await search(store.db, {
       term: query,
       limit: topK,
       properties: ['keywords', 'name', 'description'],
@@ -200,7 +211,9 @@ export async function getKnowledgeStats(): Promise<{
   types: Record<string, number>;
   sampleEntries: string[];
 }> {
-  if (!isInitialized) {
+  const store = getDBStore();
+
+  if (!store.isInitialized || !store.db) {
     await initKnowledgeDB();
   }
 
