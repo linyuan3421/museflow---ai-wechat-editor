@@ -1,5 +1,5 @@
 import { ThemeStyles, RedNoteData, RedNoteStyleConfig, AIConfig } from "../types";
-import { enhancePromptWithKnowledge } from "./knowledgeService";
+import { enhancePromptWithKnowledge, retrieveRedNoteKnowledge, formatKnowledgeContext } from "./knowledgeService";
 
 // Helper: Parse JSON safely and fix invalid React CSS properties
 const parseJSON = <T>(text: string | undefined): T => {
@@ -84,6 +84,64 @@ async function chatCompletion(
     console.error("AI Request Failed", error);
     throw error;
   }
+}
+
+/**
+ * 组合小红书知识上下文与系统提示词
+ *
+ * @param baseSystemPrompt 基础系统提示词框架
+ * @param userQuery 用户查询
+ * @returns 增强后的系统提示词
+ */
+export async function enhancePromptWithRedNoteKnowledge(
+  baseSystemPrompt: string,
+  userQuery: string,
+  config?: any
+): Promise<string> {
+  // 1. 检索小红书相关知识（传递 config 支持 LLM 重写）
+  const knowledge = await retrieveRedNoteKnowledge(userQuery, 3, config);
+
+  // 2. 如果没有相关知识，返回原提示词
+  if (knowledge.length === 0) {
+    console.log('[RedNoteKnowledgeService] 未找到相关知识，使用基础提示词');
+    return baseSystemPrompt;
+  }
+
+  // 输出检索摘要到控制台
+  console.log(`[小红书 RAG 检索摘要] "${userQuery}" → 找到 ${knowledge.length} 条知识:`);
+  console.table(knowledge.map(k => ({
+    名称: k.name,
+    类型: k.type,
+    相似度: k.score.toFixed(3)
+  })));
+
+  // 显示最终注入到系统提示词的知识上下文
+  const knowledgeContext = formatKnowledgeContext(knowledge);
+  console.group(`[小红书 RAG 最终注入内容] "${userQuery}"`);
+  console.log('以下内容将被注入到 AI 系统提示词中：');
+  console.log(knowledgeContext);
+  console.log('--- 注入结束 ---');
+  console.groupEnd();
+
+  // 3. 组合成增强提示词
+  const enhancedPrompt = `${baseSystemPrompt}
+
+---
+
+# RELEVANT KNOWLEDGE FOR: "${userQuery}"
+
+${knowledgeContext}
+
+---
+
+**设计指导**: 基于以上具体知识，结合小红书设计原则，生成卡片模板配置。
+确保:
+1. 如果提供了具体颜色，必须使用这些颜色值（精确的 hex 值）
+2. 如果提供了排版/布局技法，必须应用相应的设计实现
+3. 如果提供了装饰类型，必须使用对应的装饰样式
+`;
+
+  return enhancedPrompt;
 }
 
 // --- Prompts ---
