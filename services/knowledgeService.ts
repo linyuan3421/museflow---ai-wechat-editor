@@ -375,3 +375,151 @@ export async function getKnowledgeStats(): Promise<{
     sampleEntries: KNOWLEDGE_BASE.slice(0, 5).map((e: any) => e.name)
   };
 }
+
+// ============================================================
+// 小红书知识库 RAG 检索系统
+// ============================================================
+
+// 使用全局单例模式，避免模块重载导致重复初始化（小红书独立数据库）
+function getRedNoteDBStore() {
+  if (!(window as any).__museflowRedNoteKnowledgeDB) {
+    (window as any).__museflowRedNoteKnowledgeDB = {
+      db: null,
+      isInitialized: false
+    };
+  }
+  return (window as any).__museflowRedNoteKnowledgeDB;
+}
+
+/**
+ * 初始化小红书知识库数据库
+ */
+export async function initRedNoteKnowledgeDB(): Promise<void> {
+  const store = getRedNoteDBStore();
+
+  // 双重检查：使用全局实例检查
+  if (store.isInitialized || store.db !== null) {
+    return;
+  }
+
+  try {
+    // 导入小红书知识库数据
+    const redNoteKnowledgeBaseModule = await import('../data/knowledge-rednote');
+    const REDNOTE_KNOWLEDGE_BASE = (redNoteKnowledgeBaseModule.default || redNoteKnowledgeBaseModule) as unknown as KnowledgeEntry[];
+
+    // 创建 Orama 数据库
+    const db = await create({
+      schema: {
+        id: 'string',
+        type: 'string',
+        keywords: 'string',
+        name: 'string',
+        description: 'string'
+      }
+    });
+
+    // 索引所有小红书知识条目
+    for (const entry of REDNOTE_KNOWLEDGE_BASE) {
+      try {
+        await insert(db, {
+          id: entry.id,
+          type: entry.type,
+          keywords: entry.keywords.join(' '),
+          name: entry.name,
+          description: entry.description,
+          data: entry.data
+        });
+      } catch (insertError: any) {
+        if (!insertError.message?.includes('already exists')) {
+          throw insertError;
+        }
+      }
+    }
+
+    store.db = db;
+    store.isInitialized = true;
+    console.log(`[RedNoteKnowledgeService] 成功初始化小红书知识库，已索引 ${REDNOTE_KNOWLEDGE_BASE.length} 条知识`);
+  } catch (error: unknown) {
+    console.error('[RedNoteKnowledgeService] 初始化失败:', error);
+    throw error;
+  }
+}
+
+/**
+ * 小红书知识库语义检索
+ *
+ * @param query 用户的查询文本（如"极简风格"、"波普艺术"）
+ * @param topK 返回前 K 个最相关的结果
+ * @param config AI 配置（可选，用于 LLM 查询重写）
+ * @returns 检索结果列表
+ */
+export async function retrieveRedNoteKnowledge(
+  query: string,
+  topK: number = 5,
+  config?: any
+): Promise<RetrievalResult[]> {
+  const store = getRedNoteDBStore();
+
+  // 确保数据库已初始化
+  if (!store.isInitialized || !store.db) {
+    await initRedNoteKnowledgeDB();
+  }
+
+  try {
+    // LLM 智能查询重写（如果提供 AI 配置）
+    const expandedQuery = await rewriteQueryWithLLM(query, config);
+
+    // 使用 Orama 进行全文搜索
+    const searchResults = await search(store.db, {
+      term: expandedQuery,
+      limit: topK,
+      properties: ['keywords', 'name', 'description'],
+      threshold: 0.05,
+      exact: false
+    });
+
+    console.log(`[RedNoteKnowledgeService] 查询: "${expandedQuery}"`);
+    console.log(`[RedNoteKnowledgeService] 原始结果数量: ${searchResults.hits.length}`);
+
+    const validHits = searchResults.hits.filter((hit: any) => hit && hit.document);
+    console.log(`[RedNoteKnowledgeService] 有效结果数量: ${validHits.length}/${searchResults.hits.length}`);
+    
+    const results: RetrievalResult[] = validHits.map((hit: any) => ({
+      id: hit.id,
+      type: hit.document.type,
+      name: hit.document.name,
+      description: hit.document.description,
+      data: hit.document.data,
+      score: hit.score
+    }));
+
+    console.log(`[RedNoteKnowledgeService] 检索 "${expandedQuery}" 找到 ${results.length} 条相关知识`);
+    console.log(`[RedNoteKnowledgeService] 检索结果:`, results.map(r => ({
+      id: r.id,
+      name: r.name,
+      type: r.type,
+      score: r.score
+    })));
+
+    // 输出详细的知识内容
+    if (results.length > 0) {
+      console.group(`[小红书 RAG 知识详情] "${query}"`);
+      results.forEach((result, index) => {
+        console.log(`${index + 1}. ${result.name} (${result.type}) - 相似度: ${result.score.toFixed(3)}`);
+        console.log(`   描述: ${result.description}`);
+        console.log(`   完整数据:`, result.data);
+      });
+      console.groupEnd();
+
+      const knowledgeContext = formatKnowledgeContext(results);
+      console.group(`[小红书 RAG 提示词注入] "${query}"`);
+      console.log(knowledgeContext);
+      console.groupEnd();
+    }
+
+    return results;
+  } catch (error) {
+    console.error('[RedNoteKnowledgeService] 检索失败:', error);
+    return [];
+  }
+}
