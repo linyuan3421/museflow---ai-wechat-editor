@@ -1,0 +1,182 @@
+[
+  {
+    "id": "layout-grid-aligned",
+    "type": "layout",
+    "keywords": ["网格", "对齐", "40px", "瑞士", "grid", "aligned", "swiss"],
+    "name": "40px网格对齐",
+    "description": "严格40px网格系统，所有元素对齐网格线，瑞士国际主义风格",
+    "data": {
+      "technique": "使用40px基准网格，容器padding为24-32px（符合约束），所有元素垂直间距为40px倍数，左侧数字、标题、元数据严格垂直对齐",
+      "css": "display: grid; grid-template-columns: 60px 1fr; gap: 40px; padding: 24px; align-items: start;",
+      "vibe": "瑞士国际主义，严谨秩序，现代理性"
+    }
+  },
+  {
+    "id": "layout-asymmetric-70-30",
+    "type": "layout",
+    "keywords": ["不对称", "左重", "70:30", "动势", "asymmetric", "left-heavy"],
+    "name": "70:30不对称左重",
+    "description": "左侧70%内容区，右侧30%留白区，视觉左重",
+    "data": {
+      "technique": "主内容区占据70%宽度，右侧30%为呼吸空间，可放置装饰元素或留白，营造视觉动势",
+      "css": "display: grid; grid-template-columns: 70% 30%; gap: 32px; padding: 28px;",
+      "vibe": "不对称动势，视觉焦点，现代设计"
+    }
+  },
+  {
+    "id": "layout-glass-layered",
+    "type": "layout",
+    "keywords": ["层叠", "琉璃", "毛玻璃", "layered", "glassmorphism"],
+    "name": "层叠毛玻璃",
+    "description": "多层半透明卡片层叠，backdrop-blur毛玻璃效果",
+    "data": {
+      "technique": "创建2-3层半透明卡片，每层使用backdrop-filter: blur(20px)，rgba白色背景(0.6-0.8透明度)，层间阴影offset: 8px, blur: 24px，营造深度感",
+      "css": "position: relative; backdrop-filter: blur(20px); background: rgba(255,255,255,0.7); box-shadow: 0 8px 24px rgba(0,0,0,0.08); padding: 28px;",
+      "vibe": "琉璃拟态，梦幻层叠，现代科技"
+    }
+  },
+  {
+    "id": "layout-border-shadow",
+    "type": "layout",
+    "keywords": ["边框", "阴影", "偏移", "border", "shadow", "offset"],
+    "name": "边框阴影偏移",
+    "description": "粗边框配偏移阴影，波普风格",
+    "data": {
+      "technique": "3px黑色实线边框，阴影向右下方偏移12px，模糊度20px，营造立体感",
+      "css": "border: 3px solid #000; box-shadow: 12px 12px 0 rgba(0,0,0,0.15); padding: 32px;",
+      "vibe": "波普艺术，立体感，趣味性"
+    }
+  },
+  {
+    "id": "layout-vast-whitespace",
+    "type": "layout",
+    "keywords": ["大量", "留白", "禅意", "80%", "vast", "whitespace", "zen"],
+    "name": "80%留白禅意",
+    "description": "80%留白，20%内容，极致呼吸感",
+    "data": {
+      "technique": "容器padding为32px（符合约束上限），内容区占据中心20%区域，四周大面积留白，文字居中或左对齐",
+      "css": "padding: 32px; max-width: 50%; margin: 0 auto;",
+      "vibe": "东方禅意，极致留白，宁静空灵"
+    }
+  },
+  {
+    "id": "layout-center-focus",
+    "type": "layout",
+    "keywords": ["居中", "焦点", "对称", "center", "focus", "symmetric"],
+    "name": "居中焦点",
+    "description": "内容居中，视觉焦点集中",
+    "data": {
+      "technique": "容器使用flexbox居中对齐，padding 28px，最大宽度60%，标题、正文垂直居中排列",
+      "css": "display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 28px; text-align: center;",
+      "vibe": "居中对称，焦点集中，优雅经典"
+    }
+  },
+  {
+    "id": "layout-split-50-50",
+    "type": "layout",
+    "keywords": ["分割", "50:50", "左右", "split", "half-half"],
+    "name": "50:50左右分割",
+    "description": "左右均等分割，双栏布局",
+    "data": {
+      "technique": "使用CSS Grid或Flexbox，左右两栏各占50%，gap: 32px，padding: 28px，适合双内容或图文混排",
+      "css": "display: grid; grid-template-columns: 1fr 1fr; gap: 32px; padding: 28px;",
+      "vibe": "左右平衡，双栏排版，现代简洁"
+    }
+  },
+  {
+    "id": "layout-overlap-layers",
+    "type": "layout",
+    "keywords": ["重叠", "层次", "深度", "overlap", "layers", "depth"],
+    "name": "重叠层次",
+    "description": "元素部分重叠，营造深度层次",
+    "data": {
+      "technique": "标题与正文或数字元素部分重叠（10-15px重叠量），使用z-index控制层级，重叠区域使用半透明或负margin实现",
+      "css": "position: relative; z-index: 1; margin-top: -12px;",
+      "vibe": "重叠层次，视觉深度，现代设计"
+    }
+  },
+  {
+    "id": "layout-diagonal-split",
+    "type": "layout",
+    "keywords": ["对角", "分割", "动势", "diagonal", "split", "dynamic"],
+    "name": "对角分割",
+    "description": "对角线分割布局，动感强烈",
+    "data": {
+      "technique": "使用linear-gradient创建对角分割背景（45度或-45度），或使用clip-path，内容在对角两侧分布",
+      "css": "background: linear-gradient(135deg, #fff 50%, #f0f0f0 50%); clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);",
+      "vibe": "对角动势，动态分割，视觉冲击"
+    }
+  },
+  {
+    "id": "layout-masonry-grid",
+    "type": "layout",
+    "keywords": ["瀑布流", "错落", "网格", "masonry", "staggered"],
+    "name": "错落瀑布流",
+    "description": "元素高度错落，瀑布流布局",
+    "data": {
+      "technique": "使用CSS columns或JavaScript masonry，元素高度不同，垂直错落排列，gap: 24px，营造节奏感",
+      "css": "column-count: 2; column-gap: 24px; padding: 28px;",
+      "vibe": "错落有致，节奏感，视觉趣味"
+    }
+  },
+  {
+    "id": "layout-z-pattern",
+    "type": "layout",
+    "keywords": ["Z型", "视觉流", "引导", "z-pattern", "visual-flow"],
+    "name": "Z型视觉流",
+    "description": "Z型视觉动线，引导阅读顺序",
+    "data": {
+      "technique": "左上标题→右侧正文/图片→左下元数据，形成Z型视觉路径，使用padding和margin控制间距（24-32px）",
+      "css": "display: flex; flex-direction: column; gap: 28px; padding: 28px;",
+      "vibe": "Z型引导，视觉流动，自然阅读"
+    }
+  },
+  {
+    "id": "layout-card-stack",
+    "type": "layout",
+    "keywords": ["卡片", "堆叠", "层次", "card", "stack", "layers"],
+    "name": "卡片堆叠",
+    "description": "多张卡片堆叠，立体感强",
+    "data": {
+      "technique": "创建3-4张卡片，每张向下偏移8px，依次缩小scale(0.98-0.99)，z-index递减，营造堆叠感",
+      "css": "position: relative; transform: translateY(8px) scale(0.98); z-index: 0;",
+      "vibe": "立体堆叠，层次丰富，卡片质感"
+    }
+  },
+  {
+    "id": "layout-brutalist-grid",
+    "type": "layout",
+    "keywords": ["粗野主义", "硬朗", "边框", "brutalist", "hard", "border"],
+    "name": "粗野主义网格",
+    "description": "粗黑边框网格，硬朗直接",
+    "data": {
+      "technique": "2px或3px黑色边框，所有元素都有边框，padding 24-28px，gap 24px，网格线清晰可见",
+      "css": "border: 2px solid #000; display: grid; gap: 24px; padding: 24px;",
+      "vibe": "粗野硬朗，直接裸露，反设计感"
+    }
+  },
+  {
+    "id": "layout-vertical-flow",
+    "type": "layout",
+    "keywords": ["垂直", "流动", "纵向", "vertical", "flow"],
+    "name": "垂直流动",
+    "description": "垂直方向流动布局，纵向节奏",
+    "data": {
+      "technique": "元素从上到下垂直排列，使用margin或gap控制间距（28-32px），可配合左侧边线或装饰元素引导视觉",
+      "css": "display: flex; flex-direction: column; gap: 32px; padding: 28px; border-left: 3px solid #000; padding-left: 32px;",
+      "vibe": "垂直流动，纵向节奏，引导阅读"
+    }
+  },
+  {
+    "id": "layout-magazine-spread",
+    "type": "layout",
+    "keywords": ["杂志", "跨页", "编辑", "magazine", "spread", "editorial"],
+    "name": "杂志跨页",
+    "description": "杂志跨页排版，编辑风格",
+    "data": {
+      "technique": "模仿杂志双页排版，左侧标题区+右侧内容区，或上标题下正文分栏，使用多种字体大小对比，padding 24-28px",
+      "css": "display: grid; grid-template-rows: auto 1fr; grid-template-columns: 40% 60%; gap: 28px; padding: 28px;",
+      "vibe": "杂志排版，编辑风格，专业出版"
+    }
+  }
+]
