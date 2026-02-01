@@ -1,0 +1,383 @@
+[
+  {
+    "id": "typo-swiss-huge",
+    "type": "typography",
+    "keywords": ["巨大", "瑞士", "冲击", "几何", "swiss", "huge", "bold", "geometric"],
+    "name": "瑞士巨大冲击",
+    "description": "48px超大标题，900字重，极粗几何感，强烈视觉冲击",
+    "data": {
+      "titleStyle": {
+        "fontSize": "48px",
+        "fontWeight": "900",
+        "lineHeight": "1.1",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "letterSpacing": "-0.02em",
+        "textTransform": "uppercase"
+      },
+      "vibe": "现代主义，强烈视觉冲击，杂志封面感"
+    }
+  },
+  {
+    "id": "typo-geometric-bold",
+    "type": "typography",
+    "keywords": ["几何", "粗体", "现代", "geometric", "bold", "modern"],
+    "name": "几何粗体",
+    "description": "40px几何无衬线，800字重，现代感强",
+    "data": {
+      "titleStyle": {
+        "fontSize": "40px",
+        "fontWeight": "800",
+        "lineHeight": "1.15",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "letterSpacing": "-0.01em"
+      },
+      "vibe": "现代几何，干净利落，专业感"
+    }
+  },
+  {
+    "id": "typo-black-tight",
+    "type": "typography",
+    "keywords": ["超粗", "紧凑", "冲击", "black", "tight", "condensed"],
+    "name": "超粗紧凑",
+    "description": "36px黑体字重，紧密字距，紧凑有力",
+    "data": {
+      "titleStyle": {
+        "fontSize": "36px",
+        "fontWeight": "900",
+        "lineHeight": "1.2",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "letterSpacing": "-0.03em"
+      },
+      "vibe": "紧凑有力，强烈视觉，新闻感"
+    }
+  },
+  {
+    "id": "typo-heavy-wide",
+    "type": "typography",
+    "keywords": ["重体", "宽字距", "宽松", "heavy", "wide", "spacing"],
+    "name": "重体宽距",
+    "description": "32px重体，加宽字距，呼吸感强",
+    "data": {
+      "titleStyle": {
+        "fontSize": "32px",
+        "fontWeight": "800",
+        "lineHeight": "1.25",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "letterSpacing": "0.05em"
+      },
+      "vibe": "现代宽松，呼吸感，高级感"
+    }
+  },
+  {
+    "id": "typo-massive-display",
+    "type": "typography",
+    "keywords": ["巨大", "展示", "超粗", "massive", "display", "extra-bold"],
+    "name": "巨大展示",
+    "description": "52px超大展示，950字重，极致冲击",
+    "data": {
+      "titleStyle": {
+        "fontSize": "52px",
+        "fontWeight": "950",
+        "lineHeight": "1.05",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "letterSpacing": "-0.02em",
+        "textTransform": "uppercase"
+      },
+      "vibe": "极致冲击，海报级别，视觉焦点"
+    }
+  },
+  {
+    "id": "typo-ultra-condensed",
+    "type": "typography",
+    "keywords": ["超窄", "压缩", "竖向", "ultra", "condensed", "narrow"],
+    "name": "超窄压缩",
+    "description": "28px超窄字距，压缩排版，垂直节奏",
+    "data": {
+      "titleStyle": {
+        "fontSize": "28px",
+        "fontWeight": "900",
+        "lineHeight": "1.1",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "letterSpacing": "-0.05em"
+      },
+      "vibe": "压缩节奏，现代感，垂直导向"
+    }
+  },
+  {
+    "id": "typo-gradient-soft",
+    "type": "typography",
+    "keywords": ["渐变", "柔和", "优雅", "gradient", "soft", "elegant"],
+    "name": "柔和渐变",
+    "description": "粉紫蓝文字渐变，优雅梦幻",
+    "data": {
+      "titleStyle": {
+        "fontSize": "36px",
+        "fontWeight": "700",
+        "lineHeight": "1.3",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "background": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+        "WebkitBackgroundClip": "text",
+        "WebkitTextFillColor": "transparent"
+      },
+      "vibe": "梦幻琉璃，优雅渐变，现代感"
+    }
+  },
+  {
+    "id": "typo-gradient-vibrant",
+    "type": "typography",
+    "keywords": ["渐变", "鲜艳", "活力", "gradient", "vibrant"],
+    "name": "鲜艳渐变",
+    "description": "橙粉渐变文字，活力十足",
+    "data": {
+      "titleStyle": {
+        "fontSize": "40px",
+        "fontWeight": "800",
+        "lineHeight": "1.2",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "background": "linear-gradient(120deg, #f6d365 0%, #fda085 100%)",
+        "WebkitBackgroundClip": "text",
+        "WebkitTextFillColor": "transparent"
+      },
+      "vibe": "活力渐变，温暖阳光，年轻感"
+    }
+  },
+  {
+    "id": "typo-serif-elegant",
+    "type": "typography",
+    "keywords": ["衬线", "优雅", "斜体", "serif", "elegant", "italic"],
+    "name": "优雅衬线斜体",
+    "description": "32px衬线斜体，优雅高级",
+    "data": {
+      "titleStyle": {
+        "fontSize": "32px",
+        "fontWeight": "600",
+        "lineHeight": "1.35",
+        "fontFamily": "'Georgia', 'Times New Roman', serif",
+        "fontStyle": "italic",
+        "letterSpacing": "0.01em"
+      },
+      "vibe": "优雅衬线，意式风情，高级感"
+    }
+  },
+  {
+    "id": "typo-serif-modern",
+    "type": "typography",
+    "keywords": ["衬线", "现代", "简洁", "serif", "modern"],
+    "name": "现代衬线",
+    "description": "36px现代衬线，简洁优雅",
+    "data": {
+      "titleStyle": {
+        "fontSize": "36px",
+        "fontWeight": "600",
+        "lineHeight": "1.3",
+        "fontFamily": "'Georgia', 'Times New Roman', serif",
+        "letterSpacing": "0em"
+      },
+      "vibe": "现代衬线，简洁优雅，经典感"
+    }
+  },
+  {
+    "id": "typo-pop-rotated",
+    "type": "typography",
+    "keywords": ["波普", "旋转", "动感", "pop", "rotated", "dynamic"],
+    "name": "波普旋转",
+    "description": "40px粗体旋转-3度，波普动感",
+    "data": {
+      "titleStyle": {
+        "fontSize": "40px",
+        "fontWeight": "900",
+        "lineHeight": "1.15",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "transform": "rotate(-3deg)"
+      },
+      "vibe": "波普动感，不对称趣味，年轻活力"
+    }
+  },
+  {
+    "id": "typo-deco-bold",
+    "type": "typography",
+    "keywords": ["装饰", "粗体", "复古", "deco", "bold", "vintage"],
+    "name": "装饰粗体",
+    "description": "44px装饰艺术风格粗体，复古时尚",
+    "data": {
+      "titleStyle": {
+        "fontSize": "44px",
+        "fontWeight": "900",
+        "lineHeight": "1.2",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "letterSpacing": "0.02em",
+        "textTransform": "uppercase"
+      },
+      "vibe": "装饰艺术，复古时尚，奢华感"
+    }
+  },
+  {
+    "id": "typo-calligraphy-bold",
+    "type": "typography",
+    "keywords": ["书法", "粗体", "东方", "calligraphy", "bold", "oriental"],
+    "name": "书法粗体",
+    "description": "42px中文书法感粗体，东方韵味",
+    "data": {
+      "titleStyle": {
+        "fontSize": "42px",
+        "fontWeight": "900",
+        "lineHeight": "1.25",
+        "fontFamily": "'Noto Sans SC', 'PingFang SC', sans-serif",
+        "letterSpacing": "0.05em"
+      },
+      "vibe": "东方书法，厚重有力，文化感"
+    }
+  },
+  {
+    "id": "typo-vertical-oriental",
+    "type": "typography",
+    "keywords": ["竖排", "东方", "传统", "vertical", "oriental"],
+    "name": "竖排东方",
+    "description": "38px竖排文字，传统东方美感",
+    "data": {
+      "titleStyle": {
+        "fontSize": "38px",
+        "fontWeight": "700",
+        "lineHeight": "1.4",
+        "fontFamily": "'Noto Serif SC', 'Source Han Serif SC', serif",
+        "writingMode": "vertical-rl",
+        "letterSpacing": "0.1em"
+      },
+      "vibe": "竖排东方，传统美感，诗意感"
+    }
+  },
+  {
+    "id": "typo-zen-minimal",
+    "type": "typography",
+    "keywords": ["禅意", "极简", "纤细", "zen", "minimal", "light"],
+    "name": "禅意极简",
+    "description": "34px纤细字体，禅意极简",
+    "data": {
+      "titleStyle": {
+        "fontSize": "34px",
+        "fontWeight": "300",
+        "lineHeight": "1.5",
+        "fontFamily": "'Noto Sans SC', 'PingFang SC', sans-serif",
+        "letterSpacing": "0.15em"
+      },
+      "vibe": "东方禅意，极简空灵，宁静感"
+    }
+  },
+  {
+    "id": "typo-cinematic-title",
+    "type": "typography",
+    "keywords": ["电影", "标题", "戏剧", "cinematic", "title", "drama"],
+    "name": "电影标题",
+    "description": "46px电影感标题，戏剧张力",
+    "data": {
+      "titleStyle": {
+        "fontSize": "46px",
+        "fontWeight": "700",
+        "lineHeight": "1.2",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "letterSpacing": "0em"
+      },
+      "numberStyle": {
+        "fontSize": "12px",
+        "fontWeight": "600",
+        "fontFamily": "'SF Mono', 'Monaco', 'Courier New', monospace",
+        "letterSpacing": "0.05em",
+        "opacity": "0.6"
+      },
+      "vibe": "电影戏剧，叙事张力，故事感"
+    }
+  },
+  {
+    "id": "typo-mono-timestamp",
+    "type": "typography",
+    "keywords": ["等宽", "时间戳", "技术", "mono", "timestamp", "tech"],
+    "name": "等宽时间戳",
+    "description": "14px等宽时间戳，技术专业感",
+    "data": {
+      "metaStyle": {
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "fontFamily": "'SF Mono', 'Monaco', 'Courier New', monospace",
+        "letterSpacing": "0.05em",
+        "opacity": "0.7"
+      },
+      "vibe": "技术专业，精确感，数据感"
+    }
+  },
+  {
+    "id": "typo-minimal-light",
+    "type": "typography",
+    "keywords": ["极简", "纤细", "轻盈", "minimal", "light", "airy"],
+    "name": "极简纤细",
+    "description": "30px极简字体，300字重，轻盈通透",
+    "data": {
+      "titleStyle": {
+        "fontSize": "30px",
+        "fontWeight": "300",
+        "lineHeight": "1.4",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "letterSpacing": "0.02em"
+      },
+      "vibe": "极简轻盈，通透呼吸，现代感"
+    }
+  },
+  {
+    "id": "typo-nordic-clean",
+    "type": "typography",
+    "keywords": ["北欧", "简洁", "清爽", "nordic", "clean"],
+    "name": "北欧简洁",
+    "description": "32px北欧风简洁字体，清爽高级",
+    "data": {
+      "titleStyle": {
+        "fontSize": "32px",
+        "fontWeight": "500",
+        "lineHeight": "1.35",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "letterSpacing": "0em"
+      },
+      "vibe": "北欧简洁，清爽高级，设计感"
+    }
+  },
+  {
+    "id": "typo-display-contrast",
+    "type": "typography",
+    "keywords": ["展示", "对比", "层次", "display", "contrast", "hierarchy"],
+    "name": "展示对比",
+    "description": "巨大标题48px配微小元数据10px，4.8倍对比",
+    "data": {
+      "titleStyle": {
+        "fontSize": "48px",
+        "fontWeight": "900",
+        "lineHeight": "1.1",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "letterSpacing": "-0.02em"
+      },
+      "metaStyle": {
+        "fontSize": "10px",
+        "fontWeight": "500",
+        "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "letterSpacing": "0.05em",
+        "opacity": "0.6",
+        "textTransform": "uppercase"
+      },
+      "vibe": "极致对比，层次分明，杂志排版"
+    }
+  },
+  {
+    "id": "typo-editorial-serif",
+    "type": "typography",
+    "keywords": ["编辑", "衬线", "优雅", "editorial", "serif"],
+    "name": "编辑衬线",
+    "description": "38px编辑风格衬线，优雅专业",
+    "data": {
+      "titleStyle": {
+        "fontSize": "38px",
+        "fontWeight": "600",
+        "lineHeight": "1.3",
+        "fontFamily": "'Georgia', 'Times New Roman', serif",
+        "letterSpacing": "-0.01em"
+      },
+      "vibe": "编辑排版，优雅专业，出版感"
+    }
+  }
+]
