@@ -450,10 +450,14 @@ export const generateThemeFromPrompt = async (config: AIConfig, prompt: string):
 };
 
 export const generateRedNoteTemplateFromPrompt = async (config: AIConfig, prompt: string): Promise<RedNoteStyleConfig> => {
+  // Enhance system prompt with relevant RedNote knowledge from RAG
+  // 注意：传递 config 以支持 LLM 查询重写
+  const enhancedSystemPrompt = await enhancePromptWithRedNoteKnowledge(REDNOTE_SYSTEM_PROMPT, prompt, config);
+
   return await chatCompletion(
     config,
     [
-      { role: "system", content: REDNOTE_SYSTEM_PROMPT },
+      { role: "system", content: enhancedSystemPrompt },
       { role: "user", content: `Create a RedNote card template based on this vibe: "${prompt}". Return strict JSON.` }
     ],
     true
