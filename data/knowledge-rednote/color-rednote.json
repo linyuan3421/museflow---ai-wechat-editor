@@ -1,0 +1,405 @@
+[
+  {
+    "id": "color-bw-minimal",
+    "type": "color_palette",
+    "keywords": ["黑白", "极简", "单色", "对比", "classic", "minimal"],
+    "name": "黑白极简",
+    "description": "极致对比的单色方案，现代杂志感，强调视觉冲击力",
+    "data": {
+      "background": "#ffffff",
+      "textColor": "#000000",
+      "accentColor": "#000000",
+      "borderColor": "#e0e0e0"
+    }
+  },
+  {
+    "id": "color-warm-gray",
+    "type": "color_palette",
+    "keywords": ["暖灰", "温暖", "柔和", "warm", "gray"],
+    "name": "温暖灰调",
+    "description": "低饱和度灰调，温暖舒适，适合文艺内容",
+    "data": {
+      "background": "#faf9f7",
+      "textColor": "#3d3d3d",
+      "accentColor": "#8b7355",
+      "borderColor": "#e8e6e3"
+    }
+  },
+  {
+    "id": "color-cream-charcoal",
+    "type": "color_palette",
+    "keywords": ["米白", "炭黑", "复古", "cream", "charcoal"],
+    "name": "米白炭黑",
+    "description": "复古纸张质感，优雅阅读体验",
+    "data": {
+      "background": "#f5f3ee",
+      "textColor": "#2c2c2c",
+      "accentColor": "#8b7355",
+      "borderColor": "#d9d7d2"
+    }
+  },
+  {
+    "id": "color-off-white-black",
+    "type": "color_palette",
+    "keywords": ["米白", "纯黑", "柔和", "off-white"],
+    "name": "米白纯黑",
+    "description": "柔和的米白背景配纯黑文字，视觉舒适",
+    "data": {
+      "background": "#faf8f5",
+      "textColor": "#1a1a1a",
+      "accentColor": "#1a1a1a",
+      "borderColor": "#e8e4df"
+    }
+  },
+  {
+    "id": "color-stone-white",
+    "type": "color_palette",
+    "keywords": ["石青", "浅灰", "中性", "stone", "neutral"],
+    "name": "石青白",
+    "description": "中性石材色调，冷静专业",
+    "data": {
+      "background": "#f4f5f0",
+      "textColor": "#2d2d2d",
+      "accentColor": "#6b7c5c",
+      "borderColor": "#e0e1dd"
+    }
+  },
+  {
+    "id": "color-yellow-blue",
+    "type": "color_palette",
+    "keywords": ["黄蓝", "撞色", "对比", "yellow", "blue", "complementary"],
+    "name": "黄蓝撞色",
+    "description": "经典互补色撞色，活力十足，波普风格",
+    "data": {
+      "background": "#ffffff",
+      "textColor": "#000000",
+      "accentColor": "#ffd93d",
+      "borderColor": "#0047ab"
+    }
+  },
+  {
+    "id": "color-pink-teal",
+    "type": "color_palette",
+    "keywords": ["粉绿", "撞色", "活泼", "pink", "teal"],
+    "name": "粉绿撞色",
+    "description": "柔和粉配清冷绿，现代感强",
+    "data": {
+      "background": "#ffffff",
+      "textColor": "#1a1a1a",
+      "accentColor": "#ff6b9d",
+      "borderColor": "#008080"
+    }
+  },
+  {
+    "id": "color-orange-cyan",
+    "type": "color_palette",
+    "keywords": ["橙青", "撞色", "鲜艳", "orange", "cyan"],
+    "name": "橙青撞色",
+    "description": "高饱和度互补，视觉冲击力强",
+    "data": {
+      "background": "#ffffff",
+      "textColor": "#000000",
+      "accentColor": "#ff6b35",
+      "borderColor": "#00bcd4"
+    }
+  },
+  {
+    "id": "color-lime-purple",
+    "type": "color_palette",
+    "keywords": ["柠檬紫", "撞色", "清新", "lime", "purple"],
+    "name": "柠檬紫撞色",
+    "description": "清新柠檬配神秘紫，年轻活力",
+    "data": {
+      "background": "#ffffff",
+      "textColor": "#1a1a1a",
+      "accentColor": "#c1ff00",
+      "borderColor": "#9d4edd"
+    }
+  },
+  {
+    "id": "color-red-teal",
+    "type": "color_palette",
+    "keywords": ["红青", "撞色", "复古", "red", "teal"],
+    "name": "红青撞色",
+    "description": "复古红配青绿，怀旧时尚感",
+    "data": {
+      "background": "#fafaf8",
+      "textColor": "#2c2c2c",
+      "accentColor": "#d94e3c",
+      "borderColor": "#006d77"
+    }
+  },
+  {
+    "id": "color-magenta-lime",
+    "type": "color_palette",
+    "keywords": ["品红", "柠檬", "波普", "magenta", "lime"],
+    "name": "品红柠檬",
+    "description": "酸性色彩，超现实波普风格",
+    "data": {
+      "background": "#ffffff",
+      "textColor": "#000000",
+      "accentColor": "#ff00ff",
+      "borderColor": "#ccff00"
+    }
+  },
+  {
+    "id": "color-blue-orange",
+    "type": "color_palette",
+    "keywords": ["蓝橙", "撞色", "运动", "blue", "orange"],
+    "name": "蓝橙撞色",
+    "description": "运动活力配色，动感十足",
+    "data": {
+      "background": "#ffffff",
+      "textColor": "#1a1a1a",
+      "accentColor": "#0066cc",
+      "borderColor": "#ff6600"
+    }
+  },
+  {
+    "id": "color-aurora-gradient",
+    "type": "color_palette",
+    "keywords": ["极光", "渐变", "粉紫蓝", "梦幻", "aurora", "gradient"],
+    "name": "极光渐变",
+    "description": "粉紫蓝柔和渐变，琉璃拟态核心配色",
+    "data": {
+      "background": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 50%, #a1c4fd 100%)",
+      "textColor": "#ffffff",
+      "accentColor": "#ffffff",
+      "borderColor": "rgba(255, 255, 255, 0.3)"
+    }
+  },
+  {
+    "id": "color-sunset-gradient",
+    "type": "color_palette",
+    "keywords": ["日落", "渐变", "橙粉", "温暖", "sunset"],
+    "name": "日落渐变",
+    "description": "橙粉温暖渐变，夕阳氛围",
+    "data": {
+      "background": "linear-gradient(180deg, #ffecd2 0%, #fcb69f 100%)",
+      "textColor": "#ffffff",
+      "accentColor": "#ffffff",
+      "borderColor": "rgba(255, 255, 255, 0.4)"
+    }
+  },
+  {
+    "id": "color-ocean-gradient",
+    "type": "color_palette",
+    "keywords": ["海洋", "渐变", "蓝绿", "清新", "ocean"],
+    "name": "海洋渐变",
+    "description": "蓝绿渐变，清透海洋感",
+    "data": {
+      "background": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      "textColor": "#ffffff",
+      "accentColor": "#a7f3d0",
+      "borderColor": "rgba(255, 255, 255, 0.25)"
+    }
+  },
+  {
+    "id": "color-peach-gradient",
+    "type": "color_palette",
+    "keywords": ["桃子", "渐变", "粉橙", "甜蜜", "peach"],
+    "name": "蜜桃渐变",
+    "description": "粉橙甜蜜渐变，少女心",
+    "data": {
+      "background": "linear-gradient(120deg, #f6d365 0%, #fda085 100%)",
+      "textColor": "#ffffff",
+      "accentColor": "#ffffff",
+      "borderColor": "rgba(255, 255, 255, 0.3)"
+    }
+  },
+  {
+    "id": "color-mint-gradient",
+    "type": "color_palette",
+    "keywords": ["薄荷", "渐变", "绿青", "清凉", "mint"],
+    "name": "薄荷渐变",
+    "description": "薄荷清凉渐变，夏日清新",
+    "data": {
+      "background": "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
+      "textColor": "#ffffff",
+      "accentColor": "#ffffff",
+      "borderColor": "rgba(255, 255, 255, 0.35)"
+    }
+  },
+  {
+    "id": "color-mint-pastel",
+    "type": "color_palette",
+    "keywords": ["薄荷", "粉彩", "清新", "mint", "pastel"],
+    "name": "薄荷粉彩",
+    "description": "薄荷绿粉彩，清透温柔",
+    "data": {
+      "background": "#f0fdf4",
+      "textColor": "#166534",
+      "accentColor": "#86efac",
+      "borderColor": "#dcfce7"
+    }
+  },
+  {
+    "id": "color-lavender-pastel",
+    "type": "color_palette",
+    "keywords": ["薰衣草", "粉彩", "梦幻", "lavender"],
+    "name": "薰衣草粉彩",
+    "description": "淡紫粉彩，梦幻浪漫",
+    "data": {
+      "background": "#faf5ff",
+      "textColor": "#581c87",
+      "accentColor": "#d8b4fe",
+      "borderColor": "#f3e8ff"
+    }
+  },
+  {
+    "id": "color-peach-pastel",
+    "type": "color_palette",
+    "keywords": ["蜜桃", "粉彩", "甜美", "peach"],
+    "name": "蜜桃粉彩",
+    "description": "蜜桃粉粉彩，甜美可爱",
+    "data": {
+      "background": "#fff1f2",
+      "textColor": "#881337",
+      "accentColor": "#fda4af",
+      "borderColor": "#ffe4e6"
+    }
+  },
+  {
+    "id": "color-rose-pastel",
+    "type": "color_palette",
+    "keywords": ["玫瑰", "粉彩", "优雅", "rose"],
+    "name": "玫瑰粉彩",
+    "description": "玫瑰粉粉彩，优雅温柔",
+    "data": {
+      "background": "#fff1f8",
+      "textColor": "#831843",
+      "accentColor": "#f9a8d4",
+      "borderColor": "#fce7f3"
+    }
+  },
+  {
+    "id": "color-sky-pastel",
+    "type": "color_palette",
+    "keywords": ["天空", "粉彩", "宁静", "sky"],
+    "name": "天空粉彩",
+    "description": "天空蓝粉彩，宁静致远",
+    "data": {
+      "background": "#f0f9ff",
+      "textColor": "#0c4a6e",
+      "accentColor": "#7dd3fc",
+      "borderColor": "#e0f2fe"
+    }
+  },
+  {
+    "id": "color-vintage-paper",
+    "type": "color_palette",
+    "keywords": ["复古", "纸张", "做旧", "vintage", "paper"],
+    "name": "复古纸张",
+    "description": "做旧纸张质感，怀旧复古",
+    "data": {
+      "background": "#f4eadd",
+      "textColor": "#4a4036",
+      "accentColor": "#8b7355",
+      "borderColor": "#e0d5c1"
+    }
+  },
+  {
+    "id": "color-sepia-warmth",
+    "type": "color_palette",
+    "keywords": ["棕褐", "怀旧", "温暖", "sepia"],
+    "name": "棕褐怀旧",
+    "description": "棕褐色调，老照片质感",
+    "data": {
+      "background": "#f5ebd0",
+      "textColor": "#3e3226",
+      "accentColor": "#8b6914",
+      "borderColor": "#e8dcc8"
+    }
+  },
+  {
+    "id": "color-rose-burgundy",
+    "type": "color_palette",
+    "keywords": ["玫瑰", "勃艮第", "复古", "rose", "burgundy"],
+    "name": "玫瑰勃艮第",
+    "description": "玫瑰红配深勃艮第红，复古优雅",
+    "data": {
+      "background": "#faf5f5",
+      "textColor": "#4a1a1a",
+      "accentColor": "#be4d4d",
+      "borderColor": "#f5e6e6"
+    }
+  },
+  {
+    "id": "color-forest-green",
+    "type": "color_palette",
+    "keywords": ["森林", "绿色", "自然", "forest", "green"],
+    "name": "森林绿意",
+    "description": "深森林绿配米白，自然清新",
+    "data": {
+      "background": "#f8f9f5",
+      "textColor": "#1a3a1a",
+      "accentColor": "#4a7c59",
+      "borderColor": "#e8ebe3"
+    }
+  },
+  {
+    "id": "color-ocean-blue",
+    "type": "color_palette",
+    "keywords": ["海洋", "蓝色", "宁静", "ocean", "blue"],
+    "name": "海洋蓝调",
+    "description": "深海蓝配浅蓝，宁静深远",
+    "data": {
+      "background": "#f0f8ff",
+      "textColor": "#0c2d4a",
+      "accentColor": "#3b82f6",
+      "borderColor": "#e0f2fe"
+    }
+  },
+  {
+    "id": "color-earth-warmth",
+    "type": "color_palette",
+    "keywords": ["大地", "温暖", "棕色", "earth", "warm"],
+    "name": "大地暖棕",
+    "description": "大地棕系，温暖踏实",
+    "data": {
+      "background": "#f9f6f1",
+      "textColor": "#3d3024",
+      "accentColor": "#8b7355",
+      "borderColor": "#efe8dd"
+    }
+  },
+  {
+    "id": "color-desert-sand",
+    "type": "color_palette",
+    "keywords": ["沙漠", "沙色", "中性", "desert", "sand"],
+    "name": "沙漠沙色",
+    "description": "沙漠沙色系，自然中性",
+    "data": {
+      "background": "#f7f5f0",
+      "textColor": "#4a4036",
+      "accentColor": "#c4a77d",
+      "borderColor": "#ebe7dd"
+    }
+  },
+  {
+    "id": "color-film-grayscale",
+    "type": "color_palette",
+    "keywords": ["黑白", "电影", "怀旧", "film", "grayscale"],
+    "name": "电影黑白",
+    "description": "经典黑白电影质感，怀旧戏剧感",
+    "data": {
+      "background": "#f5f5f5",
+      "textColor": "#1a1a1a",
+      "accentColor": "#404040",
+      "borderColor": "#d0d0d0"
+    }
+  },
+  {
+    "id": "color-dramatic-dark",
+    "type": "color_palette",
+    "keywords": ["戏剧", "暗色", "怀旧", "dramatic", "dark"],
+    "name": "戏剧暗色",
+    "description": "暗色调怀旧，非暗黑科技，适合电影感内容",
+    "data": {
+      "background": "#2a2a2a",
+      "textColor": "#f0f0f0",
+      "accentColor": "#d4a574",
+      "borderColor": "#404040"
+    }
+  }
+]
