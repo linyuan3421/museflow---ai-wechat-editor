@@ -1,0 +1,112 @@
+[
+  {
+    "id": "deco-none",
+    "type": "decoration",
+    "keywords": ["无", "极简", "干净", "none", "minimal", "clean"],
+    "name": "无装饰",
+    "description": "完全无装饰，纯粹内容呈现",
+    "data": {
+      "css": "",
+      "vibe": "极简纯净，内容至上，现代主义"
+    }
+  },
+  {
+    "id": "deco-noise-light",
+    "type": "decoration",
+    "keywords": ["噪点", "轻", "纹理", "noise", "light", "texture"],
+    "name": "轻噪点纹理",
+    "description": "0.10透明度噪点，轻微纹理质感",
+    "data": {
+      "css": "position: relative; &::after { content: ''; position: absolute; inset: 0; background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJnoiPjxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjY1IiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI2cpIiBvcGFjaXR5PSIwLjEiLz48L3N2Zz4='); pointer-events: none; opacity: 0.1; }",
+      "vibe": "轻微纹理，质感提升，克制优雅"
+    }
+  },
+  {
+    "id": "deco-noise-heavy",
+    "type": "decoration",
+    "keywords": ["噪点", "重", "复古", "noise", "heavy", "vintage"],
+    "name": "重噪点纹理",
+    "description": "0.20透明度噪点，明显复古质感",
+    "data": {
+      "css": "position: relative; &::after { content: ''; position: absolute; inset: 0; background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJnoiPjxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjY1IiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI2cpIiBvcGFjaXR5PSIwLjIiLz48L3N2Zz4='); pointer-events: none; opacity: 0.2; }",
+      "vibe": "复古质感，胶片颗粒，怀旧氛围"
+    }
+  },
+  {
+    "id": "deco-grid-40px",
+    "type": "decoration",
+    "keywords": ["网格", "40px", "瑞士", "grid", "swiss"],
+    "name": "40px网格线",
+    "description": "0.10透明度40px网格线，瑞士风格",
+    "data": {
+      "css": "background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px); background-size: 40px 40px;",
+      "vibe": "瑞士网格，结构秩序，理性设计"
+    }
+  },
+  {
+    "id": "deco-gradient-blob-soft",
+    "type": "decoration",
+    "keywords": ["渐变", "柔和", "模糊", "gradient", "blob", "soft"],
+    "name": "柔和渐变光晕",
+    "description": "80px模糊渐变光晕，梦幻背景",
+    "data": {
+      "css": "position: relative; overflow: hidden; &::before { content: ''; position: absolute; width: 300px; height: 300px; background: radial-gradient(circle, rgba(102,126,234,0.3) 0%, rgba(118,75,162,0.1) 50%, transparent 70%); filter: blur(80px); border-radius: 50%; top: -100px; right: -100px; pointer-events: none; }",
+      "vibe": "梦幻光晕，柔和背景，琉璃质感"
+    }
+  },
+  {
+    "id": "deco-line-vertical",
+    "type": "decoration",
+    "keywords": ["竖线", "东方", "引导", "vertical", "line", "oriental"],
+    "name": "东方竖线",
+    "description": "左侧3px竖线，东方韵味",
+    "data": {
+      "css": "border-left: 3px solid #000; padding-left: 32px;",
+      "vibe": "东方竖排，引导视觉，传统美感"
+    }
+  },
+  {
+    "id": "deco-letterbox-32px",
+    "type": "decoration",
+    "keywords": ["信箱", "32px", "电影", "letterbox", "cinematic"],
+    "name": "32px信箱模式",
+    "description": "上下32px黑条，电影宽屏感",
+    "data": {
+      "css": "position: relative; &::before, &::after { content: ''; position: absolute; left: 0; right: 0; height: 32px; background: #000; } &::before { top: 0; } &::after { bottom: 0; } padding: 40px 28px;",
+      "vibe": "电影宽屏，叙事张力，戏剧感"
+    }
+  },
+  {
+    "id": "deco-dashed-line-2px",
+    "type": "decoration",
+    "keywords": ["虚线", "优雅", "分割", "dashed", "elegant"],
+    "name": "2px优雅虚线",
+    "description": "2px虚线分割，优雅精致",
+    "data": {
+      "css": "border-bottom: 2px dashed rgba(0,0,0,0.2); padding-bottom: 24px;",
+      "vibe": "优雅虚线，精致分割，编辑风格"
+    }
+  },
+  {
+    "id": "deco-corner-brackets",
+    "type": "decoration",
+    "keywords": ["角标", "括号", "现代", "corner", "brackets", "modern"],
+    "name": "现代角标",
+    "description": "四角括号装饰，现代设计感",
+    "data": {
+      "css": "position: relative; &::before, &::after { content: ''; position: absolute; width: 20px; height: 20px; border: 2px solid #000; } &::before { top: 16px; left: 16px; border-right: none; border-bottom: none; } &::after { bottom: 16px; right: 16px; border-left: none; border-top: none; } padding: 28px;",
+      "vibe": "角标装饰，现代设计，框架感"
+    }
+  },
+  {
+    "id": "deco-circle-accent",
+    "type": "decoration",
+    "keywords": ["圆形", "点缀", "焦点", "circle", "accent", "focus"],
+    "name": "圆形点缀",
+    "description": "半透明圆形装饰，视觉焦点",
+    "data": {
+      "css": "position: relative; &::before { content: ''; position: absolute; width: 120px; height: 120px; background: rgba(255, 217, 61, 0.15); border-radius: 50%; top: 20px; right: 20px; pointer-events: none; }",
+      "vibe": "圆形点缀，视觉焦点，轻装饰"
+    }
+  }
+]
