@@ -121,3 +121,14 @@ dist
 # 项目特定文件（开发者文档和临时文件）
 AGENTS.md
 "AI主题设计参考.md"
+"小红书生成主题-新版.md"
+"小红书生成主题-初版.md"
+"RAG实施方案.md"
+"RAG进阶方案-混合检索.md"
+"检索策略综合方案对比.md"
+"知识库扩展-最终方案.md"
+"知识库扩展计划.md"
+"知识库调研报告.md"
+"RAG_INTEGRATION_TEST_REPORT.md"
+"REDNOTE_RAG_SUMMARY.md"
+"REDNOTE_RAG_TESTING_REPORT.md"
