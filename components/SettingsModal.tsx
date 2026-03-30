@@ -128,17 +128,8 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose, config, 
            </div>
         </div>
 
-        {/* Footer */}
+{/* Footer */}
         <div className="px-6 py-4 bg-white border-t border-[#e5e0d8]">
-          {/* Version Info */}
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-xs text-stone-400">
-              MuseFlow v1.0.0 · 2025年1月29日发布
-            </span>
-            <span className="text-xs text-stone-300">
-              小而美的 AI 编辑伙伴
-            </span>
-          </div>
 
           {/* Action Buttons */}
           <div className="flex justify-end gap-3">

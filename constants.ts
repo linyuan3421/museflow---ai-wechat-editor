@@ -711,7 +711,7 @@ export const CARD_TEMPLATES: CardTemplate[] = [
   {
     id: 'glass-morphism',
     name: '琉光拟态',
-    description: '磨砂玻璃质感，辉光渐变，高级的未来科技感。',
+    description: '柔和渐变背景与半透明毛玻璃卡片的融合，轻盈通透的现代美学。',
     previewColor: '#3b82f6'
   },
   {
