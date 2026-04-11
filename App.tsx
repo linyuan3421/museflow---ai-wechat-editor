@@ -47,12 +47,10 @@ const App: React.FC = () => {
       return saved ? JSON.parse(saved) : {
         apiKey: '',
         baseUrl: 'https://api.openai.com/v1',
-        modelName: 'gpt-4o',
-        supabaseUrl: '',
-        supabaseAnonKey: ''
+        modelName: 'gpt-4o'
       };
     } catch (e) {
-      return { apiKey: '', baseUrl: 'https://api.openai.com/v1', modelName: 'gpt-4o', supabaseUrl: '', supabaseAnonKey: '' };
+      return { apiKey: '', baseUrl: 'https://api.openai.com/v1', modelName: 'gpt-4o' };
     }
   });
 

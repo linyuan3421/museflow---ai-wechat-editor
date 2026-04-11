@@ -5,9 +5,15 @@
  * to a Supabase `generation_feedback` table for Bad Case analysis.
  *
  * DESIGN: Fire-and-forget. Never throws. User experience is never affected.
+ *
+ * CONFIG: Supabase credentials are read from Vite environment variables
+ * (.env file, NOT committed to git). See .env.example for setup.
  */
 
 import { FeedbackSignal, FeedbackContext } from '../types';
+
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || '';
+const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
 
 /**
  * Submit a feedback signal to Supabase.
@@ -17,16 +23,14 @@ import { FeedbackSignal, FeedbackContext } from '../types';
  */
 export async function submitFeedback(
   signal: FeedbackSignal,
-  context: FeedbackContext,
-  supabaseUrl: string,
-  supabaseAnonKey: string
+  context: FeedbackContext
 ): Promise<void> {
-  if (!supabaseUrl || !supabaseAnonKey) {
+  if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
     console.warn('[Feedback] Supabase not configured, skipping feedback submission');
     return;
   }
 
-  const cleanUrl = supabaseUrl.replace(/\/+$/, '');
+  const cleanUrl = SUPABASE_URL.replace(/\/+$/, '');
   const endpoint = `${cleanUrl}/rest/v1/generation_feedback`;
 
   try {
@@ -34,7 +38,7 @@ export async function submitFeedback(
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'apikey': supabaseAnonKey,
+        'apikey': SUPABASE_ANON_KEY,
         'Prefer': 'return=minimal',
       },
       body: JSON.stringify({

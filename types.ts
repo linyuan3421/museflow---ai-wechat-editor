@@ -78,8 +78,6 @@ export interface AIConfig {
   apiKey: string;
   baseUrl: string;
   modelName: string;
-  supabaseUrl?: string;     // Optional Supabase project URL
-  supabaseAnonKey?: string; // Optional Supabase anon key
 }
 
 // --- Feedback System ---

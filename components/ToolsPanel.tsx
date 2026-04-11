@@ -91,7 +91,7 @@ const ToolsPanel: React.FC<ToolsPanelProps> = ({
   // Submit feedback to Supabase (fire-and-forget)
   const handleFeedback = (signal: FeedbackSignal) => {
     if (!feedbackContext) return;
-    submitFeedback(signal, feedbackContext, aiConfig.supabaseUrl || '', aiConfig.supabaseAnonKey || '');
+    submitFeedback(signal, feedbackContext);
     setFeedbackContext(null);
     setGenStatus('idle');
   };
@@ -351,7 +351,7 @@ const ToolsPanel: React.FC<ToolsPanelProps> = ({
                                 onSaveTheme(currentTheme);
                                 // Submit save signal if we have feedback context
                                 if (feedbackContext) {
-                                  submitFeedback('save', feedbackContext, aiConfig.supabaseUrl || '', aiConfig.supabaseAnonKey || '');
+                                  submitFeedback('save', feedbackContext);
                                   setFeedbackContext(null);
                                 }
                               }}
