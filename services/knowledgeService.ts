@@ -27,6 +27,13 @@ export interface RetrievalResult {
   score: number;
 }
 
+/** 检索结果（含查询重写信息，用于反馈系统） */
+export interface RetrievalResultWithContext {
+  results: RetrievalResult[];
+  rewrittenQuery: string;
+  originalQuery: string;
+}
+
 // 使用全局单例模式，避免模块重载导致重复初始化
 // 浏览器环境使用 window
 function getDBStore() {
@@ -259,6 +266,49 @@ export async function retrieveKnowledge(
   } catch (error) {
     console.error('[KnowledgeService] 检索失败:', error);
     return [];
+  }
+}
+
+/**
+ * 语义检索（带完整上下文）— 用于反馈系统
+ * 与 retrieveKnowledge 相同逻辑，但额外返回查询重写信息。
+ */
+export async function retrieveKnowledgeWithContext(
+  query: string,
+  topK: number = 5,
+  config?: any
+): Promise<RetrievalResultWithContext> {
+  const store = getDBStore();
+
+  if (!store.isInitialized || !store.db) {
+    await initKnowledgeDB();
+  }
+
+  try {
+    const expandedQuery = await rewriteQueryWithLLM(query, config);
+
+    const searchResults = await search(store.db, {
+      term: expandedQuery,
+      limit: topK,
+      properties: ['keywords', 'name', 'description'],
+      threshold: 0.05,
+      exact: false,
+    });
+
+    const validHits = searchResults.hits.filter((hit: any) => hit && hit.document);
+    const results: RetrievalResult[] = validHits.map((hit: any) => ({
+      id: hit.id,
+      type: hit.document.type,
+      name: hit.document.name,
+      description: hit.document.description,
+      data: hit.document.data,
+      score: hit.score,
+    }));
+
+    return { results, rewrittenQuery: expandedQuery, originalQuery: query };
+  } catch (error) {
+    console.error('[KnowledgeService] retrieveKnowledgeWithContext failed:', error);
+    return { results: [], rewrittenQuery: query, originalQuery: query };
   }
 }
 
@@ -521,5 +571,47 @@ export async function retrieveRedNoteKnowledge(
   } catch (error) {
     console.error('[RedNoteKnowledgeService] 检索失败:', error);
     return [];
+  }
+}
+
+/**
+ * 小红书知识库检索（带完整上下文）— 用于反馈系统
+ */
+export async function retrieveRedNoteKnowledgeWithContext(
+  query: string,
+  topK: number = 5,
+  config?: any
+): Promise<RetrievalResultWithContext> {
+  const store = getRedNoteDBStore();
+
+  if (!store.isInitialized || !store.db) {
+    await initRedNoteKnowledgeDB();
+  }
+
+  try {
+    const expandedQuery = await rewriteQueryWithLLM(query, config);
+
+    const searchResults = await search(store.db, {
+      term: expandedQuery,
+      limit: topK,
+      properties: ['keywords', 'name', 'description'],
+      threshold: 0.05,
+      exact: false,
+    });
+
+    const validHits = searchResults.hits.filter((hit: any) => hit && hit.document);
+    const results: RetrievalResult[] = validHits.map((hit: any) => ({
+      id: hit.id,
+      type: hit.document.type,
+      name: hit.document.name,
+      description: hit.document.description,
+      data: hit.document.data,
+      score: hit.score,
+    }));
+
+    return { results, rewrittenQuery: expandedQuery, originalQuery: query };
+  } catch (error) {
+    console.error('[RedNoteKnowledgeService] retrieveRedNoteKnowledgeWithContext failed:', error);
+    return { results: [], rewrittenQuery: query, originalQuery: query };
   }
 }
