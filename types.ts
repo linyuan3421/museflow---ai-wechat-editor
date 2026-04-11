@@ -78,4 +78,31 @@ export interface AIConfig {
   apiKey: string;
   baseUrl: string;
   modelName: string;
+  supabaseUrl?: string;     // Optional Supabase project URL
+  supabaseAnonKey?: string; // Optional Supabase anon key
+}
+
+// --- Feedback System ---
+
+export type FeedbackSignal = 'thumbs_up' | 'thumbs_down' | 'save';
+
+export interface FeedbackContext {
+  /** User's original input, e.g. "赛博朋克风格" */
+  userQuery: string;
+  /** LLM rewritten query, e.g. "cyberpunk 霓虹 紫蓝 neon glitch" */
+  queryRewritten: string;
+  /** RAG retrieved knowledge entries with scores */
+  retrievedKnowledge: Array<{
+    name: string;
+    type: string;
+    description: string;
+    data: Record<string, any>;
+    score: number;
+  }>;
+  /** The AI-generated theme or template */
+  generatedOutput: Record<string, any>;
+  /** Model used for generation */
+  modelName: string;
+  /** wechat or rednote */
+  mode: EditorMode;
 }
