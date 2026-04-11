@@ -129,5 +129,4 @@ temp-*.js
 test-*.cjs
 test-*.js
 
-# 脚本目录（开发工具）
-scripts/
+# 脚本目录（开发工具）— removed to track scripts/setup-supabase-feedback.sql
