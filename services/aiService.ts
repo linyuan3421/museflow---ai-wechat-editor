@@ -1,5 +1,11 @@
-import { ThemeStyles, RedNoteData, RedNoteStyleConfig, AIConfig } from "../types";
-import { enhancePromptWithKnowledge, retrieveRedNoteKnowledge, formatKnowledgeContext } from "./knowledgeService";
+import { ThemeStyles, RedNoteData, RedNoteStyleConfig, AIConfig, FeedbackContext, EditorMode } from "../types";
+import { enhancePromptWithKnowledge, retrieveRedNoteKnowledge, formatKnowledgeContext, retrieveKnowledgeWithContext, retrieveRedNoteKnowledgeWithContext } from "./knowledgeService";
+
+/** AI generation result with feedback context attached */
+export interface GenerationResult<T> {
+  result: T;
+  feedbackContext: FeedbackContext;
+}
 
 // Helper: Parse JSON safely and fix invalid React CSS properties
 const parseJSON = <T>(text: string | undefined): T => {
@@ -449,6 +455,68 @@ export const generateThemeFromPrompt = async (config: AIConfig, prompt: string):
   );
 };
 
+/**
+ * Generate WeChat theme WITH full feedback context for Bad Case tracking.
+ * This is the feedback-aware version of generateThemeFromPrompt.
+ */
+export const generateThemeFromPromptWithFeedback = async (
+  config: AIConfig,
+  prompt: string
+): Promise<GenerationResult<ThemeStyles>> => {
+  // 1. Retrieve knowledge WITH context (captures rewritten query)
+  const knowledgeContext = await retrieveKnowledgeWithContext(prompt, 3, config);
+  const knowledgeResults = knowledgeContext.results;
+
+  // 2. Build enhanced system prompt (same logic as enhancePromptWithKnowledge)
+  let enhancedSystemPrompt = THEME_SYSTEM_PROMPT;
+  if (knowledgeResults.length > 0) {
+    const formattedKnowledge = formatKnowledgeContext(knowledgeResults);
+    enhancedSystemPrompt = `${THEME_SYSTEM_PROMPT}
+
+---
+# RELEVANT KNOWLEDGE FOR: "${prompt}"
+
+${formattedKnowledge}
+
+---
+
+**设计指导**: 基于以上具体知识，结合设计原则，生成主题设计。
+确保:
+1. 如果提供了具体颜色，必须使用这些颜色值（精确的 hex 值）
+2. 如果提供了质感/技法要求，必须应用相应的 CSS 实现
+3. 如果提供了场景/情绪，必须体现相应的氛围特征
+`;
+  }
+
+  // 3. Generate (same call as original)
+  const styles = await chatCompletion(
+    config,
+    [
+      { role: "system", content: enhancedSystemPrompt },
+      { role: "user", content: `Create a WeChat article theme based on this description: "${prompt}". Return strict JSON.` }
+    ],
+    true
+  );
+
+  // 4. Build feedback context
+  const feedbackContext: FeedbackContext = {
+    userQuery: prompt,
+    queryRewritten: knowledgeContext.rewrittenQuery,
+    retrievedKnowledge: knowledgeResults.map(r => ({
+      name: r.name,
+      type: r.type,
+      description: r.description,
+      data: r.data,
+      score: r.score,
+    })),
+    generatedOutput: styles as Record<string, any>,
+    modelName: config.modelName,
+    mode: 'wechat' as EditorMode,
+  };
+
+  return { result: styles, feedbackContext };
+};
+
 export const generateRedNoteTemplateFromPrompt = async (config: AIConfig, prompt: string): Promise<RedNoteStyleConfig> => {
   // Enhance system prompt with relevant RedNote knowledge from RAG
   // 注意：传递 config 以支持 LLM 查询重写
@@ -462,6 +530,68 @@ export const generateRedNoteTemplateFromPrompt = async (config: AIConfig, prompt
     ],
     true
   );
+};
+
+/**
+ * Generate RedNote template WITH full feedback context for Bad Case tracking.
+ * This is the feedback-aware version of generateRedNoteTemplateFromPrompt.
+ */
+export const generateRedNoteTemplateFromPromptWithFeedback = async (
+  config: AIConfig,
+  prompt: string
+): Promise<GenerationResult<RedNoteStyleConfig>> => {
+  // 1. Retrieve RedNote knowledge WITH context
+  const knowledgeContext = await retrieveRedNoteKnowledgeWithContext(prompt, 3, config);
+  const knowledgeResults = knowledgeContext.results;
+
+  // 2. Build enhanced system prompt
+  let enhancedSystemPrompt = REDNOTE_SYSTEM_PROMPT;
+  if (knowledgeResults.length > 0) {
+    const formattedKnowledge = formatKnowledgeContext(knowledgeResults);
+    enhancedSystemPrompt = `${REDNOTE_SYSTEM_PROMPT}
+
+---
+# RELEVANT KNOWLEDGE FOR: "${prompt}"
+
+${formattedKnowledge}
+
+---
+
+**设计指导**: 基于以上具体知识，结合小红书设计原则，生成卡片模板配置。
+确保:
+1. 如果提供了具体颜色，必须使用这些颜色值（精确的 hex 值）
+2. 如果提供了排版/布局技法，必须应用相应的设计实现
+3. 如果提供了装饰类型，必须使用对应的装饰样式
+`;
+  }
+
+  // 3. Generate
+  const styleConfig = await chatCompletion(
+    config,
+    [
+      { role: "system", content: enhancedSystemPrompt },
+      { role: "user", content: `Create a RedNote card template based on this vibe: "${prompt}". Return strict JSON.` }
+    ],
+    true
+  );
+
+  // 4. Build feedback context
+  const feedbackContext: FeedbackContext = {
+    userQuery: prompt,
+    queryRewritten: knowledgeContext.rewrittenQuery,
+    retrievedKnowledge: knowledgeResults.map(r => ({
+      name: r.name,
+      type: r.type,
+      description: r.description,
+      data: r.data,
+      score: r.score,
+    })),
+    generatedOutput: styleConfig as Record<string, any>,
+    modelName: config.modelName,
+    mode: 'rednote' as EditorMode,
+  };
+
+  return { result: styleConfig, feedbackContext };
 };
 
 export const generateThemeFromImage = async (config: AIConfig, base64Data: string, mimeType: string): Promise<ThemeStyles> => {
