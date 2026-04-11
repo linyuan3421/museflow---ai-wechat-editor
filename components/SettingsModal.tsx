@@ -110,22 +110,48 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose, config, 
                 />
               </div>
 
-              <div>
-                <label className="block text-xs font-bold text-stone-600 mb-1.5">API Key</label>
-                <div className="relative">
-                  <input 
-                    type="password" 
-                    value={localConfig.apiKey}
-                    onChange={(e) => setLocalConfig({...localConfig, apiKey: e.target.value})}
-                    placeholder="sk-..."
-                    className="w-full bg-white border border-[#d6d3d1] rounded-lg p-2.5 text-sm text-stone-700 focus:outline-none focus:border-stone-500 focus:ring-1 focus:ring-stone-500 transition-all font-mono placeholder:text-stone-300"
-                  />
-                  <div className="absolute right-2 top-2.5 text-[10px] text-stone-400 bg-stone-100 px-1.5 py-0.5 rounded border border-stone-200">
-                     本地存储
-                  </div>
-                </div>
-              </div>
-           </div>
+               <div>
+                 <label className="block text-xs font-bold text-stone-600 mb-1.5">API Key</label>
+                 <div className="relative">
+                   <input
+                     type="password"
+                     value={localConfig.apiKey}
+                     onChange={(e) => setLocalConfig({...localConfig, apiKey: e.target.value})}
+                     placeholder="sk-..."
+                     className="w-full bg-white border border-[#d6d3d1] rounded-lg p-2.5 text-sm text-stone-700 focus:outline-none focus:border-stone-500 focus:ring-1 focus:ring-stone-500 transition-all font-mono placeholder:text-stone-300"
+                   />
+                   <div className="absolute right-2 top-2.5 text-[10px] text-stone-400 bg-stone-100 px-1.5 py-0.5 rounded border border-stone-200">
+                      本地存储
+                   </div>
+                 </div>
+               </div>
+
+               {/* Supabase Feedback Config (Optional) */}
+               <div className="pt-4 mt-4 border-t border-[#e5e0d8]">
+                 <label className="text-xs font-bold text-stone-400 uppercase tracking-widest mb-2 block">
+                   数据反馈配置（可选）
+                 </label>
+                 <p className="text-[10px] text-stone-400 mb-3">
+                   配置后，你的 👍👎 评分将帮助改进 AI 生成质量。不配置则不影响使用。
+                 </p>
+                 <div className="space-y-2">
+                   <input
+                     type="text"
+                     value={localConfig.supabaseUrl || ''}
+                     onChange={(e) => setLocalConfig({ ...localConfig, supabaseUrl: e.target.value })}
+                     placeholder="Supabase URL（如 https://xxx.supabase.co）"
+                     className="w-full bg-white border border-[#d6d3d1] rounded-lg p-2.5 text-sm text-stone-700 focus:outline-none focus:border-stone-500 focus:ring-1 focus:ring-stone-500 transition-all font-mono placeholder:text-stone-300"
+                   />
+                   <input
+                     type="password"
+                     value={localConfig.supabaseAnonKey || ''}
+                     onChange={(e) => setLocalConfig({ ...localConfig, supabaseAnonKey: e.target.value })}
+                     placeholder="Supabase Anon Key"
+                     className="w-full bg-white border border-[#d6d3d1] rounded-lg p-2.5 text-sm text-stone-700 focus:outline-none focus:border-stone-500 focus:ring-1 focus:ring-stone-500 transition-all font-mono placeholder:text-stone-300"
+                   />
+                 </div>
+               </div>
+            </div>
         </div>
 
 {/* Footer */}
