@@ -1,7 +1,8 @@
 import React, { useState, useRef } from 'react';
-import { AppTheme, GenerationStatus, EditorMode, CardTemplate, AIConfig } from '../types';
+import { AppTheme, GenerationStatus, EditorMode, CardTemplate, AIConfig, FeedbackContext, FeedbackSignal } from '../types';
 import { DEFAULT_THEMES, CARD_TEMPLATES } from '../constants';
 import * as AIService from '../services/aiService';
+import { submitFeedback } from '../services/feedbackService';
 
 interface ToolsPanelProps {
   currentTheme: AppTheme;
@@ -74,6 +75,9 @@ const ToolsPanel: React.FC<ToolsPanelProps> = ({
   
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // Feedback: context from last AI text-to-theme generation
+  const [feedbackContext, setFeedbackContext] = useState<FeedbackContext | null>(null);
+
   // --- Handlers ---
 
   const checkConfig = () => {
@@ -84,14 +88,23 @@ const ToolsPanel: React.FC<ToolsPanelProps> = ({
     return true;
   }
 
+  // Submit feedback to Supabase (fire-and-forget)
+  const handleFeedback = (signal: FeedbackSignal) => {
+    if (!feedbackContext) return;
+    submitFeedback(signal, feedbackContext, aiConfig.supabaseUrl || '', aiConfig.supabaseAnonKey || '');
+    setFeedbackContext(null);
+    setGenStatus('idle');
+  };
+
   const handleAiThemeGenerate = async () => {
     if (!aiPrompt.trim()) return;
     if (!checkConfig()) return;
 
     setGenStatus('generating');
+    setFeedbackContext(null); // Clear previous feedback context
     try {
       if (mode === 'wechat') {
-        const styles = await AIService.generateThemeFromPrompt(aiConfig, aiPrompt);
+        const { result: styles, feedbackContext: ctx } = await AIService.generateThemeFromPromptWithFeedback(aiConfig, aiPrompt);
         const newTheme: AppTheme = {
           id: `custom-${Date.now()}`,
           name: `AI: ${aiPrompt.substring(0, 10)}...`,
@@ -100,9 +113,9 @@ const ToolsPanel: React.FC<ToolsPanelProps> = ({
           isCustom: true
         };
         onThemeSelect(newTheme);
+        setFeedbackContext(ctx);
       } else {
-        // REDNOTE MODE
-        const styleConfig = await AIService.generateRedNoteTemplateFromPrompt(aiConfig, aiPrompt);
+        const { result: styleConfig, feedbackContext: ctx } = await AIService.generateRedNoteTemplateFromPromptWithFeedback(aiConfig, aiPrompt);
         const newTemplate: CardTemplate = {
           id: `custom-card-${Date.now()}`,
           name: `AI: ${aiPrompt.substring(0, 8)}...`,
@@ -112,6 +125,7 @@ const ToolsPanel: React.FC<ToolsPanelProps> = ({
           styleConfig: styleConfig
         };
         onAddCustomTemplate(newTemplate);
+        setFeedbackContext(ctx);
       }
       setGenStatus('success');
     } catch (e: any) {
@@ -332,13 +346,20 @@ const ToolsPanel: React.FC<ToolsPanelProps> = ({
                             <span className="text-xs text-stone-500 block mb-1">当前生成</span>
                             <span className="font-bold text-sm text-[#292524]">{currentTheme.name}</span>
                           </div>
-                          <button 
-                             onClick={() => onSaveTheme(currentTheme)}
-                             className="text-xs bg-[#57534e] text-white px-3 py-1.5 rounded-md hover:bg-[#292524] transition-colors flex items-center gap-1 shadow-sm"
-                          >
-                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
-                             收藏
-                          </button>
+                           <button
+                              onClick={() => {
+                                onSaveTheme(currentTheme);
+                                // Submit save signal if we have feedback context
+                                if (feedbackContext) {
+                                  submitFeedback('save', feedbackContext, aiConfig.supabaseUrl || '', aiConfig.supabaseAnonKey || '');
+                                  setFeedbackContext(null);
+                                }
+                              }}
+                              className="text-xs bg-[#57534e] text-white px-3 py-1.5 rounded-md hover:bg-[#292524] transition-colors flex items-center gap-1 shadow-sm"
+                           >
+                              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
+                              收藏
+                           </button>
                        </div>
                        <p className="text-xs text-stone-400">{currentTheme.description}</p>
                     </div>
@@ -466,15 +487,38 @@ const ToolsPanel: React.FC<ToolsPanelProps> = ({
                   placeholder={mode === 'wechat' ? "例如：'莫兰迪色系的油画质感'" : "例如：'赛博朋克霓虹' 或 '极简咖啡馆'"}
                   className="w-full bg-white border border-[#e5e5e5] rounded-lg p-3 text-xs text-stone-600 focus:border-[#57534e] focus:outline-none min-h-[80px] placeholder:text-stone-300 resize-none shadow-sm"
                 />
-                <button 
-                  onClick={handleAiThemeGenerate}
-                  disabled={genStatus === 'generating' || !aiPrompt.trim()}
-                  className="w-full py-2 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-600 text-xs font-bold border border-stone-200 transition-colors disabled:opacity-50"
-                >
-                  {genStatus === 'generating' ? '设计中...' : mode === 'wechat' ? '生成主题' : '生成卡片'}
-                </button>
-              </div>
-            </section>
+                <button
+                   onClick={handleAiThemeGenerate}
+                   disabled={genStatus === 'generating' || !aiPrompt.trim()}
+                   className="w-full py-2 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-600 text-xs font-bold border border-stone-200 transition-colors disabled:opacity-50"
+                 >
+                   {genStatus === 'generating' ? '设计中...' : mode === 'wechat' ? '生成主题' : '生成卡片'}
+                 </button>
+
+                {/* Feedback Buttons — show only after successful text-to-theme generation */}
+                {genStatus === 'success' && feedbackContext && (
+                  <div className="flex items-center justify-center gap-2 mt-2">
+                    <span className="text-[10px] text-stone-400 mr-1">这次生成：</span>
+                    <button
+                      onClick={() => handleFeedback('thumbs_up')}
+                      className="flex items-center gap-1 px-3 py-1.5 rounded-lg border border-[#e5e5e5] text-xs text-stone-500 hover:bg-green-50 hover:border-green-300 hover:text-green-600 transition-all"
+                      title="满意"
+                    >
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" /></svg>
+                      好
+                    </button>
+                    <button
+                      onClick={() => handleFeedback('thumbs_down')}
+                      className="flex items-center gap-1 px-3 py-1.5 rounded-lg border border-[#e5e5e5] text-xs text-stone-500 hover:bg-red-50 hover:border-red-300 hover:text-red-600 transition-all"
+                      title="不满意"
+                    >
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018a2 2 0 01.485.06l3.76.94m-7 10v5a2 2 0 002 2h.096c.5 0 .905-.405.905-.904 0-.715.211-1.413.608-2.008L17 13V4m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2.5" /></svg>
+                      差
+                    </button>
+                  </div>
+                )}
+               </div>
+             </section>
 
             {/* 3. Image to Theme (Adaptive) */}
             <section>
