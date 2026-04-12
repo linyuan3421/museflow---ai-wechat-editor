@@ -130,3 +130,9 @@ test-*.cjs
 test-*.js
 
 # 脚本目录（开发工具）— removed to track scripts/setup-supabase-feedback.sql
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
